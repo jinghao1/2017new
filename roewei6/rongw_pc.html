@@ -1,0 +1,222 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN""http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<title>上汽荣威i6耀世而出</title>
+<meta name="format-detection" content="telephone=no"/>
+<link href="css/rwSty.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="js/jquery.SuperSlide.2.1.1.js"></script>
+<script type="text/javascript" src="js/rw_js.js"></script>
+<!--<script type="text/javascript" src="js/login.js"></script>-->
+</head>
+
+<body>                  
+<div class="container">
+	<!-- 预约试驾 -->
+	<div class="login">
+		<div class="fu"><img src="images/fu.png"></div>
+		<div class="login_box">
+			<ul>
+				<li><input type="text" name="name" placeholder="姓名" /></li>
+				<li><input type="text" name="phone" placeholder="手机号码" /></li>
+				<li><select id="province" name='provinceId'><option>省份</option></select></li>
+				<li><select id="city" name='cityId'><option>城市</option></select></li>
+			</ul>
+			<p><input type="checkbox" checked name="">   * 我已阅读并接受汽车大全隐私条款：您的个人资料有可能会提交至厂商的授权经销商或汽车大全客服，与您进一步沟通试驾、购车等事宜。</p>
+			<div class="tjBtn">提交报名</div>
+			<span class="close"></span>
+		</div>
+		<div class="tks"></div>
+	</div>
+	<!-- 预约试驾 -end-->
+	<!-- 车型亮点 -->
+	<div class="carType">
+		<ul>
+			<li class="on">internet<br/>互联网</li>
+			<li>interesting<br/>乐趣</li>
+			<li>impetus<br/>动力</li>
+			<li>innovation<br/>革新</li>
+			<li>inner space<br/>宽适</li>
+			<li>intelligence<br/>智能</li>
+		</ul>
+		<div class="imgs">
+			<div><img src="images/cx01.jpg"/><h2>搭载互联网汽车智能系统，基础服务及基本流量终身免费</h2></div>
+			<div><img src="images/cx02.jpg"/><h2>10.4英寸超大高清触控电容屏，实时分享更多乐趣</h2></div>
+			<div><img src="images/cx03.jpg"/><h2>上汽蓝芯高效动力，百公里油耗低至5.9L</h2></div>
+			<div><img src="images/cx04.jpg"/><h2>0.25超低风阻系数，媲美轿跑空气动力学</h2></div>
+			<div><img src="images/cx05.jpg"/><h2>2715mm超长轴距1835mm宽体座舱，为家人腾出更大空间</h2></div>
+			<div><img src="images/cx06.jpg"/><h2>远程车辆控制，随时掌握全车状态</h2></div>
+		</div>
+	</div>
+	<!-- 车型亮点 -end-->
+	<!-- 精彩视频 -->
+	<div class="video">
+		<!-- <video width="579" height="350" controls="controls" poster="images/videoBg.png" >    
+                <source src="video/video.mp4" type="video/mp4">
+                你的浏览器不支持video标签
+        </video> -->
+        <div id="youkuplayer" style="width:574px;height:320px"></div>
+	</div>
+	<!-- 精彩视频 -end-->
+	<!-- 车身颜色 -->
+	<div class="carColor">
+		<div id="slideBox" class="slideBox">
+            <div class="hd">
+                <ul>
+                	<li class="one on"></li>
+                	<li class="two"></li>
+                	<li class="three"></li>
+                	<li class="four"></li>
+                	<li class="five"></li>
+                	<li class="six"></li>
+                </ul>
+            </div>
+            <div class="bd">
+                <ul>
+                    <li><a href=""><img src="images/car01.png"></a></li>
+                    <li><a href=""><img src="images/car02.png"></a></li>
+                    <li><a href=""><img src="images/car03.png"></a></li>
+                    <li><a href=""><img src="images/car04.png"></a></li>
+                    <li><a href=""><img src="images/car05.png"></a></li>
+                    <li><a href=""><img src="images/car06.png"></a></li>
+                </ul>
+            </div>
+            <!-- 下面是前/后按钮代码，如果不需要删除即可 -->
+            <a class="prev" href="javascript:void(0)"></a>
+            <a class="next" href="javascript:void(0)"></a>
+        </div>
+	</div>
+	<!-- 车身颜色 -end -->
+	<!-- 车型配置 -->
+	<div class="cxpz">
+		<iframe src="table.html" frameborder="no" style="width:1200px;height:566px; overflow: hidden;margin-top:0px;background:none"></iframe>
+	</div>
+	<!-- 车型配置 -end-->
+
+</div>
+<script type="text/javascript" src="http://player.youku.com/jsapi"></script>
+<script type="text/javascript">
+    player = new YKU.Player('youkuplayer',{
+    styleid: '0',
+    client_id: '8dea6b110e2bc49d',
+    vid: 'XMjY3NjA5NjY1Mg==',
+    newPlayer: true,
+    show_related:false
+    });
+</script>
+<script id="jsID" type="text/javascript">
+         var ary = location.href.split("&");
+        jQuery(".slideBox").slide( { 
+            mainCell:".bd ul", 
+            effect:"fold",
+            autoPlay:true,
+            trigger:ary[3],
+            easing:ary[4],
+            delayTime:ary[5],
+            mouseOverStop:ary[6],
+            pnLoop:ary[7] });
+        </script> 
+<script type="text/javascript">
+	//edit by song
+	var ymurl = "http://h5.qlh520.top";
+	var ymurl = "http://xy.qichedaquan.com";
+	var proid = "35"; //项目id
+	//默认状态下，将‘省’的值传入
+	$.getJSON(ymurl+"/medias/public/index.php/port/Rwuser/listdata", {proid:proid}, function(json){
+		//console.log(json);
+		if(json.statu==1){
+			$.each(json.data,function(index,v){ 
+				var option_html = '<option value='+v.dealer_id+'>'+v.dealer_name+'</option>';
+		  		$("#province").append(option_html);
+			})
+		}else{
+			console.log(json.data);
+		} 
+	})
+	$("#province").change(function(){
+		//省份变化，获取市区内容
+		var dealer_id = $("#province").val(); //省份id 3 为浙江
+		$.getJSON(ymurl+"/medias/public/index.php/port/Rwuser/procitydeal", {proid:proid,dealer_id:dealer_id}, function(json){ 
+			$("#city").html("<option>城市</option>");
+			if(json.statu==1){ //数据返回正常
+				$.each(json.data,function(index,value){
+					var option_html = '<option value='+value.dealer_id+'>'+value.dealer_name+'</option>';
+		  			$("#city").append(option_html); 
+				})
+			}else{//打印错误信息
+				console.log(json);
+			}
+			
+		}) 
+	});
+	
+	//信息提交
+	$(".tjBtn").click(function(){
+		 //名字不为空
+        var name = $("input[name='name']").val();
+        if(name == "" || name == "姓名" ){
+            alert("请输入姓名");
+            $("input[name='name']").focus();
+            return false;
+        }
+        if (!name.match(/^([\u4E00-\u9FA5]{2,4}$)|(^[a-zA-Z]{1,8}$)/)){ 
+            alert("抱歉，姓名需要输入2-4位汉字或八个英文字母");
+            return false;
+        }
+        //手机号验证
+        var phone = $("input[name='phone']").val();
+        if (phone == "" || phone == "手机号") { 
+            alert("手机号码不能为空！");  
+            $("input[name='phone']").focus(); 
+            return false; 
+        }  
+        if (!phone.match(/^(((1[3|5|7|8][0-9]{1}))+\d{8})$/)) { 
+            alert("手机号码格式不正确！");  
+            $("input[name='phone']").focus(); 
+            return false; 
+        } 
+        //省，必选
+        var province = $("select[name='provinceId']").val();
+        //console.log(province);
+        if(province == "省份"){
+            alert("请选择省份");
+            $("select[name='provinceId']").focus();
+            return false; 
+        }
+        //市，必选
+        var city = $("select[name='cityId']").val(); 
+        if(city == "城市"){
+            alert("请选择城市");
+            $("select[name='cityId']").focus();
+            return false; 
+        }
+        var dealer_name = province+","+city;
+        // 
+		 
+		var fromwh = $("input[name='fromwh']").val(); //手机端   1 mobile
+		var frompl = $("input[name='frompl']").val(); //注册页面来源
+        //console.log(fromwh);
+        $.getJSON(ymurl+"/medias/public/index.php/port/Rwuser/Comreg", { username:name,numberphone:phone,dealer:dealer_name,model:'69',fromwh:fromwh,frompl:frompl}, function(json){ 
+            //console.log(json);
+            if(jQuery.type(json)=="string"){
+                var json = eval('('+json+')'); //字符串转为json格式
+            } 
+            alert(json.msg); 
+            if(json.start=='2003'){
+                $("input[name='name']").val("");
+                $("input[name='phone']").val(""); 
+            }
+        })
+	});
+//百度统计
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?0b614ececdccb212ed03c3b289357b33";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>  
+</body>
+</html>

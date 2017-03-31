@@ -1,0 +1,131 @@
+/* 公共样式 */
+html,body { height:100%;}
+body,div,dl,dt,dd,ul,ol,li,h1,h3,h4,h5,h6,pre,form,fieldset,input,p,blockquote,th,td {margin:0;padding:0;}
+h1,h2,h3,h4,h5,h6 {font-size:100%;margin:0;}
+ol,ul {list-style:none;}
+address,caption,cite,code,dfn,em,strong,th,var {font-style:normal;font-weight:normal;}
+table {border-collapse:collapse;border-spacing:0;}
+fieldset,img {border:0;}
+caption,th {text-align:left;}
+q:before,q:after {content:'';}
+body{font-family:'Microsoft YaHei';font-size:12px;_height:100%;}
+.f14{ font-size:14px;}
+.bold{ font-weight:bold;}
+input{border:none; outline: none}
+input:not([type="checkbox"]), select, textarea { /*outline: none; border: none; -webkit-appearance: none; */}
+select {
+  /*Chrome和Firefox里面的边框是不一样的，所以复写了一下*/
+ /* border: solid 1px #000;*/
+outline: none; border: none; 
+  /*将默认的select选择框样式清除*/
+ /* appearance:none;
+  -moz-appearance:none;
+  -webkit-appearance:none;*/
+
+  /*在选择框的最右侧中间显示小箭头图片*/
+ /* background: url("arrow.png") no-repeat right center;
+  padding-right: 14px;*/
+  -webkit-appearance:none;
+    -moz-appearance:none;
+    appearance:none;
+    background:transparent;
+    border:none;
+}
+
+/*清除ie的默认选择框样式清除，隐藏下拉箭头*/
+select::-ms-expand { display: none; }
+input[type="button"], input[type="submit"], input[type="reset"] {
+    -webkit-appearance: none;
+}
+input {
+    background:no-repeat 0 0 scroll ＃EEEEEE;
+    border:none;
+    outline:medium; /* 在浏览器下面，点击input输入时，会有边框，只要在样式中应用：outline:medium;即可去掉边框。 */ 
+    padding:0; /*input默认有上下padding*/
+}
+/*清浮动*/
+.clearfix:after {visibility:hidden; display:block; font-size:0; content:""; clear:both; height:0;}
+.clearfix{*zoom:1;}
+
+a:visited, a:link {color:#c1c1c1; text-decoration:none;}
+a:hover {color:#FFF; text-decoration:underline;}
+
+
+/*.container{background:url(../images/bwBg.jpg) no-repeat center top;}*/
+/*.content{width:1000px;padding-top:521px;margin:0 auto; overflow: hidden;}*/
+.jr{float:right;background:url(../images/bg01.jpg) no-repeat center top;width:100%;height:574px;}
+.jr p{width:1000px;overflow: hidden;margin:0 auto;}
+.jr p a{color:#fff;float:right;margin-top:520px;}
+
+.tu2{float:left;background:url(../images/bg02.jpg) no-repeat center top;width:100%;height:457px;}
+.tu3{float:left;background:url(../images/bg03.jpg) no-repeat center top;width:100%;height:543px;}
+.tu4{float:left;background:url(../images/bg04.jpg) no-repeat center top;width:100%;height:549px;}
+.tu5{float:left;background:url(../images/bg05.jpg) no-repeat center top;width:100%;height:525px;}
+.tu6{float:left;background:url(../images/bg06.jpg) no-repeat center top;width:100%;height:652px;}
+/*视频-登录*/
+.bg01{width:1000px;margin:0 auto;overflow: hidden;margin-top:93px;}
+.bg01 .video{width:500px;height:280px;float:left;}
+.bg01 .login{float:right;width:460px;}
+.bg01 .login li{float:left; width:460px;line-height:40px;margin-bottom:10px;}
+.bg01 .login li span{font-size:16px; color:#fff;float:left;width:80px; text-align:center;}
+.bg01 .login li span b{color:#d50012;}
+.bg01 .login li p{ background: #fff;float:left;height:40px;width:380px;}
+.bg01 .login li p input{height:40px;line-height:40px;font-size:16px;width:100%;padding-left:10px;}
+.bg01 .login li font{color:#fff;font-size:16px;padding:0 20px;float:left;}
+.bg01 .login li font input{width:20px;height:20px;float:left;margin-top:10px;}
+.bg01 .login li i{background:#fff;height:40px;float:left;width:150px;}
+.bg01 .login li i select{width:150px;padding:8px 0;padding-left:10px;font-size:16px;background: url("../images/arrow.png") no-repeat 132px center;background-size:10px 10px;}
+.bg01 .login li i.dealer{background:#fff;height:40px;float:left;width:380px;}
+.bg01 .login li i.dealer select{width:380px;padding:8px 0;padding-left:10px;font-size:16px;background: url("../images/arrow.png") no-repeat 362px center;background-size:10px 10px;}
+.bg01 .login h2{margin-left:80px;font-size:12px;color:#c7b6a8;font-weight: normal;}
+.bg01 .login h2 b{color:#d50012;}
+.bg01 .login .btn{width:380px;height:50px;background:#ba0714;font-size:24px; cursor:pointer;border:1px solid #80684f;margin-top:15px;text-align:center;line-height:50px;color:#fff;float:right;}
+.bg01 .login .btn:hover{background:#a0000d;}
+
+/*车型亮点*/
+.bg02{overflow:hidden;margin:0 auto;width:1000px;margin-top:28px;}
+
+
+
+/* 本例子css */
+.slideBox{ width:1000px; height:435px; overflow:hidden; position:relative;  }
+.slideBox .hd{ width:210px;left:43%; margin:0 auto; overflow:hidden; position:absolute; bottom:0px; z-index:1; }
+.slideBox .hd ul{ overflow:hidden; zoom:1;  margin:0 auto; text-align:center; }
+
+.slideBox .hd ul li{ float:left; margin:0 8px;  width:9px; height:9px; background:#666;border-radius: 100% }
+.slideBox .hd ul li{ float:left;  }
+.slideBox .hd ul li.on{ background:#fff; }
+/*.slideBox .hd span.on{color:#f00;}*/
+.slideBox .bd{ position:relative; height:100%; z-index:0;   }
+.slideBox .bd li{ zoom:1; vertical-align:middle; }
+.slideBox .bd li a{position:relative;display: block;}
+.slideBox .bd li a span{position:absolute;height:97px;filter:alpha(opacity=80);   -moz-opacity:0.8;   -khtml-opacity: 0.8;   
+      opacity: 0.8;  width:1000px;bottom:0;background: #000 }
+.slideBox .bd li a span h3{margin-left:30px;line-height:52px;font-size:16px;color: #fff;font-weight: normal;}
+.slideBox .bd li a span h4{margin-left:30px;margin-right:30px;font-size:14px;color: #fff;font-weight: normal;}
+.slideBox .bd img{ width:1000px; height:394px; display:block;  }
+
+
+.slideBoxs{}
+.slideBoxs .prev,
+.slideBoxs .next{filter:alpha(opacity=80);opacity:0.8; width:50px;height:90px;display: block;background: #000}
+.slideBoxs .prev{position: absolute;top:171px;left:0px;}
+.slideBoxs .next{position: absolute;top:171px;right:0px;}
+.slideBoxs .prev:hover,
+.slideBoxs .next:hover{ filter:alpha(opacity=50);opacity:0.5;  }
+.slideBoxs .bds img{height:433px;}
+.slideBoxs .prev img,
+.slideBoxs .next img{margin-top:9px;margin-left:6px;}
+
+/*车型配置*/
+.bg03{width:1000px;position:relative;margin:0 auto;overflow: hidden;margin-top:30px;}
+.bg03 p{height:64px;width:1000px;float:left;position:absolute;top:0;left:0;}
+.bg03 h4{height:350px;width:1000px;float: left;overflow: auto;margin-top:64px;overflow-x:hidden}
+
+/*精美车图*/
+.bg04{width:1000px;position:relative;margin:0 auto;overflow: hidden;margin-top:30px;}
+.bg04 .news{position:absolute;width:292px;height:43px;top:-75px;right:0;}
+
+
+.bg05{width:1000px;position:relative;margin:0 auto;overflow: hidden;margin-top:-30px;}
+.bg05 p{color:#fff; font-size:12px;float:right;margin-right:20px;}

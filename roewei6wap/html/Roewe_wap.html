@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<!-- <base href="./html/"> -->
+    <meta http-equiv="Content-Type">
+    <meta content="text/html; charset=utf-8">
+    <meta charset="utf-8">
+    <title>上汽荣威i6 耀世而出</title>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="format-detection" content="email=no">
+    <link rel="stylesheet" type="text/css" href="./css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="./css/rwSty.css" />
+    <link rel="stylesheet" type="text/css" href="./css/swiper.min.css" />
+    <link rel="stylesheet" type="text/css" href="./css/dialog.css" />
+    <script src="./js/jquery-1.10.2.min.js" type="text/javascript"></script>
+    <!-- <script src="./js/login.js" type="text/javascript"></script> -->
+    <script src="./js/adaptational.js" type="text/javascript"></script> 
+    <script src="./js/dialog.js" type="text/javascript"></script>
+    <script src="./js/swiper.jquery.min.js" type="text/javascript"></script>
+</head>
+
+<body>
+<div class="container">
+    <!-- 预约试驾 -->
+    <div class="login">
+        <ul>
+            <li><input type="text" placeholder="姓名"></li>
+            <li><input type="text" placeholder="手机号码"></li>
+            <li><select><option>省份</option></select></li>
+            <li><select><option>城市</option></select></li>
+        </ul>
+        <div class="tjBtn"></div>
+    </div>
+    <!-- 预约试驾 -end-->
+    <!-- 车型亮点 -->
+    <div class="carType">
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="./images/cximg01.jpg"/></div>
+                <div class="swiper-slide"><img src="./images/cximg02.jpg"/></div>
+                <div class="swiper-slide"><img src="./images/cximg03.jpg"/></div>
+                <div class="swiper-slide"><img src="./images/cximg04.jpg"/></div>
+                <div class="swiper-slide"><img src="./images/cximg05.jpg"/></div>     
+            </div>
+            <!-- Add Arrows -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div> 
+        </div>
+    </div>
+    <!-- 车型亮点 -end-->
+    <!-- 精彩视频 -->
+    <div class="video">
+        <div class="vid-box">        
+            <video controls="controls" poster="./images/videoBg.png">   
+                <source src="./video/video.mp4" type="video/mp4">
+            </video>              
+        </div>
+    </div>
+    <!-- 精彩视频 -end-->
+    <!-- 车身颜色 -->
+    <div class="carColor">
+        <div class="swiper-containers">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="./images/car01.png"/></div>
+                <div class="swiper-slide"><img src="./images/car02.png"/></div>
+                <div class="swiper-slide"><img src="./images/car03.png"/></div>
+                <div class="swiper-slide"><img src="./images/car04.png"/></div>
+                <div class="swiper-slide"><img src="./images/car05.png"/></div>
+                <div class="swiper-slide"><img src="./images/car06.png"/></div>      
+            </div> 
+            <!-- Add Arrows -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>           
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+    </div>
+    <!-- 车身颜色 -end-->
+</div>
+<script>
+/*车型亮点*/
+    var swiper = new Swiper('.swiper-container', {
+        // pagination: '.swiper-pagination',
+        nextButton: '.swiper-button-next',
+        prevButton: '.swiper-button-prev',
+        paginationClickable: true,
+        spaceBetween: 30,
+        centeredSlides: true,
+        autoplay: 2500,
+        autoplayDisableOnInteraction: false
+    });
+/*车身颜色*/
+var swiper = new Swiper('.swiper-containers', {
+        pagination: '.swiper-pagination',
+        nextButton: '.swiper-button-next',
+        prevButton: '.swiper-button-prev',
+        paginationClickable: true,
+        spaceBetween: 30,
+        centeredSlides: true,
+        /*autoplay: 2000,*/
+        autoplayDisableOnInteraction: false
+    });
+</script>
+</body>
+</html>
