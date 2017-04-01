@@ -1,3 +1,3 @@
 <?php 
-echo "song";
+echo "song¶¦Ê¢Ê±´ú´óÏÃ";
 ?>
