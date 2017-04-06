@@ -74,7 +74,7 @@ a:hover {color:#FFF; text-decoration:underline;}
 .login p{color:#6c6c6d;}
 .login .btn{width:330px;cursor:pointer;line-height:50px; text-align:center;background: #017bde;font-size:22px;color:#fff;margin-top:15px;}
 .login .btn:hover{background:#0062c5;}
-.state{position:absolute;bottom:55px;left:144px;}
+.state{position:absolute;bottom:85px;left:144px;}
 .state h2{width:145px;float:left;margin-right:15px;cursor: pointer }
 
 .img4008{width:1000px;margin:0 auto;overflow: hidden;}
@@ -137,7 +137,7 @@ a:hover {color:#FFF; text-decoration:underline;}
 .roundabout a:active, .roundabout a:focus, .roundabout a:visited{outline:none;text-decoration:none;}
 .roundabout li{margin:0}
 
-.jmCars{height:365px;overflow: hidden;width:1000px;float:left;}
+.jmCars{height:390px;overflow: hidden;width:1000px;float:left;}
 
 .video{width:1000px;height:425px;margin:0 auto;overflow: hidden;position:relative;}
 .video ul{z-index:999;position: absolute;top:168px;left:130px;width:114px;}
