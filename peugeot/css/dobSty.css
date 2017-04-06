@@ -139,7 +139,7 @@ a:hover {color:#FFF; text-decoration:underline;}
 
 .jmCars{height:365px;overflow: hidden;width:1000px;float:left;}
 
-.video{width:1000px;height:450px;margin:0 auto;overflow: hidden;position:relative;}
+.video{width:1000px;height:425px;margin:0 auto;overflow: hidden;position:relative;}
 .video ul{z-index:999;position: absolute;top:168px;left:130px;width:114px;}
 .video ul li{cursor:pointer;float:left;margin:5px 0px; text-align:center; border:1px solid #017bde;color:#017bde;font-weight:bold;font-size:20px;width:114px;line-height:30px;font-style:oblique}
 .video ul li.on{background:#ff8a00;color:#fff;border:none;height:32px;width:116px;line-height:32px;}
