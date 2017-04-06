@@ -52,16 +52,16 @@ a:visited, a:link {color:#c1c1c1; text-decoration:none;}
 a:hover {color:#FFF; text-decoration:underline;}
 
 .box{background:url(../images/bg01.jpg) no-repeat center top;}
-.box01{width:1000px;overflow: hidden;margin:0 auto;height:1399px;position:relative;}
-.box02{background:url(../images/bg02.jpg) no-repeat center top; height:687px;position: relative;}
-.box03{background:url(../images/bg03.jpg) no-repeat center top; height:1591px;}
-.box04{background:url(../images/bg04.jpg) no-repeat center top; height:649px;}
-.box05{background:url(../images/bg05.jpg) no-repeat center top; height:867px;}
-.tk01{position: absolute;top:579px;right:334px;width:155px;height:20px;cursor: pointer}
+.box01{width:1000px;overflow: hidden;margin:0 auto;height:1398px;position:relative;}
+.box02{background:url(../images/bg02.jpg) no-repeat center top; height:686px;position: relative;}
+.box03{background:url(../images/bg03.jpg) no-repeat center top; height:1590px;}
+.box04{background:url(../images/bg04.jpg) no-repeat center top; height:650px;}
+.box05{background:url(../images/bg05.jpg) no-repeat center top; height:839px;}
+.tk01{position: absolute;top:594px;right:427px;width:155px;height:20px;cursor: pointer}
 /*.dB{width:1000px;margin:0 auto;height:500px;padding-top:140px;}*/
 
 /*活动报名*/
-.login{position:absolute;right:0;top:931px;width:331px;height:296px; }
+.login{position:absolute;right:0;top:900px;width:331px;height:296px; }
 .login ul{float:left;}
 .login li{float:left; margin-bottom:14px;height:48px;}
 .login li input.name{font-size:16px;width:101px;height:48px;line-height:48px;color:#999999;padding-left:10px;}
@@ -79,7 +79,7 @@ a:hover {color:#FFF; text-decoration:underline;}
 
 .img4008{width:1000px;margin:0 auto;overflow: hidden;}
  /* 本例子css */
-.slideBoxs{ width:1000px; height:420px;margin-top:166px; overflow:hidden; position:relative;  }
+.slideBoxs{ width:1000px; height:420px;margin-top:138px; overflow:hidden; position:relative;  }
 .slideBoxss{margin-top:60px;}
 .slideBoxsss{margin-top:60px;}
 .slideBox .hd{ height:15px; overflow:hidden; position:absolute; right:5px; bottom:5px; z-index:1; }
@@ -140,15 +140,15 @@ a:hover {color:#FFF; text-decoration:underline;}
 .jmCars{height:365px;overflow: hidden;width:1000px;float:left;}
 
 .video{width:1000px;height:450px;margin:0 auto;overflow: hidden;position:relative;}
-.video ul{z-index:999;position: absolute;top:190px;left:130px;width:114px;}
+.video ul{z-index:999;position: absolute;top:168px;left:130px;width:114px;}
 .video ul li{cursor:pointer;float:left;margin:5px 0px; text-align:center; border:1px solid #017bde;color:#017bde;font-weight:bold;font-size:20px;width:114px;line-height:30px;font-style:oblique}
 .video ul li.on{background:#ff8a00;color:#fff;border:none;height:32px;width:116px;line-height:32px;}
-.videoBox{position:absolute;top:125px;right:82px;width:576px;height:320px;}
+.videoBox{position:absolute;top:100px;right:82px;width:576px;height:320px;}
 .video video{width:100%;}
 
-.box02 img.dbs {position:absolute;width:632px;height:469px;margin-top:160px;left:50%;margin-left:-490px;}
-.box02 .bdss{position:absolute;width:260px;height:300px;left:50%;margin-left:170px;top:290px;}
+.box02 img.dbs {position:absolute;width:632px;height:469px;margin-top:130px;left:50%;margin-left:-490px;}
+.box02 .bdss{position:absolute;width:260px;height:300px;left:50%;margin-left:170px;top:270px;}
 .box02 .bdss h2{font-size:22px;font-weight:normal;color:#132551;}
 .box02 .bdss p{font-size:12px;font-weight:normal;color:#132551;margin-top:15px;}
 .box02 h3{border:10px solid #7fb0e2;position:absolute;}
-.box02 img.dbss{ width:426px; height:371px; display:block;position:absolute;margin-top:208px;left:50%;margin-left:20px;  }
+.box02 img.dbss{ width:426px; height:371px; display:block;position:absolute;margin-top:183px;left:50%;margin-left:20px;  }
