@@ -108,7 +108,7 @@ a:hover {color:#FFF; text-decoration:underline;}
 .bgs_s{display: none}
 .bgs_ss{display: none}
 .bgss{z-index:999;position:absolute;top:0;left:0;width:100%;height:100%; background: #000; filter:alpha(opacity=50); -moz-opacity:0.5;-khtml-opacity: 0.5;  opacity: 0.5;  }
-.scl{position:absolute;top:200px;width:1000px;height:525px;left:50%;margin-left:-500px;z-index:9999;}
+.scl{position:absolute;top:620px;width:1000px;height:525px;left:50%;margin-left:-500px;z-index:9999;}
 .scl .close{background:#f00;filter:alpha(opacity=0); -moz-opacity:0;-khtml-opacity: 0;  opacity: 0;position:absolute;width:42px;height:42px;top:25px;right:25px; cursor:pointer;}
 .sm{background:url(../images/sm.jpg) no-repeat;width:860px;height:430px;position:absolute;top:900px;left:50%;margin-left:-430px;z-index:9999;}
 .sm .close{position:absolute;width:32px;height:32px;top:10px;right:10px;cursor: pointer}
