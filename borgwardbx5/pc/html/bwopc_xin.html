@@ -265,7 +265,7 @@
             console.log(json);
             if(jQuery.type(json)=="string"){
                 var json = eval('('+json+')'); //字符串转为json格式
-            } 
+            }  
             alert(json.msg); 
             if(json.start=='2003'){
                 $("input[name='name']").val("");
