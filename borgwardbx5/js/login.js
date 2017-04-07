@@ -8,7 +8,7 @@ $(document).ready(function(){
 	//console.log($("body").data('encrystr'));
 	//end by song
 	var kkurl = "http://h5.qlh520.top/medias/public/index.php/port/";
-	var kkurl = "http://xy.qichedaquan.com/medias/public/index.php/port/";
+	var kkurl = "//xy.qichedaquan.com/medias/public/index.php/port/";
 	//var kkurl = "http://localhost/medias/public/index.php/port/";
 	var proid = "34";
 	//默认状态下，将‘省’的值传入
