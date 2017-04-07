@@ -149,7 +149,7 @@ a:hover {color:#FFF; text-decoration:underline;}
 .videoBox{position:absolute;top:100px;right:82px;width:576px;height:320px;}
 .video video{width:100%;}
 
-.box02 .slideBox_s img.dbs {width:632px;float:left;height:469px;margin-top:15px;margin-left:15px;}
+.box02 .slideBox_s img.dbs {position:absolute;z-index: 20; width:632px;float:left;height:469px;margin-top:15px;margin-left:15px;}
 .box02 .slideBox_s .bdss{width:260px;height:300px;float:right;margin-right:70px;margin-top:140px;}
 .box02 .slideBox_s .bdss h2{font-size:22px;font-weight:normal;color:#132551;}
 .box02 .slideBox_s .bdss p{font-size:12px;font-weight:normal;color:#132551;margin-top:15px;}
