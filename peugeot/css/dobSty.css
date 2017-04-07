@@ -5,7 +5,7 @@ h1,h2,h3,h4,h5,h6 {font-size:100%;margin:0;}
 ol,ul {list-style:none;}
 address,caption,cite,code,dfn,em,strong,th,var {font-style:normal;font-weight:normal;}
 table {border-collapse:collapse;border-spacing:0;}
-fieldset,img {border:0;}
+fieldset,img {border:0;} 
 caption,th {text-align:left;}
 q:before,q:after {content:'';}
 body{font-family:'Microsoft YaHei';font-size:12px;_height:100%;}
