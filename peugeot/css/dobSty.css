@@ -51,17 +51,20 @@ input {
 a:visited, a:link {color:#c1c1c1; text-decoration:none;}
 a:hover {color:#FFF; text-decoration:underline;}
 
-.box{background:url(../images/bg01.jpg) no-repeat center top;}
-.box01{width:1000px;overflow: hidden;margin:0 auto;height:1398px;position:relative;}
+.box{/*background:url(../images/bg01.jpg) no-repeat center top;*/}
+.boxCont{height:1398px;}
+.boxOne{background:url(../images/bg01.1.jpg) no-repeat center top;height:544px;}
+.boxTwo{background:url(../images/bg01.2.jpg) no-repeat center top;height:854px;}
+.box01{width:1000px;overflow: hidden;margin:0 auto;height:854px;position:relative;}
 .box02{background:url(../images/bg02.jpg) no-repeat center top; height:686px;position: relative;}
 .box03{background:url(../images/bg03.jpg) no-repeat center top; height:1590px;}
 .box04{background:url(../images/bg04.jpg) no-repeat center top; height:650px;}
 .box05{background:url(../images/bg05.jpg) no-repeat center top; height:839px;}
-.tk01{position: absolute;top:594px;right:427px;width:155px;height:20px;cursor: pointer}
+.tk01{position: absolute;top:50px;right:427px;width:155px;height:20px;cursor: pointer}
 /*.dB{width:1000px;margin:0 auto;height:500px;padding-top:140px;}*/
 
 /*活动报名*/
-.login{position:absolute;right:0;top:900px;width:331px;height:296px; }
+.login{position:absolute;right:0;top:355px;width:331px;height:296px; }
 .login ul{float:left;}
 .login li{float:left; margin-bottom:14px;height:48px;}
 .login li input.name{font-size:16px;width:101px;height:48px;line-height:48px;color:#999999;padding-left:10px;}
