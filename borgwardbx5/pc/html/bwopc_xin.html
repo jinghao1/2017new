@@ -6,6 +6,7 @@
 <title>宝沃BX5</title>
 <meta name="format-detection" content="telephone=no"/>
 <link href="./pc/css/bwoSty.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="//player.youku.com/jsapi"></script>
 <script type="text/javascript" src="./pc/js/jquery-1.10.2.min.js"></script>
 <script type="text/javascript" src="./pc/js/jquery.SuperSlide.2.1.1.js"></script>
 <script type="text/javascript" src="./pc/js/login.js"></script>
@@ -169,7 +170,7 @@
             <p>上市活动中奖名单>> </p>
         </div>
     </div>
- <script type="text/javascript" src="http://player.youku.com/jsapi"></script>
+
 <script type="text/javascript">
     player = new YKU.Player('youkuplayer',{
     styleid: '0',
@@ -202,7 +203,7 @@
             pnLoop:ary[7] });
     //edit by song 
     var ymurl = "http://h5.qlh520.top";
-    var ymurl = "http://xy.qichedaquan.com";
+    var ymurl = "//xy.qichedaquan.com";
 
     $(".btn").click(function(){
         //名字不为空
@@ -282,8 +283,8 @@
                // console.log(name,newsex,phone,provincename,cityname,dealername,carname);
                 //return;
                 $.ajax({
-	                type:"GET",
-	                url:"http://www.marketing-borgward.com/lms/api/index.php/api/clue",
+	                type:"POST",
+	                url:ymurl+"/201703/borgwardbx5/bw5act.php",
 	                data:{name:name,sex:newsex,tel:phone,province:provincename,city:cityname,dealer_name:dealername,car_name:carname,media_id:'48',activity_id:124},
 	                dataType:'json',
 	                success:function(end){
