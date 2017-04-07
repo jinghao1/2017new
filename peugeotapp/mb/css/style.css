@@ -79,7 +79,7 @@ img{width:100%;}
 .btn{margin-top:0.375rem}
 
 .main{position:absolute;top:66.15rem ;width:14.1rem;left:0.95rem;}
-.editPost,.video{margin-top:1.7rem;}
+.editPost,.video{margin-top:1.9rem;}
 .editPost h2,.video h2{width:8.3rem;margin:0 auto;}
 .editPost p,.video p{margin-top:0.75rem;margin-bottom:0.25rem;}
 .editPost h3,.video h3{margin-top:0.25rem;margin-bottom:0.25rem;float:left;}
@@ -121,3 +121,7 @@ img{width:100%;}
 .dialog-content .dialog-content-bd p{margin:0;}
 .dialog-content .dialog-content-ft{line-height:2.0rem; font-size:0.7rem;margin-top:0.5rem;}
 .dialog-content .dialog-content-ft .dialog-btn-ok{color:#1c4573;}
+
+
+.swiper-containers{width:100%;height:100%;}
+.swiper-containers .swiper-slide img{width:100%;}
