@@ -56,16 +56,38 @@
     </div>
     <!-- 编辑文章 -->
     <div class="box02">
-    <a   target="_blank" href="http://news.qichedaquan.com/news/shangpeiruanwen/20170330/147867.html">
-       <img class="dbs" src="images/dbs.jpg"/>
-       <div class="bdss">
-           <!--<h2>X008 SUV盛会</h2>
-           <p>2017年4月1日至2017年4月21日，东风标致“0”息“0”税“0”元保养回馈活动倾情开启，参与活动即有机会赢取丰厚大奖！</p>-->
-           <h2 style="font-size:16px;">科技公司的人更应该会讨女人欢心</h2>
-           <p>在没有访问之前，其实编者本人是对这个问题抱有很大疑问的，科技公司？就是那个由程序猿、码农组成的只有1和2的世界吗？！编者读书少你不要骗我，网上流传这样着一个段子，说程序猿钓到一个美人鱼，结果又默默的放到了大海里，同伴问why？他回答说：因为没有API...</p>
-       </div>
-       <img class="dbss" src="images/tm.png"/>
-       </a>
+        <div id="slideBox" class="slideBox_s">
+
+        <div class="bds">
+        
+        <ul>
+            <li>
+                <a target="_blank" href="http://news.qichedaquan.com/news/shangpeiruanwen/20170330/147867.html">
+                   <img class="dbs" src="images/dbs.jpg"/>
+                   <div class="bdss">
+                       <h2 style="font-size:16px;">科技公司的人更应该会讨女人欢心</h2>
+                       <p>在没有访问之前，其实编者本人是对这个问题抱有很大疑问的，科技公司？就是那个由程序猿、码农组成的只有1和2的世界吗？！编者读书少你不要骗我，网上流传这样着一个段子，说程序猿钓到一个美人鱼，结果又默默的放到了大海里，同伴问why？他回答说：因为没有API...</p>
+                   </div>
+                   <img class="dbss" src="images/tm.png"/>
+                   </a>
+            </li>
+            <li>
+                <a target="_blank" href="http://news.qichedaquan.com/news/danchepingce/20170407/148294.html">
+                   <img class="dbs" src="images/dbss.jpg"/>
+                   <div class="bdss">
+                       <h2 style="font-size:16px;">玩另类绝对是把好手 测东标4008</h2>
+                       <p>凡是和法国沾边的东西，最大的特点是什么？就是太有特点了！就像最近很火的法国时尚品牌Balenciaga，玩另类绝对是把好手，一个“编织袋”红遍大江南北，各路大小明星都抢着背，也是醉了。法国车当然也不例外，给人留下的第一印象大多是时尚、另类、夸张和大胆的设计，那么问题来了...</p>
+                   </div>
+                   <img class="dbss" src="images/tm.png"/>
+                   </a>
+            </li>
+        </ul>
+        
+        </div>
+       <!-- 下面是前/后按钮代码，如果不需要删除即可 -->
+        <a class="prev" href="javascript:void(0)"><img src="images/left.png"/></a>
+        <a class="next" href="javascript:void(0)"><img src="images/right.png"/></a>
+        </div>    
     </div>
     <!-- 编辑文章 -end-->
     <!-- 车型亮点 -->
@@ -270,6 +292,19 @@
     newPlayer: true,
     show_related:false
     });
+</script>
+<!-- 编辑文章轮播 -->
+<script type="text/javascript">
+    var ary = location.href.split("&");
+        jQuery(".slideBox_s").slide( { 
+            mainCell:".bds ul", 
+            effect:"fold",
+           // autoPlay:true,
+            trigger:ary[3],
+            easing:ary[4],
+            delayTime:ary[5],
+            mouseOverStop:ary[6],
+            pnLoop:ary[7] });
 </script>
 <!-- 4008 -->
 <script type="text/javascript">
