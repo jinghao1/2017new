@@ -180,23 +180,23 @@
 	 	//省，必选
 	 	var province = $("select[name='provinceId']").val();
 	 	//console.log(province);
-	 	if(province == "省份"){
+	 	if(province == "请选择"){
 	 		alert("请选择省份");
-	 		$("select[name='provinceId']").focus();
+	 		//$("select[name='provinceId']").focus();
 	 		return false; 
 	 	}
 	 	//市，必选
 	 	var city = $("select[name='cityId']").val(); 
-	 	if(city == "城市"){
+	 	if(city == "请选择"){
 	 		alert("请选择城市");
-	 		$("select[name='cityId']").focus();
+	 		//$("select[name='cityId']").focus();
 	 		return false; 
 	 	}
 	 	//经销商，必选
 	 	var dealer = $("select[name='dealer']").val(); 
-	 	if(dealer == "经销商"){
+	 	if(dealer == "请选择"){
 	 		alert("请选择经销商");
-	 		$("select[name='dealer']").focus();
+	 		//$("select[name='dealer']").focus();
 	 		return false; 
 	 	}
 	  
@@ -214,9 +214,31 @@
 			if(json.start=='2003'){
 				$("input[name='name']").val("");
 				$("input[name='phone']").val("");
-				$("select[name='provinceId']").html('<option>请选择</option>');
-				$("select[name='cityId']").html('<option>请选择</option>');
-				$("select[name='dealer']").html('<option>请选择</option>');
+				//注册成功，提交信息到宝沃
+                var newsex = 0; //性别，1男，0女
+                if(sex==1){
+	                newsex = 1;
+                }  
+                var provincename = $("select[name='provinceId']").find("option:selected").text(); //获取省份名称
+                var cityname = $("select[name='cityId']").find("option:selected").text(); //获取城市名称
+                var dealername =  $("select[name='dealer']").find("option:selected").text(); //获取经销商名称
+                var carname = 'BX5'; //车型名称
+               // console.log(name,newsex,phone,provincename,cityname,dealername,carname);
+                //return;
+                $.ajax({
+	                type:"GET",
+	                url:"http://www.marketing-borgward.com/lms/api/index.php/api/clue",
+	                data:{name:name,sex:newsex,tel:phone,province:provincename,city:cityname,dealer_name:dealername,car_name:carname,media_id:'48',activity_id:124},
+	                dataType:'json',
+	                success:function(end){
+		                console.log(1);
+		                //console.log(end);
+	                },
+	                error:function(err){
+		                console.log(2);
+		               // console.log(err);
+	                }
+                })
 			}
 		})
 	 
