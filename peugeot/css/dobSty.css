@@ -51,8 +51,8 @@ input {
 a:visited, a:link {color:#c1c1c1; text-decoration:none;}
 a:hover {color:#FFF; text-decoration:underline;}
 
-.box{/*background:url(../images/bg01.jpg) no-repeat center top;*/}
-.boxCont{height:1375px;}
+.box{/*background:url(../images/bg01.jpg) no-repeat center top;*/float:left}
+.boxCont{height:1375px;float:left;width:100%;}
 .boxOne{background:url(../images/bg01.1.jpg) no-repeat center top;height:847px;width:100%;float:left;}
 .boxTwo{background:url(../images/bg01.2.jpg) no-repeat center top;height:528px;width:100%;float:left;}
 .box01{width:1000px;overflow: hidden;margin:0 auto;height:633px;position:relative;}
