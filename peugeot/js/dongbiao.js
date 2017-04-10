@@ -20,7 +20,7 @@ $().ready(function(){
 	//中奖名单
 	$(".btnss").click(function(){
 		//alert(1);
-		$(".bgs_ss").show();
+		//$(".bgs_ss").show();
 	});
 	$(".close").click(function(){
 		//alert(1);

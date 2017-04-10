@@ -14,24 +14,26 @@ shuffle($arr); //打乱数组顺序
 $arrstr = implode("-",$arr); 
 $str = $aes->encrypt($arrstr);//加密
 
-include("./dongb_pc.html");
+ 
+if(!isMobile()){ //pc端  
+	include("./dongb_pc.html");
+	echo '<input type="hidden" name="fromwh" value="2" />';
+}else{ //mobile 
+	//echo 'mobile'; 
+	include("./mb/html/index.html"); 
+	echo '<input type="hidden" name="fromwh" value="1" />';
+}
+
 echo '<input type="hidden" name="encrystr" value="'.$str.'" />';
 //echo '<meta charset="UTF-8">';
-echo ' <script type="text/javascript" src="../../medias/public/javascript/skin/js/jweixin-1.0.0.js"></script>
+echo ' <script type="text/javascript" src="/medias/public/javascript/skin/js/jweixin-1.0.0.js"></script>
 ';
-echo '<input type="hidden" name="fromwh" value="2" />';
+//echo '<input type="hidden" name="fromwh" value="2" />';
 if(isset($_GET['self'])){
 	echo '<input type="hidden" name="fself" value="1" />';
 }else{
 	echo '<input type="hidden" name="fself" value="0" />';
 } 
-//if(!isMobile()){ //pc端 
-//	echo '<input type="hidden" name="fromwh" value="2" />';
-//	include("./pc/html/index.html");
-//}else{ //mobile 
-//	//echo 'mobile';
-//	echo '<input type="hidden" name="fromwh" value="1" />';
-//	include("./mb/html/index.html"); 
-//}
+
 
 ?>
