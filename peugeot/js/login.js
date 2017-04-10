@@ -223,7 +223,7 @@ $(document).ready(function(){
 						}else if(json.start=="2004"){ //中奖
 							$("#dialert").html('<p><b>恭喜您</b></br> 获得<font>汽车大全</font>提供的</br> <font>'+json.msg+'</font> <span class="close"  ></span></p>');  
 						}else{ //其他
-							$("#dialert").html('<p><font>'+json.msg+'</font><span class="close"  ></span> </p>');  
+							$("#dialert").html('<p><font>'+json.msg+'</font> </p>');  
 						}
 						$(".bgs_ss").show();
 						//console.log(json);
