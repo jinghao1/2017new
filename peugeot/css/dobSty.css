@@ -77,11 +77,11 @@ a:hover {color:#FFF; text-decoration:underline;}
 .login p{color:#6c6c6d;}
 .login .btn{width:330px;cursor:pointer;line-height:50px; text-align:center;background: #017bde;font-size:22px;color:#fff;margin-top:15px;}
 .login .btn:hover{background:#0062c5;}
-.state{position:absolute;bottom:130px;left:37px;}
+.state{position:absolute;bottom:130px;left:27px;}
 .state h2{height:36px;float:left;/*margin-right:15px;*/cursor: pointer }
 .state h2.btns{background: url("../images/btn01.png") no-repeat;background-size:202px 36px;width:202px;height:36px;}
-.state h2.btnss{background: url("../images/btn02.png") no-repeat;background-size:205px 36px;width:202px;height:36px;}
-.state h2.btnss:hover{background: url("../images/btn03.png") no-repeat;background-size:205px 36px;width:202px;height:36px;}
+.state h2.btnss{background: url("../images/btn02.png") no-repeat;background-size:206px 36px;width:206px;height:36px;}
+.state h2.btnss:hover{background: url("../images/btn03.png") no-repeat;background-size:206px 36px;width:206px;height:36px;}
 
 .img4008{width:1000px;margin:0 auto;overflow: hidden;}
  /* 本例子css */
