@@ -3,7 +3,7 @@
 $(document).ready(function(){
  	var kkurl = "http://h5.qlh520.top";
  	var kkurl = "http://xy.qichedaquan.com";
- 	var encrystr = $("input[name='encrystr']").val();
+ 	//var encrystr = $("input[name='encrystr']").val();
 	
 	//默认状态下，将‘省’的值传入
 	$.getJSON(kkurl+"/medias/public/index.php/port/Userreg/listdata", { han: "list"}, function(json){
@@ -198,6 +198,8 @@ $(document).ready(function(){
 	 	//
 		var fromwh = $("input[name='fromwh']").val();
 		var fself = $("input[name='fself']").val();
+		var encrystr = $("input[name='encrystr']").val();
+	
 	 	$.ajax({
 		  	type: 'POST',
 		  	url: 'http://fld.xingyuanauto.com/public/index.php/port/Userdblotter/DuserBphone',
@@ -247,9 +249,9 @@ $(document).ready(function(){
           return alert(msg.message);
         }
 		
-		var title ='东风标致SUV盛会'; // 分享标题
-        var link = kkurl+'/201703/peugeotapp';
-        var desc = '“0”息“0”税“0”元保养'; // 分享描述
+		var title ='GO! X008 SUV盛会 “惠”有大动作'; // 分享标题
+        var link = kkurl+'/201703/peugeot';
+        var desc = '东风标致2008、3008、4008全系SUV盛惠升级'; // 分享描述
         var imgUrl = kkurl+'/201703/peugeotapp/images/log1.jpg';
 	
 	    var wx_appId = msg.appId; 
