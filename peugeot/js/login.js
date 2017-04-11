@@ -221,7 +221,7 @@ $(document).ready(function(){
 						//	contentHtml : '<p>'+json.msg+'</p>'
 						//});
 						if(json.start=="2003"){//未中奖
-							$("#dialert").html('<h4>感谢参与东风标致X008 SUV盛会活动</h4> <span class="close"  ></span>'); 
+							$("#dialert").html('<h4><br>感谢参与东风标致X008 SUV盛会活动</h4> <span class="close"  ></span>');
 						}else if(json.start=="2004"){ //中奖
 							$("#dialert").html('<p><b>恭喜您</b></br> 获得<font>汽车大全</font>提供的</br> <font>'+json.msg+'</font> <span class="close"  ></span></p>');  
 						}else{ //其他
