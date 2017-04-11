@@ -124,7 +124,8 @@ $(document).ready(function(){
 			return false;
 		}
 	 	//性别，必选
-	 	var sex = $("select[name='sexId']").val(); 
+	 	//var sex = $("select[name='sexId']").val(); 
+	 	var sex = 0; 
 	 	 	//性别，必选
 	 	//var sex = $("select[name='sexId']:checked").val();
 	 	//alert(sex); 
