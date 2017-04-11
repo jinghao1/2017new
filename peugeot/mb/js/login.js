@@ -3,7 +3,8 @@
 $(document).ready(function(){
  	var kkurl = "http://h5.qlh520.top";
  	var kkurl = "http://xy.qichedaquan.com";
- 	
+ 	//var encrystr = $("input[name='encrystr']").val();
+	
 	//默认状态下，将‘省’的值传入
 	$.getJSON(kkurl+"/medias/public/index.php/port/Userreg/listdata", { han: "list"}, function(json){
 		//console.log(json);
@@ -123,8 +124,7 @@ $(document).ready(function(){
 			return false;
 		}
 	 	//性别，必选
-	 	//var sex = $("select[name='sexId']").val(); 
-	 	var sex = 0; //未选择性别
+	 	var sex = $("select[name='sexId']").val(); 
 	 	 	//性别，必选
 	 	//var sex = $("select[name='sexId']:checked").val();
 	 	//alert(sex); 
@@ -196,10 +196,10 @@ $(document).ready(function(){
 	 	}
 	 	var dealer_name = province+","+city+","+dealer;
 	 	//
-	 	var encrystr = $("input[name='encrystr']").val();
-	
 		var fromwh = $("input[name='fromwh']").val();
 		var fself = $("input[name='fself']").val();
+		var encrystr = $("input[name='encrystr']").val();
+	
 	 	$.ajax({
 		  	type: 'POST',
 		  	url: 'http://fld.xingyuanauto.com/public/index.php/port/Userdblotter/DuserBphone',
@@ -207,28 +207,22 @@ $(document).ready(function(){
 		  	dataType: "json",
 		    success: function(data){  //验证下游是否有注册,
 			    if(data.start=="2008"){
-				   // console.log("song");
 				    $.getJSON(kkurl+"/medias/public/index.php/port/Userreg/Comreg", { han: "dealreg",username:name,thesex:sex,numberphone:phone,dealer:dealer_name,model:carid,key:encrystr,fromwh:fromwh,fself:fself}, function(json){ 
-					    
 						if(jQuery.type(json)=="string"){
 							var json = eval('('+json+')'); //字符串转为json格式
 						} 
 						/*alert(json.msg);*/
+						$.dialog({
+						contentHtml : '<p>'+json.msg+'</p>'
+						});
 						//清理当前信息
 						$("input[name='name']").val("");
 						$("input[name='phone']").val("");
-						//$.dialog({ 
-						//	contentHtml : '<p>'+json.msg+'</p>'
-						//});
-						if(json.start=="2003"){//未中奖
-							$("#dialert").html('<h4><b>未中奖</b><br/>感谢参与东风标致X008 SUV盛会活动</h4> <span class="close"  ></span>');
-						}else if(json.start=="2004"){ //中奖
-							$("#dialert").html('<p><b>恭喜您</b></br> 获得<font>汽车大全</font>提供的</br> <font>'+json.msg+'</font> <span class="close"  ></span></p>');  
-						}else{ //其他
-							$("#dialert").html('<p><font>'+json.msg+'</font><span class="close"  ></span> </p>');  
-						}
-						$(".bgs_ss").show();
-						//console.log(json);
+						//$("select[name='provinceId']").html('<option>省份</option>');
+						//$("select[name='provinceId']").find("option[text='省份']").attr("selected",true);
+						//$("select[name='cityId']").html('<option>城市</option>');
+						//$("select[name='dealer']").html('<option>经销商</option>');
+						console.log(json);
 						 
 					})
 			    }else{
@@ -255,10 +249,10 @@ $(document).ready(function(){
           return alert(msg.message);
         }
 		
-		var title ='东风标致SUV盛会'; // 分享标题
+		var title ='GO! X008 SUV盛会 “惠”有大动作'; // 分享标题
         var link = kkurl+'/201703/peugeot';
-        var desc = '“0”息“0”税“0”元保养'; // 分享描述
-        var imgUrl = kkurl+'/201703/peugeot/images/log1.jpg';
+        var desc = '东风标致2008、3008、4008全系SUV盛惠升级'; // 分享描述
+        var imgUrl = kkurl+'/201703/peugeotapp/images/log1.jpg';
 	
 	    var wx_appId = msg.appId; 
 		var wx_timestamp = msg.timestamp;
