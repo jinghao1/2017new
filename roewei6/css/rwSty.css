@@ -51,8 +51,8 @@ input {
 a:visited, a:link {color:#c1c1c1; text-decoration:none;}
 a:hover {color:#FFF; text-decoration:underline;}
 
-body{background:url(../images/bg.jpg) no-repeat center top;overflow: auto;}
-.container{width:1200px;margin:0 auto;overflow: hidden;margin-top:1244px;}
+body{background:url(../images/bg.jpg) no-repeat center 36px;overflow: auto;}
+.container{width:1200px;margin:0 auto;overflow: hidden;margin-top:1216px;}
 .login{/*height:410px;*/}
 .login .fu{position:fixed;right:0;top:190px;width:69px;height:390px;cursor: pointer;}
 .login .login_box{z-index:99;display:none;position:fixed;right:0;top:190px;background-size: 283px 412px; background: url(../images/login.png) no-repeat;width:283px;height:412px;}

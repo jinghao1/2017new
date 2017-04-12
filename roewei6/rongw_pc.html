@@ -5,14 +5,26 @@
 <title>上汽荣威i6耀世而出</title>
 <meta name="format-detection" content="telephone=no"/>
 <link href="css/rwSty.css" rel="stylesheet" type="text/css"/>
+	  <link type="text/css" rel="stylesheet" href="./css/base.css">
+    <link type="text/css" rel="stylesheet" href="./css/summarize.css">
+    <link type="text/css" rel="stylesheet" href="./css/jquery.mCustomScrollbar.min.css">
+<script type="text/javascript" src="http://player.youku.com/jsapi"></script>
 <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
 <script type="text/javascript" src="js/jquery.SuperSlide.2.1.1.js"></script>
 <script type="text/javascript" src="js/rw_js.js"></script>
 <!--<script type="text/javascript" src="js/login.js"></script>-->
 </head>
-
-<body>                  
+ 
+<body>         
+	   
+  <div id="headerid" class="header">
+		
+	</div>  
+	<div id="test" style="height:36px;" class="test">
+		
+	</div>
 <div class="container">
+	
 	<!-- 预约试驾 -->
 	<div class="login">
 		<div class="fu"><img src="images/fu.png"></div>
@@ -95,7 +107,17 @@
 	<!-- 车型配置 -end-->
 
 </div>
-<script type="text/javascript" src="http://player.youku.com/jsapi"></script>
+<div class="footer" style="position: relative; bottom: 0px;">
+	<div class="footer" style="position: relative; bottom: 0px;">
+	    <div class="footer_content"> 
+	        <p> </p>
+	        <div>
+	            <span>京ICP备17011360号-1</span>
+	            @2016-2017  <a href="javascript:void (0)">www.qichedaquan.com</a> All Rights Reserved. 北京行圆汽车信息技术有限公司所有
+	        </div>
+	    </div>
+    </div>
+</div>
 <script type="text/javascript">
     player = new YKU.Player('youkuplayer',{
     styleid: '0',
@@ -122,8 +144,9 @@
 	var ymurl = "http://h5.qlh520.top";
 	var ymurl = "http://xy.qichedaquan.com";
 	var proid = "35"; //项目id
+	//jQuery("#province").html();
 	//默认状态下，将‘省’的值传入
-	$.getJSON(ymurl+"/medias/public/index.php/port/Rwuser/listdata", {proid:proid}, function(json){
+	$.getJSON(ymurl+"/medias/public/index.php/port/Rwuser/listdata", {proid:proid},function(json){
 		//console.log(json);
 		if(json.statu==1){
 			$.each(json.data,function(index,v){ 
@@ -217,6 +240,27 @@ var _hmt = _hmt || [];
   var s = document.getElementsByTagName("script")[0]; 
   s.parentNode.insertBefore(hm, s);
 })();
-</script>  
+
+//头部底部信息
+$(document).ready(function(){  
+    var url=window.location.href;
+    if(window.location.href.indexOf("?querytype")==-1){
+        url=window.location.href +"?querytype=1";
+    }
+    $.ajax({
+        type: "get",
+        url: "http://i.qichedaquan.com/info/header?backurl="+url,
+  		dataType: 'jsonp',
+        jsonp:'callback',
+        callback:"getHeadCallBack",
+        timeout: 5000,
+        success: function (result) {
+            $("#headerid").html(result);
+            $('body').append('<script src="http://static.qcdqcdn.com/js/index.js"><\/script>')
+        } 
+    });    
+})
+</script>
+  
 </body>
 </html>
