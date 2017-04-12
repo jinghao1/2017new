@@ -202,7 +202,7 @@ $(document).ready(function(){
 		var fself = $("input[name='fself']").val();
 	 	$.ajax({
 		  	type: 'POST',
-		  	url: 'http://fld.xingyuanauto.com/public/index.php/port/Userdblotter/DuserBphone',
+		  	url: 'https://fld.xingyuanauto.com/public/index.php/port/Userdblotter/DuserBphone',
 		  	data: {numberphone:phone,key:encrystr},
 		  	dataType: "json",
 		    success: function(data){  //验证下游是否有注册,
