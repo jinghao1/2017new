@@ -50,8 +50,8 @@ $().ready(function(){
 				var cont = eval("(" + res.HtmlCode + ")");
 				//console.log(cont[0]);
 				//console.log("song"+i);
-				$("#pic"+index).attr('src',cont[0]['Image']);
-				$("#pic"+index).parent().attr('href',cont[0]['Link']);
+				$(".picad"+index).attr('src',cont[0]['Image']);
+				$(".picad"+index).parent().attr('href',cont[0]['Link']);
 
 			},
 			error:function(err){
