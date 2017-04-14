@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>内容页</title>
+	<script type="text/javascript" src="./js/jquery.min.js"></script>
+</head>
+<body>
+	<div id="con" >
+		
+	</div>
+	<div id="outcar"  >
+		
+	</div>
+</body>
+	<script type="text/javascript">
+function getUrlParam(name){
+	var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)"); //构造一个含有目标参数的正则表达式对象
+	var r = window.location.search.substr(1).match(reg);  //匹配目标参数
+	if (r!=null) return unescape(r[2]); return null; //返回参数值
+} 
+	var cid = getUrlParam('cid');
+	 
+	var hereurl = "http://h5.qlh520.top";
+	var hereurl = "http://localhost";
+	var jscurl = "/medias/public/index.php/port/Hkinfo/Changelist";
+	var jscont = "/medias/public/index.php/port/Hkinfo/Changecont";
+		$.ajax({
+			type:'get',
+			url:hereurl+jscont, 
+			data:{cid:cid},
+			dataType: 'jsonp', 
+			jsonp:'callback',
+	        callback:"flightHandler",
+			success:function(res){ 
+				var cont = eval("(" + res + ")"); //转换为json
+				console.log("song*******");
+				console.log(cont.data);
+				$("#con").append(cont.data.newscontent);
+				console.log(cont.data.carseriallist[0].urlspell);
+				//http://car.m.qichedaquan.com/carSerialSummary/espace
+				$('#outcar').append('<p><a href="http://car.m.qichedaquan.com/carSerialSummary/'+cont.data.carseriallist[0].urlspell+'">'+cont.data.carseriallist[0].serialName+'</a></p>');
+			},
+			error:function(err){
+				//console.log("jing==========");
+				//console.log(err);
+			}
+		});
+	</script>
+</html>

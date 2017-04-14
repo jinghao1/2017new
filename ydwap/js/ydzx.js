@@ -39,17 +39,14 @@ $().ready(function(){
 	
    	var dbtl = '9a3067fc-becf-471f-9b09-b11ec0497a54'; //底部通栏  
    	//焦点图
-   	$(jd).each(function(index,element){ 
-	    
+   	$(jd).each(function(index,element){  
 	   	$.ajax({
 			type:'get',
 			url:adurl+element,
 			dataType: 'json', 
 			success:function(res){
-					//var	ttype = typeof(res.HtmlCode); //判断类型
-				var cont = eval("(" + res.HtmlCode + ")");
-				//console.log(cont[0]);
-				//console.log("song"+i);
+				//var	ttype = typeof(res.HtmlCode); //判断类型
+				var cont = eval("(" + res.HtmlCode + ")"); 
 				$(".picad"+index).attr('src',cont[0]['Image']);
 				$(".picad"+index).parent().attr('href',cont[0]['Link']);
 
@@ -60,28 +57,7 @@ $().ready(function(){
 		});
 	 });
 
-  //  	for(var i = 1;i<=5;i++){
-	 //   	$.ajax({
-		// 	type:'get',
-		// 	url:adurl+jd[i],
-		// 	dataType: 'json', 
-		// 	success:function(res,i){
-		// 		var	ttype = typeof(res.HtmlCode); //判断类型
-		// 		var cont = eval("(" + res.HtmlCode + ")");
-		// 		console.log(cont[0]);
-		// 		console.log("song"+i);
-		// 		$("#pic"+i).attr('src',cont[0]['Image']);
-		// 		$("#pic"+i).parent().attr('href',cont[0]['Link']);
-
-		// 		//$.each(cont[0] , function(ind,val){
-		// 		//	console.log(ind,val);
-		// 		//});
-		// 	},
-		// 	error:function(err){
-		// 		console.log(err);
-		// 	}
-		// });
-  //  	}
+  
 	//热门车型
 	//1
 	$.ajax({

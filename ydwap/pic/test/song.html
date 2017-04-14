@@ -1,0 +1,296 @@
+ 
+<!doctype html>
+<html id="song" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="x-ua-compatible" content="IE=8,9,10,11">
+	 
+	<title>song</title>
+    <link type="text/css" rel="stylesheet" href="./css/base.css">
+    <link type="text/css" rel="stylesheet" href="./css/summarize.css">
+    <link type="text/css" rel="stylesheet" href="./css/jquery.mCustomScrollbar.min.css">
+	<script type="text/javascript" src="./js/jquery.min.js"></script>
+	<script type="text/javascript" src="./js/md6.js"></script>
+   
+</head>
+<body>
+	<style type="text/css" media="screen" id="test">
+		img{
+			width:50px;
+		}
+	</style>
+	<div id="headerid" class="header" >
+		
+	</div>
+ <!--<iframe width="100%" height="460px" src="http://vku.youku.com/live/share?id=11934" frameborder="0" allowfullscreen="true"></iframe>
+ -->
+ 	<!--焦点图示例-->
+	<div id="jdpic" style="border:1px solid #ccc;" >
+		<a href="#"><img src="#"  id="pic1" alt="焦点图" /></a>
+	</div>
+	<!--图文列表-->
+	<div id="artlist" style="border:1px solid #ccc;" >
+		 
+	</div>
+	<div id="test" class="test">
+		<button name="test" type="button" onclick="otad();" value="val">Button Text</button>
+	</div>
+	
+	<!-- 底部 -->
+	<div class="footer" style="position: relative; bottom: 0px;">
+		<div class="footer" style="position: relative; bottom: 0px;">
+		    <div class="footer_content"> 
+		        <p> </p>
+		        <div>
+		            <span>京ICP备17011360号-1</span>
+		            @2016-2017  <a href="javascript:void (0)">www.qichedaquan.com</a> All Rights Reserved. 北京行圆汽车信息技术有限公司所有
+		        </div>
+		    </div>
+	    </div>
+	</div>
+
+</body>
+</html>
+ 
+ 
+<script type="text/javascript">
+	function otad(){
+		//alert("song");
+	//点击检测
+		var tit="rongwei";
+		var pos = "焦点图2";
+		var link = "www.qichedaquan.com";
+		var jcurl = "/medias/public/index.php/port/Hkinfo/Adck";
+		$.ajax({
+			type:'post',
+			url:jcurl,
+			data:{tit:tit,pos:pos,link:link},
+			dataType: 'json', 
+			success:function(res){
+				console.log(link);
+				window.location.href="http://"+link;
+				console.log(res);
+			},
+			error:function(err){
+				console.log(err);
+			}
+		});
+	}
+$(document).ready(function(){  
+	//头部信息拉样式拉取
+    var url=window.location.href;
+    if(window.location.href.indexOf("?querytype")==-1){
+        url=window.location.href +"?querytype=1";
+    }
+    $.ajax({
+        type: "get",
+        url: "http://i.qichedaquan.com/info/header?backurl="+url,
+  		dataType: 'jsonp',
+        jsonp:'callback',
+        callback:"getHeadCallBack",
+        timeout: 5000,
+        success: function (result) {
+           // $("#headerid").html(result);
+            //$('body').append('<script src="http://static.qcdqcdn.com/js/index.js"><\/script>')
+        } 
+    });
+ //图文列表
+	var hereurl = "http://h5.qlh520.top";
+	//var hereurl = "http://localhost";
+	var jscurl = "/medias/public/index.php/port/Hkinfo/Changelist";
+	var jscont = "/medias/public/index.php/port/Hkinfo/Changecont";
+	$.ajax({
+		type:'get',
+		url:hereurl+jscurl, 
+		data:{pageNo:'1',pageSize:'10'}, 
+		dataType: 'jsonp', 
+		jsonp:'callback',
+        callback:"flightHandler",
+		success:function(res){
+			//console.log("song");
+			//var tyres = typeof(res); 
+			var cont = eval("(" + res + ")"); //转换为json
+			var tdata = cont.data.newsList;
+			$.each(tdata , function(ind,val){
+				$("#artlist").append('<p>'+ind+'=='+val.title+'=='+val.publish_time+'=='+'  <a href="cons.html?cid='+val.newsId+'"><img src="'+val.piccover+'"  /></a></p>');
+				
+			}); 
+		},
+		error:function(err){
+			console.log("jing");
+			console.log(err);
+		}
+	});
+	//Content
+	$.ajax({
+		type:'get',
+		url:hereurl+jscont, 
+		data:{cid:'2690'},
+		dataType: 'jsonp', 
+		jsonp:'callback',
+        callback:"flightHandler",
+		success:function(res){ 
+			console.log("song*******");
+			//console.log(res);
+		},
+		error:function(err){
+			//console.log("jing==========");
+			//console.log(err);
+		}
+	});
+	
+return ;
+
+	//不感兴趣信息反馈   
+	var pid = "44456";
+	var laiyuan = 1;
+	var biaoti = "0";
+	var zl = "1";
+	var lycont = '中兴网33';
+	var hkurl = "/medias/public/index.php/port/Hkinfo/ItHk";
+	//$.ajax({
+	//	type:'post',
+	//	url:hkurl,
+	//	data:{pid:pid,laiyuan:laiyuan,biaoti:biaoti,zl:zl,lycont:lycont},
+	//	dataType: 'json', 
+	//	success:function(res){
+	//		console.log(res);
+	//	},
+	//	error:function(err){
+	//		console.log(err);
+	//	}
+	//});
+	
+	
+    return ;
+
+	//广告接口地址
+	var adurl = 'http://g.qichedaquan.com/api/ad/GetAdData?BlockCode=';
+	//各接口参数
+	var jd = new Array();
+	jd[1] = 'a157240d-ebb1-4360-8b22-181436ddcfc2'; //编辑
+	jd[2] = 'd4303212-1ffc-4547-9cfe-6c27e0ddd88d'; //编辑
+	jd[3] = 'dd02d2c3-b142-4981-b3c7-dff45a7ff267'; //广告
+	jd[4] = '8a2af928-363b-46d7-ac5e-27171e363e4e'; //广告
+	jd[5] = 'e6f2b675-3797-4efb-8a17-c7f660eae811'; //广告
+	
+	var remcar1 = '44b1c043-5283-4916-a77d-c84cbba97968'; //热门车型
+	var remcar2 = 'e7dc747f-03e2-4c55-b019-5c4ee27e5ede'; //热门车型
+	var remcar3 = '72fbfc84-af5b-4c7c-9671-eeec57953fd4'; //热门车型
+	
+	var xxl4 = '019224da-cda3-40a6-84dc-2045c7ee4aad'; //信息流4
+	var xxl10 = '21fdeb66-2b75-4bde-a646-1487f3714334'; //信息流10
+	var xxl16 = '22379cba-8dcc-44c8-b6cd-021982c3986f '; //信息流16
+	
+   	var dbtl = '9a3067fc-becf-471f-9b09-b11ec0497a54'; //底部通栏  
+   	//焦点图
+   $(jd).each(function(index,element){ 
+	    
+	   	$.ajax({
+			type:'get',
+			url:adurl+element,
+			dataType: 'json', 
+			success:function(res){
+				//var	ttype = typeof(res.HtmlCode); //判断类型
+				var cont = eval("(" + res.HtmlCode + ")");
+				//console.log(cont);
+				console.log("song"+index);
+				$("#pic"+index).attr('src',cont[0]['Image']);
+				$("#pic"+index).parent().attr('href',cont[0]['Link']);
+				//$.each(cont[0] , function(ind,val){
+				//	console.log(ind,val);
+				//});
+			},
+			error:function(err){
+				console.log(err);
+			}
+		});
+	 });
+return;
+		//信息流
+	$.ajax({
+		type:'get',
+		url:adurl+xxl4,
+		dataType: 'json', 
+		success:function(res){
+			console.log(res.HtmlCode);
+		},
+		error:function(err){
+			console.log(err);
+		}
+	}); 
+
+			//信息流
+	$.ajax({
+		type:'get',
+		url:adurl+xxl10,
+		dataType: 'json', 
+		success:function(res){
+			console.log(res.HtmlCode);
+		},
+		error:function(err){
+			console.log(err);
+		}
+	}); 
+
+			//信息流
+	$.ajax({
+		type:'get',
+		url:adurl+xxl16,
+		dataType: 'json', 
+		success:function(res){
+			console.log(res.HtmlCode);
+		},
+		error:function(err){
+			console.log(err);
+		}
+	}); 
+
+	
+	
+	return; //不再执行，以下为demo
+	
+	//热门车型
+	$.ajax({
+		type:'get',
+		url:adurl+remcar2,
+		dataType: 'json', 
+		success:function(res){
+			console.log(res.HtmlCode);
+		},
+		error:function(err){
+			console.log(err);
+		}
+	}); 
+	//信息流
+	$.ajax({
+		type:'get',
+		url:adurl+xxl10,
+		dataType: 'json', 
+		success:function(res){
+			console.log(res.HtmlCode);
+		},
+		error:function(err){
+			console.log(err);
+		}
+	}); 
+	
+	//文章内容底部通栏
+	$.ajax({
+		type:'get',
+		url:adurl+dbtl,
+		dataType: 'json', 
+		success:function(res){
+			console.log(res.HtmlCode);
+		},
+		error:function(err){
+			console.log(err);
+		}
+	});  
+	
+	 
+	
+})
+</script>
+ 

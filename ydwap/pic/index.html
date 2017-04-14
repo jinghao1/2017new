@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>pic</title>
+	<script type="text/javascript" src="/201703/roewei6/js/jquery-1.10.2.min.js"></script>
+</head>
+<body>
+	<!--<img src="images/testing.jpg" width="auto" height="auto" alt="" />-->
+	<h1>song</h1>
+	<script type="text/javascript">
+	$(function(){ 
+		var tturl = "http://h5.qlh520.top";
+		$.ajax({
+			type:"post",
+			url:tturl+"/medias/public/index.php/port/Cjcir/Cirlot",
+			dataType:"json",
+			data:{phone:"17703186690",key:"7"},
+			success:function(end){
+				console.log(end);
+			},
+			error:function(err){
+				$("body").html(err.responseText)
+				console.log(err.responseText);
+				//console.log(err);
+			}
+		});
+	});
+	</script>
+</body>
+</html>
