@@ -55,9 +55,7 @@ $().ready(function(){
 				console.log(err);
 			}
 		});
-	 });
-
-  
+	 }); 
 	//热门车型
 	//1
 	$.ajax({
