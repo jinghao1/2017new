@@ -1,7 +1,4 @@
 $(document).ready(function(){
-	var d_h=$(document).height();
-	/*alert(d_h);*/
-	$(".bgs").height(d_h+48);
 	/*弹框*/
 	$(".tksCont ul li").click(function(){
 		$(this).addClass("on").siblings().removeClass("on");
@@ -15,7 +12,15 @@ $(document).ready(function(){
 	/*点击叉号-弹框显示*/
 	$(".dk").click(function(){
 		$(".tks").show();
+		//$("html,body").css({"overflow":"hidden","height":"100%"});
+		var d_h=$(window).height();
+		//alert(d_h);
+		$(".bgs").height(d_h);
+		//$('body').css("overflow","hidden")
 	})
+	// $('.tks,.bgs').bind("touchmove",function(e){
+	// 	e.preventDefault();
+	// });
 
 
 	/*******************************--------------接口4-13---------------************************/
@@ -132,7 +137,4 @@ $(document).ready(function(){
 			console.log(err);
 		}
 	});
- 
-  
-
 })
