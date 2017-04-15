@@ -14,8 +14,7 @@ img{width:100%;}
 }
 
 .loading{
-  width: 80px;
-  height: 40px;
+  width: 3.75rem;
   margin: 0 auto;
   margin-top:7.5rem;
 }
@@ -41,7 +40,7 @@ img{width:100%;}
 .load-box p{
   text-align: center;
   font-size:0.5rem;
-  margin-top:2.0rem;
+  margin-top:1.0rem;
   color:#fff;
 
 }
