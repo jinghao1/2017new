@@ -89,20 +89,24 @@ var swiper = new Swiper('.swiper-container', {
     loop: true,
 });
 
-$(document).ready(function(){
-        var $window = $(window);
-        var $document = $(document);
-    $window.scroll(function(){
-            if ($document.scrollTop() + $window.height()/2 >= $document.height()) {
-              insertcode();
-              }
-        });
-})
+ 
 function insertcode() {
+	console.log("song");
         var $main = $(".main");
         $main.append('<div class="m_box"><div class="boxL"><h2>3月份刚刚上市的一大波中国的SUV,这几款值得一看！</h2><h3><span>行圆汽车</span><b class="dk"><img src="images/close.png"/></b></h3></div><div class="boxR"><img src="images/img_car01.jpg"></div></div>');
         // $("#page_tag_load").hide();
     }
+
+$(document).ready(function () { 
+    $(window).scroll(function () {
+        var $body = $("body");
+      
+  /*判断窗体高度与竖向滚动位移大小相加 是否 超过内容页高度*/
+        if (($(window).height() + $(window).scrollTop()) >= $body.height()) {
+           console.log("song");
+        }
+    });
+});
 </script>
 </body>
 </html>

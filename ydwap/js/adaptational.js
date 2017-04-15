@@ -187,6 +187,8 @@ function choosebl(pos){
 					break;
 			}
 			$("#indad"+pos).append(adconstr); 
+			$("#indad"+pos).find(".m_box").attr("onclick","otad('"+cont[0].Text+"','"+typestr+'-信息流广告位-'+pos+"','"+cont[0].Link+"')") ;
+			 
 		},
 		error:function(err){
 			console.log(err);

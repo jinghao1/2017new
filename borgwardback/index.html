@@ -10,6 +10,7 @@
 <link rel="stylesheet" href="css/animate.min.css">
 <link rel="stylesheet" href="css/style.css">
 <script src="//wximg.qq.com/wxp/libs/wxmoment/0.0.4/wxmoment.min.js?v=2"></script>
+
 <script src="js/jquery-1.10.1.min.js"></script>
 <script type="text/javascript" src="js/adaptational.js"></script>
 <script src="js/swiper.min.js"></script> 
@@ -17,6 +18,7 @@
 <script src="js/swiper.animate-twice.min.js"></script> 
 <script src="js/app.js"></script>
 
+<script type="text/javascript" src="/medias/public/javascript/skin/js/jweixin-1.0.0.js"></script>
 </head>
 <body>
 <!-- loadding -开始 -->
@@ -194,29 +196,29 @@
     </div>    
     <!-- p12/13 -->
     <!-- p12/13 -->
-    <div class="swiper-slide page12">
+     <div class="swiper-slide page12">
         <!-- p12 -->
-        <div class="ani" data-slide-in="at 500 from slideInRight use swing during 1500" data-slide-out="at 0 to swipeleft use swing during 3000 force">
+        <div class="ani" data-slide-in="at 500 from slideInRight use swing during 600" data-slide-out="at 0 to swipeleft use swing during 3000 force">
             <div class="p12_q01 xz"><img src="images/p11_q.png"/></div>
             <div class="p12_pic01" ><img src="images/p11_pic01.png"/></div> 
         </div>
-        <div class="ani" data-slide-in="at 700 from slideInRight use swing during 1600" data-slide-out="at 0 to swipelefts use swing during 3200 force">
+        <div class="ani" data-slide-in="at 600 from slideInRight use swing during 600" data-slide-out="at 0 to swipelefts use swing during 3100 force">
             <div class="p12_q02 xz"><img src="images/p11_q.png"/></div>
             <div class="p12_pic02"><img src="images/p11_pic02.png"/></div>
         </div>
-        <div class="ani" data-slide-in="at 900 from slideInRight use swing during 1700" data-slide-out="at 0 to swipeleftss use swing during 3400 force">
+        <div class="ani" data-slide-in="at 700 from slideInRight use swing during 600" data-slide-out="at 0 to swipeleftss use swing during 3200 force">
             <div class="p12_q03 xz"><img src="images/p11_q.png"/></div>
-            <div class="ani p12_pic03" data-slide-in="at 500 from bounceIn use swing during 500" data-slide-out="at 0 to picss use swing during 1500 force"><img src="images/p11_pic03.png"/></div> 
+            <div class="p12_pic03"><img src="images/p11_pic03.png"/></div> 
         </div>
-        <div class="ani" data-slide-in="at 1100 from slideInRight use swing during 1800" data-slide-out="at 0 to swipeleftsss use swing during 3600 force">
+        <div class="ani" data-slide-in="at 800 from slideInRight use swing during 600" data-slide-out="at 0 to swipeleftsss use swing during 3300 force">
             <div class="p12_q04 xz"><img src="images/p11_q.png"/></div>
-            <div class="ani p12_pic04" data-slide-in="at 500 from bounceIn use swing during 500" data-slide-out="at 0 to picsss use swing during 1500 force"><img src="images/p11_pic04.png"/></div>
+            <div class="p12_pic04"><img src="images/p11_pic04.png"/></div>
         </div>
-        <div class="ani pic12_h" data-slide-in="at 1200 from rubberBand use swing during 400" data-slide-out="at 0 to zidingyi use swing during 500 force"><img src="images/p12_h.png"/></div>
-        <div class="ani p_one" data-slide-in="at 4500 from slideInRights use swing during 100"><img src="images/p13_img01.png"/></div>
-        <div class="ani p_two" data-slide-in="at 4700 from slideInRightss use swing during 100"><img src="images/p13_img02.png"/></div>
-        <div class="ani p_three" data-slide-in="at 4900 from slideInRightsss use swing during 100"><img src="images/p13_img03.png"/></div>
-        <div class="ani p_four" data-slide-in="at 5100 from slideInRightssss use swing during 100"><img src="images/p13_img04.png"/></div>
+        <div class="ani pic12_h" data-slide-in="at 800 from rubberBand use swing during 500" data-slide-out="at 0 to zidingyi use swing during 400 force"><img src="images/p12_h.png"/></div>
+        <div class="ani p_one" data-slide-in="at 3800 from slideInRights use swing during 100"><img src="images/p13_img01.png"/></div>
+        <div class="ani p_two" data-slide-in="at 4000 from slideInRightss use swing during 100"><img src="images/p13_img02.png"/></div>
+        <div class="ani p_three" data-slide-in="at 4200 from slideInRightsss use swing during 100"><img src="images/p13_img03.png"/></div>
+        <div class="ani p_four" data-slide-in="at 4400 from slideInRightssss use swing during 100"><img src="images/p13_img04.png"/></div>
     </div>
     <!-- p14 -->
     <div class="swiper-slide page14">
@@ -228,6 +230,128 @@
 </div>
 <!-- <div class="ani-elem animated fadeInDown arrow"></div> -->
 <script type="text/javascript">
+	var ymurl = "//xy.qichedaquan.com";
+	var url = ymurl+"/weixin/jssdk/wx_token.php";
+	$.post(url,function(msg){
+		if(msg.start == 0){ 
+            return alert(msg.message);
+        }
+		
+		var title ='行圆携手宝沃BX5上市首秀'; // 分享标题
+        var link =ymurl+'/201703/borgwardback';
+        var desc = '和宝沃一起为这个春天添点红！'; // 分享描述
+        var imgUrl = ymurl+'/201703/borgwardback/images/wxsh.jpg'; 
+	    var wx_appId = msg.appId; 
+		var wx_timestamp = msg.timestamp;
+		var wx_nonceStr = msg.nonceStr;
+		var wx_signature = msg.signature;
+		
+		        /*
+             * 注意：
+             * 1. 所有的JS接口只能在公众号绑定的域名下调用，公众号开发者需要先登录微信公众平台进入“公众号设置”的“功能设置”里填写“JS接口安全域名”。
+             * 2. 如果发现在 Android 不能分享自定义内容，请到官网下载最新的包覆盖安装，Android 自定义分享接口需升级至 6.0.2.58 版本及以上。
+             * 3. 常见问题及完整 JS-SDK 文档地址：http://mp.weixin.qq.com/wiki/7/aaa137b55fb2e0456bf8dd9148dd613f.html
+             *
+             * 开发中遇到问题详见文档“附录5-常见错误及解决办法”解决，如仍未能解决可通过以下渠道反馈：
+             * 邮箱地址：weixin-open@qq.com
+             * 邮件主题：【微信JS-SDK反馈】具体问题
+             * 邮件内容说明：用简明的语言描述问题所在，并交代清楚遇到该问题的场景，可附上截屏图片，微信团队会尽快处理你的反馈。
+             */
+            wx.config({
+                debug: false,
+                appId: wx_appId,
+                timestamp: wx_timestamp,
+                nonceStr: wx_nonceStr,
+                signature: wx_signature,
+                jsApiList: [
+                    // 所有要调用的 API 都要加到这个列表中
+                    'onMenuShareTimeline',//分享到朋友圈
+                    'onMenuShareAppMessage',//分享给朋友
+                    'onMenuShareQQ',//分享到QQ
+					'onMenuShareQZone',//分享到QQ空间
+                    'onMenuShareWeibo'//分享到腾讯微博
+                ]
+            });
+           
+		   wx.ready(function () {
+                // 在这里调用 API
+				
+				//分享到朋友圈
+                wx.onMenuShareTimeline({
+                    title:title, // 分享标题
+                    link: link, // 分享链接
+                    desc: desc, // 分享描述
+                    imgUrl:imgUrl, // 分享图标
+                    success: function () {
+                        // 用户确认分享后执行的回调函数
+                    },
+                    cancel: function () {
+                        // 用户取消分享后执行的回调函数
+                    }
+                });
+				
+				//分享到朋友
+				wx.onMenuShareAppMessage({
+                    title: title, // 分享标题
+                    desc: desc, // 分享描述
+                    link: link, // 分享链接
+                    imgUrl: imgUrl, // 分享图标
+                    type: '', // 分享类型,music、video或link，不填默认为link
+                    dataUrl: '', // 如果type是music或video，则要提供数据链接，默认为空
+                    success: function () {
+                        // 用户确认分享后执行的回调函数
+                    },
+                    cancel: function () {
+                        // 用户取消分享后执行的回调函数
+                    }
+                });
+				
+                //分享到QQ
+				wx.onMenuShareQQ({
+                    title: title, // 分享标题
+                    desc: desc, // 分享描述
+                    link: link, // 分享链接
+                    imgUrl: imgUrl, // 分享图标
+                    success: function () {
+                        // 用户确认分享后执行的回调函数
+                    },
+                    cancel: function () {
+                        // 用户取消分享后执行的回调函数
+                    }
+                });
+				
+				//分享到QQ空间
+				wx.onMenuShareQZone({
+					title: title, // 分享标题
+					desc: desc, // 分享描述
+					link: link, // 分享链接
+					imgUrl: imgUrl, // 分享图标
+					success: function () { 
+					   // 用户确认分享后执行的回调函数
+					},
+					cancel: function () { 
+						// 用户取消分享后执行的回调函数
+					}
+				});
+				
+				//分享到腾讯微博
+                wx.onMenuShareWeibo({
+                    title: title, // 分享标题
+                    desc: desc, // 分享描述
+                    link: link, // 分享链接
+                    imgUrl: imgUrl, // 分享图标
+                    success: function () {
+                        // 用户确认分享后执行的回调函数
+                    },
+                    cancel: function () {
+                        // 用户取消分享后执行的回调函数
+                    }
+                });
+
+            });
+			
+	},'json')
+	
 $().ready(function(){
  var d_h=$(document).height();
 // alert(d_h);
