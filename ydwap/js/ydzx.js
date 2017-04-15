@@ -1,4 +1,4 @@
-$().ready(function(){
+$(document).ready(function(){
 	var d_h=$(document).height();
 	/*alert(d_h);*/
 	$(".bgs").height(d_h+48);
@@ -28,10 +28,10 @@ $().ready(function(){
 	jd[3]= 'dd02d2c3-b142-4981-b3c7-dff45a7ff267'; //广告
 	jd[4]= '8a2af928-363b-46d7-ac5e-27171e363e4e'; //广告
 	jd[5] = 'e6f2b675-3797-4efb-8a17-c7f660eae811'; //广告
-	
-	var remcar1 = '44b1c043-5283-4916-a77d-c84cbba97968'; //热门车型
-	var remcar2 = 'e7dc747f-03e2-4c55-b019-5c4ee27e5ede'; //热门车型
-	var remcar3 = '72fbfc84-af5b-4c7c-9671-eeec57953fd4'; //热门车型
+	var rmcar = new Array();
+	rmcar[1] = '44b1c043-5283-4916-a77d-c84cbba97968'; //热门车型
+	rmcar[2] = 'e7dc747f-03e2-4c55-b019-5c4ee27e5ede'; //热门车型
+	rmcar[3] = '72fbfc84-af5b-4c7c-9671-eeec57953fd4'; //热门车型
 	
 	var xxl4 = '019224da-cda3-40a6-84dc-2045c7ee4aad'; //信息流4
 	var xxl10 = '21fdeb66-2b75-4bde-a646-1487f3714334'; //信息流10
@@ -46,9 +46,14 @@ $().ready(function(){
 			dataType: 'json', 
 			success:function(res){
 				//var	ttype = typeof(res.HtmlCode); //判断类型
-				var cont = eval("(" + res.HtmlCode + ")"); 
+				
+				var cont = $.parseJSON(res.HtmlCode);
+				  // eval("(" + res.HtmlCode + ")"); 
+				//console.log(cont[0]);
 				$(".picad"+index).attr('src',cont[0]['Image']);
-				$(".picad"+index).parent().attr('href',cont[0]['Link']);
+				$(".picadtt"+index).html(cont[0].Text);
+				$(".picad"+index).attr("onclick","otad('"+cont[0].Text+"','"+'焦点图'+index+"','"+cont[0].Link+"')") ;
+				//$(".picad"+index).parent().attr('href',cont[0]['Link']);
 
 			},
 			error:function(err){
@@ -56,63 +61,78 @@ $().ready(function(){
 			}
 		});
 	 }); 
-	//热门车型
-	//1
+	//热门车型 
+	$(rmcar).each(function(ind,elem){ 
+		$.ajax({
+			type:'get',
+			url:adurl+elem,
+			dataType: 'json', 
+			success:function(res){
+				var	ttype = typeof(res.HtmlCode); //判断类型
+				var cont = eval("(" + res.HtmlCode + ")");
+				//console.log(cont);
+				$("#remcimg"+ind).attr('src',cont[0]['Image']); 
+				
+				if(cont[0]['Text']!=""){
+					$("#remctt"+ind).html(cont[0]['Text']);
+					$("#remcimg"+ind).parent().attr("onclick","otad('"+cont[0].Text+"','"+'热门车型'+ind+"','"+cont[0].Link+"')") ;
+				}else{
+					$("#remctt"+ind).html(cont[0]['Image1']);
+					$("#remcimg"+ind).parent().attr("onclick","otad('"+cont[0].Image1+"','"+'热门车型'+ind+"','"+cont[0].Link+"')") ;
+				}
+				
+				//$("#img"+ind).parent().attr('href',cont[0]['Link']);
+			 
+			},
+			error:function(err){
+				console.log(err);
+			}
+		}); 
+	}); 
+
+	//获取第一次信息流 20 条，并插入广告信息 
+	var hereurl = "http://localhost";
+	var jscurl = "/medias/public/index.php/port/Hkinfo/Changelist";
+	var jscont = "/medias/public/index.php/port/Hkinfo/Changecont";
 	$.ajax({
 		type:'get',
-		url:adurl+remcar1,
-		dataType: 'json', 
+		url:hereurl+jscurl, 
+		data:{pageNo:'1',pageSize:'20'}, 
+		dataType: 'jsonp', 
+		jsonp:'callback',
+        callback:"flightHandler",
 		success:function(res){
-			var	ttype = typeof(res.HtmlCode); //判断类型
-			var cont = eval("(" + res.HtmlCode + ")");
-			//console.log(cont);
-			$("#img1").attr('src',cont[0]['Image']);
-			$("#img1").parent().attr('href',cont[0]['Link']);
-			//$.each(cont[0] , function(ind,val){
-			//	console.log(ind,val);
-			//});
+			//console.log("song");
+			//var tyres = typeof(res); 
+			var cont = eval("("+res+")"); //转换为json
+			var tdata = cont.data.newsList;
+			var constr = "";
+			$.each(tdata , function(ind,val){
+				constr = infoblock(ind,val);
+				//console.log(ind);
+				if(ind==3){ //第四个广告块
+					var ind3 = choosebl(ind); 
+					$("#allcont").append("<div id='indad3'></div>");
+				 
+				}
+				if(ind==9){ //第10个广告块
+					var ind9 = choosebl(ind);
+					$("#allcont").append("<div id='indad9'></div>");
+				}
+				if(ind==15){ //第16个广告块
+					var ind15 = choosebl(ind);
+					$("#allcont").append("<div id='indad15'></div>");
+				}
+				$("#allcont").append(constr);
+				
+			}); 
 		},
 		error:function(err){
+			console.log("jing");
 			console.log(err);
 		}
-	}); 
-	//2
-	$.ajax({
-		type:'get',
-		url:adurl+remcar2,
-		dataType: 'json', 
-		success:function(res){
-			var	ttype = typeof(res.HtmlCode); //判断类型
-			var cont = eval("(" + res.HtmlCode + ")");
-			//console.log(cont);
-			$("#img2").attr('src',cont[0]['Image']);
-			$("#img2").parent().attr('href',cont[0]['Link']);
-			//$.each(cont[0] , function(ind,val){
-			//	console.log(ind,val);
-			//});
-		},
-		error:function(err){
-			console.log(err);
-		}
-	}); 
-	//3
-	$.ajax({
-		type:'get',
-		url:adurl+remcar3,
-		dataType: 'json', 
-		success:function(res){
-			var	ttype = typeof(res.HtmlCode); //判断类型
-			var cont = eval("(" + res.HtmlCode + ")");
-			//console.log(cont);
-			$("#img3").attr('src',cont[0]['Image']);
-			$("#img3").parent().attr('href',cont[0]['Link']);
-			//$.each(cont[0] , function(ind,val){
-			//	console.log(ind,val);
-			//});
-		},
-		error:function(err){
-			console.log(err);
-		}
-	}); 
+	});
+ 
+  
 
 })
