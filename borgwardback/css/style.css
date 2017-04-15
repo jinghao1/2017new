@@ -787,7 +787,7 @@ opacity: 1;
   width: 1.4rem;
   height: 1.35rem;
   background-image: url(../images/arrow.png);
-  bottom: .5rem;
+  bottom: .25rem;
   left: 50%;
   animation-iteration-count: infinite;
   z-index: 100;
@@ -1029,12 +1029,12 @@ opacity: 1;
   top: 9.95rem;
 }
 .h_d{
-  height:15.2rem;
+  height:15.2078rem;
   overflow: auto;
   width: 8.6rem;
 }
 .h_ds{
-  height:13.55rem;
+  height:13.59rem;
   overflow: auto;
   width: 8.4rem;
   margin-left:0.15rem;
@@ -1174,38 +1174,38 @@ opacity: 1;
   position: absolute;
   width:3.125rem;
   height:3.125rem;
-  top:15.5rem;
+  top:15.8rem;
   left:2.0rem;
 }
 .p11_pic03{
   position:absolute;
   width:2.1rem;
-  top:16rem;
+  top:16.3rem;
   left:2.55rem;
 }
 .p11_img03{
   position:absolute;
   width:8.175rem;
-  top:15.8rem;
+  top:15.98rem;
   right:2.25rem;
 }
 .p11_q04{
   position: absolute;
   width:3.125rem;
   height:3.125rem;
-  top:19.85rem;
+  top:19.8rem;
   left:2.0rem;
 }
 .p11_pic04{
   position:absolute;
   width:2.1rem;
-  top:20.38rem;
+  top:20.31rem;
   left:2.57rem;
 }
 .p11_img04{
   position:absolute;
   width:8.175rem;
-  top:19.8rem;
+  top:19.9rem;
   right:2.25rem;
 }
 /*p12/13*/
@@ -1268,13 +1268,13 @@ opacity: 1;
   position: absolute;
   width:3.125rem;
   height:3.125rem;
-  top:15.4rem;
+  top:15.3rem;
   left:6.45rem;
 }
 .p12_pic03{
   position:absolute;
   width:2.1rem;
-  top:15.9rem;
+  top:15.8rem;
   left:6.99rem;
 }
 .p12_q04{
