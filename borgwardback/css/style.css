@@ -10,13 +10,15 @@ img{width:100%;}
   position: absolute;
   z-index: 999;
   width: 100%;
-  background:#cb002b;
+ /* background:#cb002b;*/
+  background: url(../images/p1_bg.jpg);
+  background-size:100% 100%;
 }
 
 .loading{
-  width: 3.75rem;
+  width: 2.5rem;
   margin: 0 auto;
-  margin-top:7.5rem;
+  margin-top:10rem;
 }
 .loading span{
   display: inline-block;
@@ -40,7 +42,7 @@ img{width:100%;}
 .load-box p{
   text-align: center;
   font-size:0.5rem;
-  margin-top:1.0rem;
+  margin-top:0.6rem;
   color:#fff;
 
 }
