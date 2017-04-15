@@ -201,7 +201,7 @@ function choosebl(pos){
 //懒加载
 function laizk(page) { 
 	//获取第一次信息流 20 条，并插入广告信息 
-	var hereurl = "http://localhost";
+	var hereurl = "http://xy.qichedaquan.com";
 	var jscurl = "/medias/public/index.php/port/Hkinfo/Changelist";
 	var jscont = "/medias/public/index.php/port/Hkinfo/Changecont";
 	page = parseInt(page);
