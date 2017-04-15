@@ -198,7 +198,41 @@ function choosebl(pos){
 	
 }
 
+//懒加载
+function laizk(page) { 
+	//获取第一次信息流 20 条，并插入广告信息 
+	var hereurl = "http://localhost";
+	var jscurl = "/medias/public/index.php/port/Hkinfo/Changelist";
+	var jscont = "/medias/public/index.php/port/Hkinfo/Changecont";
+	page = parseInt(page);
+	$("input[name='pagenum']").val(page+1); 
+	$("body").data("ajaxing",0);
+	$.ajax({
+		type:'get',
+		url:hereurl+jscurl, 
+		data:{pageNo:page,pageSize:'10'}, 
+		dataType: 'jsonp', 
+		jsonp:'callback',
+        callback:"flightHandler",
+		success:function(res){  
+			var cont = eval("("+res+")"); //转换为json
+			var tdata = cont.data.newsList;
+			var constr = "";
+			$.each(tdata , function(ind,val){
+				constr = infoblock(ind,val); 
+				$("#allcont").append(constr); 
+			}); 
+			$("body").data("ajaxing",1);
+		},
+		error:function(err){
+			console.log("jing");
+			console.log(err);
+		}
+	});
+	 
 
+	 
+}
 
 
 

@@ -63,6 +63,9 @@
     <div class="main" id="allcont">
       	          
     </div>
+    <div style="display: none;">
+    	<input type="hidden" name="pagenum" value=2 />
+    </div>
     <!-- 内容区 -end-->
     <!-- 弹框 -->
     <div class="tks">
@@ -90,20 +93,20 @@ var swiper = new Swiper('.swiper-container', {
 });
 
  
-function insertcode() {
-	console.log("song");
-        var $main = $(".main");
-        $main.append('<div class="m_box"><div class="boxL"><h2>3月份刚刚上市的一大波中国的SUV,这几款值得一看！</h2><h3><span>行圆汽车</span><b class="dk"><img src="images/close.png"/></b></h3></div><div class="boxR"><img src="images/img_car01.jpg"></div></div>');
-        // $("#page_tag_load").hide();
-    }
 
-$(document).ready(function () { 
+
+$(document).ready(function () {  
+	$("body").data("ajaxing",1);
     $(window).scroll(function () {
-        var $body = $("body");
-      
-  /*判断窗体高度与竖向滚动位移大小相加 是否 超过内容页高度*/
-        if (($(window).height() + $(window).scrollTop()) >= $body.height()) {
-           console.log("song");
+        var allconth = $("#allcont").height(); 
+        var curing = $("body").data("ajaxing");
+  		/*判断窗体高度与竖向滚动位移大小相加 是否 超过内容页高度*/ 
+  		//console.log($(window).height() );
+  		var chheight = $(window).height() + $(window).scrollTop()-200;
+        if (chheight >= allconth && curing==1) {
+	        var pagenum = $("input[name='pagenum']").val();
+          	laizk(pagenum);
+          	console.log(pagenum);
         }
     });
 });

@@ -72,3 +72,14 @@ b.dk{
 	width:20px;
 	text-align:right;
 }
+.boxR img{
+	max-height:100px;
+}
+.img_notextident img{
+	float:left;
+}
+.sdimg img{
+	width:2.5em;
+	float:left;
+	margin-top:7px;
+}

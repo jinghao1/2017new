@@ -17,32 +17,106 @@
         html{background: #f6f6f6}
     </style>
 </head>
-
+<script type="text/javascript">
+//获取头部链接参数
+function getUrlParam(name){
+	var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)"); //构造一个含有目标参数的正则表达式对象
+	var r = window.location.search.substr(1).match(reg);  //匹配目标参数
+	if (r!=null) return unescape(r[2]); return null; //返回参数值
+} 
+//时间戳转换
+function getLocalTime(nS) {     
+   return new Date(parseInt(nS) * 1000).toLocaleString().replace(/:\d{1,2}$/,' ');     
+}  
+function   sformatDate(now)   {     
+  var   year=now.getYear();     
+  var   month=now.getMonth()+1;     
+  var   date=now.getDate();     
+  var   hour=now.getHours();     
+  var   minute=now.getMinutes();     
+  var   second=now.getSeconds();     
+  return   year+"-"+month+"-"+date+"   "+hour+":"+minute+":"+second;     
+}     
+  function getLocalTime2(nS) {     
+       return new Date(parseInt(nS) * 1000).toLocaleString().replace(/年|月/g, "-").replace(/日/g, " ");      
+    }  
+           
+var cid = getUrlParam('cid');
+	//广告接口地址
+	var adurl = 'http://g.qichedaquan.com/api/ad/GetAdData?BlockCode=';
+	var dbtl = '9a3067fc-becf-471f-9b09-b11ec0497a54'; //底部通栏  
+	var hereurl = "http://localhost"; 
+	var jscont = "/medias/public/index.php/port/Hkinfo/Changecont";
+	//Content
+	$.ajax({
+		type:'get',
+		url:hereurl+jscont, 
+		data:{cid:cid},
+		dataType: 'jsonp', 
+		jsonp:'callback',
+        callback:"flightHandler",
+		success:function(res){ 
+			var cont = eval("(" + res + ")"); //转换为json 
+			console.log(cont.data);
+			//console.log(cont.data.carseriallist[0]);
+			if(cont.data.carseriallist[0]!=undefined){ //存在相关推荐车型
+				var cartype = cont.data.carseriallist[0].serialName; 
+				if(cartype!=undefined){
+					$("#stitle").html(cartype);
+				}else{
+					$("#stitle").html(cont.data.shorttitle);
+				}
+				//插入底部相关车型信息
+				$("#bottomerel").append('<div class="c_box">  <div class="sdimg"><img src="'+cont.data.piccover+'">  </div>  <div class="c_bs"> <h2><b>'+cartype+'</b> </h2>  <h3>厂商指导价:'+cont.data.carseriallist[0].minPriceStr+'万~'+cont.data.carseriallist[0].maxPriceStr+'万</h3> <h4>经销商报价:<a>'+cont.data.carseriallist[0].dealerMinPriceStr+'万</a>~<a>'+cont.data.carseriallist[0].dealerMaxPriceStr+'万</a></h4>  </div></div>');
+			}else{
+				$("#stitle").html(cont.data.shorttitle); //顶部title
+			}
+			//console.log(cont.data.publish_time);
+			var pubtime = getLocalTime(cont.data.publish_time);
+			$("#newtitle").html(cont.data.title); //一级标题
+			$("#sourcedate").html(pubtime+"&nbsp;&nbsp;"+cont.data.sourcename);
+			//$("#con").append(cont.data.newscontent);
+			//console.log(pubtime);
+			$("#cont").html(cont.data.newscontent);
+			//http://car.m.qichedaquan.com/carSerialSummary/espace
+			//$('#outcar').append('<p><a href="http://car.m.qichedaquan.com/carSerialSummary/'+cont.data.carseriallist[0].urlspell+'">'+cont.data.carseriallist[0].serialName+'</a></p>');
+		},
+		error:function(err){
+			console.log(err);
+		}
+	});
+	
+	//文章内容底部通栏
+	$.ajax({
+		type:'get',
+		url:adurl+dbtl,
+		dataType: 'json', 
+		success:function(res){
+			//botadimg
+			var cont = eval("(" + res.HtmlCode + ")"); //转换为json 
+			$("#botadimg").attr("src",cont[0].ImageUrl);
+			//console.log(cont);
+		},
+		error:function(err){
+			console.log(err);
+		}
+	});  
+</script>
 <body>
-<div class="return"><a><img src="images/return.png"/></a><span>奔驰s级</span></div>
+<div class="return"><a onClick='javascript :history.back(-1);'><img src="images/return.png"/></a><span id="stitle"></span></div>
 <div class="article">
-    <h1>奔驰新一代S级4月18日首秀 配置再
-升级</h1>
-    <h6>昨天  网通社</h6>
-    <div class="artCont">
-        <p>“梅赛德斯-奔驰的品牌设计之中始终深植时尚魅力与动感美学，凭借‘感性·纯粹’的新豪华主义设计理念，拥有与梅赛德斯-奔驰中国国际时装周不谋而合的独特型格与前卫时尚。</p>
-<p>”北京梅赛德斯-奔驰销售服务有限公司执行副总裁段建军在2017梅赛德斯-奔驰风尚之夜现场表示，“此次梅赛德斯-奔驰在时装周现场展出的多款魅力座驾蕴含了梅赛德斯-奔驰设计中的时尚前卫基因。</p>
-<p>
-梅赛德斯-奔驰不断地在设计中突破求新，在传承经典的同时，完美融合创新元素与前卫的设计理念，都诠释着奔驰对汽车工艺美学的极致追求。</p>
-<p>
-”北京梅赛德斯-奔驰销售服务有限公司执行副总裁段建军在2017梅赛德斯-奔驰风尚之夜现场表示，“此次梅赛德斯-奔驰在时装周现场展出的多款魅力座驾蕴含了梅赛德斯-奔驰设计中的时尚前卫基因。</p>
-<a>查看原文</a>
+    <h1 id="newtitle"> </h1>
+    <h6 id="sourcedate"> </h6>
+    <div class="artCont" id="cont">
+        
     </div>
-    <div class="c_box">
-        <p></p>
-        <div class="c_bs">
-            <h2><b>奔驰s级</b><span>1.6万人订阅</span></h2>
-            <h3>2016款 320L 豪车版</h3>
-            <h4>自动 指导价:<a>110.8万</a>参考价:<a>88.64万</a></h4>
-        </div>
+    </br>
+    <div id="bottomerel">
+    	
     </div>
+   
     <div class="ads">
-        <img src="images/car01.jpg"/>
+        <img id="botadimg" src=""/>
         <span>广告</span> 
     </div>
 </div>
