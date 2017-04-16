@@ -1,22 +1,44 @@
 $(document).ready(function(){
 	/*弹框*/
 	$(".tksCont ul li").click(function(){
-		$(this).addClass("on").siblings().removeClass("on");
+		//检测当前是否选中
+		var thec = $(this).find("input").val();
+		if(thec==0){//未选中
+			$(this).find("input").val(1);
+			$(this).addClass("on")
+		}else{ //已选中
+			$(this).find("input").val(0);
+			$(this).removeClass("on")
+		}
+		//console.log(thec);
+		//$(this).addClass("on").siblings().removeClass("on");
 	});
 	/*不感兴趣-关闭弹框*/
 	$(".close").click(function(){
-		$(".tks").hide();
+		 
+		var lay = $("#hklaiy").val();
+		var biaot = $("#hkbiaot").val();
+		var qualt = $("#hkqualt").val();
+		if(lay==1 || biaot==1 || qualt==1){
+			//页面点击添加pid
+			//backHk(lay,biaot,qualt,laycon);
+		}
+		console.log(lay,biaot,qualt);
+		return ;
+				$(".tks").hide();
 		$(".tksCont ul li").removeClass("on"); 
 	    $(".xs").show().delay(1000).fadeOut();//显示1s后消失
 	})
 	/*点击叉号-弹框显示*/
 	$(".dk").click(function(){
+		
 		$(".tks").show();
 		//$("html,body").css({"overflow":"hidden","height":"100%"});
 		var d_h=$(window).height();
 		//alert(d_h);
 		$(".bgs").height(d_h);
 		//$('body').css("overflow","hidden")
+		//console.log("songgg");
 	})
 	// $('.tks,.bgs').bind("touchmove",function(e){
 	// 	e.preventDefault();
