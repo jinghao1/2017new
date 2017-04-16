@@ -26,7 +26,7 @@
     <div class="loading">
         <img class="xz" src="images/loadding.png"/>
     </div>
-    <p>努力加载中... </p>
+    <p>努力加载中...</p>
 </div>
 <!-- loadding -ending -->
 <div class="swiper-container">
@@ -241,7 +241,20 @@
     </div>
 </div>
 <div class="ani-elem animated fadeInDown arrow"></div>
+<div class="sound">
+    <audio id="sound0" src="audio/sound_bg.mp3" autoplay="autoplay" loop></audio>
+</div>
 <script type="text/javascript">
+ document.addEventListener('DOMContentLoaded', function () {
+    function audioAutoPlay() {
+        var audio = document.getElementById('sound0');
+            audio.play();
+        document.addEventListener("WeixinJSBridgeReady", function () {
+            audio.play();
+        }, false);
+    }
+    audioAutoPlay();
+});
 	var ymurl = "http://xy.qichedaquan.com";
 	var url = ymurl+"/weixin/jssdk/wx_token.php";
 	$.post(url,function(msg){
@@ -381,15 +394,6 @@ $(".load-box").height(d_h);
   } 
   });
 })
-//百度统计
-var _hmt = _hmt || [];
-(function() {
-  var hm = document.createElement("script");
-  hm.src = "https://hm.baidu.com/hm.js?dad9e4e1c1ba132224056c4be3fc3cf3";
-  var s = document.getElementsByTagName("script")[0]; 
-  s.parentNode.insertBefore(hm, s);
-})();
 </script>
-
 </body>
 </html>
