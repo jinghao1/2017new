@@ -240,9 +240,16 @@
     </div>
     </div>
 </div>
+<!-- 下滑箭头 -->
 <div class="ani-elem animated fadeInDown arrow"></div>
+<!-- 背景音乐 -->
 <div class="sound">
     <audio id="sound0" src="audio/sound_bg.mp3" autoplay="autoplay" loop></audio>
+</div>
+<!-- 音乐icon 控制开关 -->
+<div class="musics">
+  <div class="open" id="openss" onclick="opens();"><img src="images/open.png"/></div>
+  <div class="close" id="closes" onclick="closess();"><img src="images/close.png"/></div>
 </div>
 <script type="text/javascript">
  document.addEventListener('DOMContentLoaded', function () {
@@ -255,6 +262,18 @@
     }
     audioAutoPlay();
 });
+ function opens(){
+    document.getElementById('sound0').pause();
+    document.getElementById("openss").style.display="none";
+    document.getElementById("closes").style.display="block";
+ }
+  function closess(){
+    //alert(1);
+    document.getElementById('sound0').play();
+    document.getElementById("openss").style.display="block";
+    document.getElementById("closes").style.display="none";
+ }
+
 	var ymurl = "http://xy.qichedaquan.com";
 	var url = ymurl+"/weixin/jssdk/wx_token.php";
 	$.post(url,function(msg){
@@ -393,6 +412,15 @@ $(".load-box").height(d_h);
     swiperAnimate(swiper); 
   } 
   });
+   // $(".open").click(function(){
+   //  //alert(1);
+   //  $("#sound0").pause();
+   //  $(".close").show();
+   // })
+   //  $(".close").click(function(){
+   //  $("#sound0").play();
+   //  $(".open").show();
+   // })
 })
 </script>
 </body>
