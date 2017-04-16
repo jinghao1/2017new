@@ -2,7 +2,7 @@ $(document).ready(function(){
 	/*弹框*/
 	$(".tksCont ul li").click(function(){
 		//检测当前是否选中
-		var thec = $(this).find("input").val();
+		var thec = $(this).find("input").val(); 
 		if(thec==0){//未选中
 			$(this).find("input").val(1);
 			$(this).addClass("on")
@@ -10,28 +10,71 @@ $(document).ready(function(){
 			$(this).find("input").val(0);
 			$(this).removeClass("on")
 		}
+
+		//检测当前是否有已选中
+		var cansub = 0;
+		var allinpt = $(".tksCont ul li").find("input");
+		$(allinpt).each(function(indi,ele){
+			///console.log(ele);
+			if($(ele).val()>0){
+				cansub = 1;
+			}
+			//$(ele).val(0);
+		});
+		if(cansub ==1 ){
+			$(".close").addClass("tjsubon");
+		}else{
+			$(".close").removeClass("tjsubon");
+		}
+		 
 		//console.log(thec);
 		//$(this).addClass("on").siblings().removeClass("on");
 	});
+	//.tjsubon
+	
 	/*不感兴趣-关闭弹框*/
 	$(".close").click(function(){
 		 
-		var lay = $("#hklaiy").val();
-		var biaot = $("#hkbiaot").val();
-		var qualt = $("#hkqualt").val();
+		var lay = $("#hklaiy").val(); //来源
+		var biaot = $("#hkbiaot").val(); //标题
+		var qualt = $("#hkqualt").val(); //质量
+		var laycon = "行圆汽车"; //来源
 		if(lay==1 || biaot==1 || qualt==1){
 			//页面点击添加pid
-			//backHk(lay,biaot,qualt,laycon);
+			backHk(lay,biaot,qualt,laycon);
+		}else{
+			//return;
 		}
-		console.log(lay,biaot,qualt);
-		return ;
-				$(".tks").hide();
+		var thepid = $('body').data('xxnewsid');
+	 
+	    setTimeout(function () { 
+		     $("."+thepid).fadeTo("slow", 0.01, function(){//fade
+			    $(this).slideUp("slow", function() {//slide up
+			      $(this).remove();//then remove from the DOM
+			    });
+			  });
+
+	        //$("."+thepid).remove();
+	        $('body').data('xxnewsid','');
+	        $(".close").removeClass("tjsubon");
+	    }, 500);
+		//
+		//$(this).parent().parent().parent().remove();
+		//console.log(lay,biaot,qualt);
+		//return ;
+		$(".tks").hide();
+		var allinpt = $(".tksCont ul li").find("input");
+		$(allinpt).each(function(indi,ele){
+			///console.log(ele);
+			$(ele).val(0);
+		});
+		//console.log(allinpt);
 		$(".tksCont ul li").removeClass("on"); 
 	    $(".xs").show().delay(1000).fadeOut();//显示1s后消失
 	})
 	/*点击叉号-弹框显示*/
 	$(".dk").click(function(){
-		
+		//console.log("kkm");
 		$(".tks").show();
 		//$("html,body").css({"overflow":"hidden","height":"100%"});
 		var d_h=$(window).height();
