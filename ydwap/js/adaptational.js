@@ -95,17 +95,19 @@ function get_font_size(width, default_min_size, default_max_size, default_coeffi
 }
 //edit by song
 //点击弹出 信息反馈
-function hkout(){
+function hkout(pid){
+	$('body').data("xxnewsid",pid);
+	//console.log("skknn");
 	$(".tks").show();
 }
 
 //广告点击检测
 function otad(tit,pos,link){ 
-	var owner = "http://localhsot";
+	var owner = "http://xy.qichedaquan.com";
 	var jcurl = "/medias/public/index.php/port/Hkinfo/Adck";
 	$.ajax({
 		type:'post',
-		url:jcurl,
+		url:owner+jcurl,
 		data:{tit:tit,pos:pos,link:link},
 		dataType: 'json', 
 		success:function(res){
@@ -121,7 +123,7 @@ function otad(tit,pos,link){
 
 //信息块
 function infoblock(ind,val){ 
-	var str = '<div class="m_box"><div class="boxL"> <h2> <a href="article.html?cid='+val.newsId+'">'+val.title+'</a></h2>  <h3><span>'+val.categoryName+'</span>&nbsp;<span>'+val.publish_time+'</span><b onclick="hkout('+val.newsId+')" class="dk"><img src="images/close.png"/></b></h3> </div> <div class="boxR">  <a href="article.html?cid='+val.newsId+'"><img src="'+val.piccover+'"></a></div></div>';
+	var str = '<div class="m_box '+val.newsId+'"><div class="boxL"> <h2> <a href="article.html?cid='+val.newsId+'">'+val.title+'</a></h2>  <h3><span>'+val.categoryName+'</span>&nbsp;<span>'+val.publish_time+'</span><b onclick="hkout('+val.newsId+')" class="dk"><img src="images/close.png"/></b></h3> </div> <div class="boxR">  <a href="article.html?cid='+val.newsId+'"><img src="'+val.piccover+'"></a></div></div>';
 	return str;
 }
 
@@ -233,7 +235,25 @@ function laizk(page) {
 
 	 
 }
-
+var hereurl = "http://xy.qichedaquan.com";
+//信息回馈
+function backHk(lay,biaot,qualt,laycon){
+	var pid=$("body").data('xxnewsid');
+ 
+	var hkurl = "/medias/public/index.php/port/Hkinfo/ItHk";
+	$.ajax({
+		type:'post',
+		url:hereurl+hkurl,
+		data:{pid:pid,laiyuan:lay,biaoti:biaot,zl:qualt,lycont:laycon},
+		dataType: 'json', 
+		success:function(res){
+			console.log(res);
+		},
+		error:function(err){
+			console.log(err);
+		}
+	});
+}
 
 
 

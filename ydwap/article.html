@@ -57,7 +57,7 @@ var cid = getUrlParam('cid');
         callback:"flightHandler",
 		success:function(res){ 
 			var cont = eval("(" + res + ")"); //转换为json 
-			console.log(cont.data);
+			//console.log(cont.data);
 			//console.log(cont.data.carseriallist[0]);
 			if(cont.data.carseriallist[0]!=undefined){ //存在相关推荐车型
 				var cartype = cont.data.carseriallist[0].serialName; 
@@ -66,8 +66,11 @@ var cid = getUrlParam('cid');
 				}else{
 					$("#stitle").html(cont.data.shorttitle);
 				}
+				
 				//插入底部相关车型信息
 				$("#bottomerel").append('<div class="c_box">  <div class="sdimg"><img src="'+cont.data.piccover+'">  </div>  <div class="c_bs"> <h2><b>'+cartype+'</b> </h2>  <h3>厂商指导价:'+cont.data.carseriallist[0].minPriceStr+'万~'+cont.data.carseriallist[0].maxPriceStr+'万</h3> <h4>经销商报价:<a>'+cont.data.carseriallist[0].dealerMinPriceStr+'万</a>~<a>'+cont.data.carseriallist[0].dealerMaxPriceStr+'万</a></h4>  </div></div>');
+				$("#bottomerel").find(".c_box").attr("onclick","otad('"+cont.data.carseriallist[0].serialName+"','文章页底部相关车型' ,'http://car.m.qichedaquan.com/carSerialSummary/"+cont.data.carseriallist[0].urlspell+"')") ;
+			 
 			}else{
 				$("#stitle").html(cont.data.shorttitle); //顶部title
 			}
@@ -75,11 +78,9 @@ var cid = getUrlParam('cid');
 			var pubtime = getLocalTime(cont.data.publish_time);
 			$("#newtitle").html(cont.data.title); //一级标题
 			$("#sourcedate").html(pubtime+"&nbsp;&nbsp;"+cont.data.sourcename);
-			//$("#con").append(cont.data.newscontent);
-			//console.log(pubtime);
+		 
 			$("#cont").html(cont.data.newscontent);
-			//http://car.m.qichedaquan.com/carSerialSummary/espace
-			//$('#outcar').append('<p><a href="http://car.m.qichedaquan.com/carSerialSummary/'+cont.data.carseriallist[0].urlspell+'">'+cont.data.carseriallist[0].serialName+'</a></p>');
+		 
 		},
 		error:function(err){
 			console.log(err);
@@ -95,7 +96,11 @@ var cid = getUrlParam('cid');
 			//botadimg
 			var cont = eval("(" + res.HtmlCode + ")"); //转换为json 
 			$("#botadimg").attr("src",cont[0].ImageUrl);
-			//console.log(cont);
+			console.log(cont);
+			if(cont[0].Text==""){
+				cont[0].Text= "暂无标题";
+			}
+			$("#botadimg").attr("onclick","otad('"+cont[0].Text+"','文章页底部通栏广告' ,'"+cont[0].Link+"')") ;
 		},
 		error:function(err){
 			console.log(err);
