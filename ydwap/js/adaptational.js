@@ -173,7 +173,7 @@ function choosebl(pos){
 			//console.log(cont[0]);
 			var typestr = cont[0].Adtype;
 			var adconstr = "";
-			
+		
 			switch(typestr){
 				case '组图':
 					//console.log(cont[0],'组图');
