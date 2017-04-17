@@ -209,6 +209,8 @@ function laizk(page) {
 	page = parseInt(page);
 	$("input[name='pagenum']").val(page+1); 
 	$("body").data("ajaxing",0);
+	$("#allcont").append("<h3 class='ldings' style='text-align:center;'>正在加载....</h3>");
+	 
 	$.ajax({
 		type:'get',
 		url:hereurl+jscurl, 
@@ -225,6 +227,7 @@ function laizk(page) {
 				$("#allcont").append(constr); 
 			}); 
 			$("body").data("ajaxing",1);
+			//$(".ldings").remove();
 		},
 		error:function(err){
 			console.log("jing");
