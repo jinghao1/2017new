@@ -1,0 +1,5 @@
+body{width:100%;}
+.rw_bg{background: url(../images/bg01.jpg) no-repeat;height:9.325rem;width:100%;background-size: 100%;float:left;}
+.rw_video{background: url(../images/bg02.jpg) no-repeat;height:19.15rem;width:100%;background-size: 100%;float:left;}
+
+.v_box{width:14.85rem;height:8.15rem;position: absolute;top:9.35rem;left:0.625rem;background:#fff;}
