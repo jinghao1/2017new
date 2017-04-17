@@ -94,3 +94,7 @@ b.dk{
 	float:left;
 	margin-top:7px;
 }
+
+/*loadding*/
+.ldings{text-align: center;font-size:12px; float:left;width:100%;padding:0.6rem 0;}
+.ldings img{width:1.0rem; vertical-align: sub;}
