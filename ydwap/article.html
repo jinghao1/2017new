@@ -99,6 +99,12 @@ var cid = getUrlParam('cid');
 			$("#sourcedate").html(pubtime+"&nbsp;&nbsp;"+cont.data.sourcename);
 		 
 			$("#cont").html(cont.data.newscontent);
+			var conthtml = $("#cont").find(".img_notextident").find("img");
+			$(conthtml).each(function(indcon,conele){ //移除img style
+				$(conele).attr("style","");
+				//console.log(conele);
+			})
+			
 		 
 		},
 		error:function(err){
