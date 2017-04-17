@@ -100,7 +100,7 @@ var cid = getUrlParam('cid');
 			//botadimg
 			//console.log(res.Success);
 			if(res.Success==false){
-				$("#botadimg").parent().remove();
+				$("#botadimg").parent().html("");
 				return false;
 			}
 			var cont = eval("(" + res.HtmlCode + ")"); //转换为json 
