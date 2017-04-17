@@ -1,0 +1,10 @@
+html,body { height:100%; background: #061843}
+body,div,dl,dt,dd,ul,ol,li,h1,h3,h4,h5,h6,pre,form,fieldset,input,p,blockquote,th,td {margin:0;padding:0;}
+h1,h2,h3,h4,h5,h6 {font-size:100%;margin:0;}
+ol,ul {list-style:none;}
+body{font-family:'Microsoft YaHei';font-size:12px;_height:100%}
+
+.zb_top{width:100%;background:url(../images/bg01.jpg) no-repeat center top;height:625px;float:left;}
+.zb_video{width:100%;background:url(../images/bg02.jpg) no-repeat center top;height:455px;float:left;}
+.video{width:1000px;margin:0 auto; }
+.v_box{width:650px;height:356px;float:right;background: #fff}
