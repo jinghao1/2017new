@@ -110,6 +110,7 @@ $(document).ready(function(){
    	var dbtl = '9a3067fc-becf-471f-9b09-b11ec0497a54'; //底部通栏  
    	//焦点图
    	var nonum = 0;
+   	var htmlpig = "";
    	$(jd).each(function(index,element){ nonum = index; });
    	$(jd).each(function(index,element){  
 	   
@@ -118,37 +119,50 @@ $(document).ready(function(){
 			url:adurl+element,
 			dataType: 'json', 
 			success:function(res){
+				htmlpig = "";
 				//var	ttype = typeof(res.HtmlCode); //判断类型
-				 
+				 if(index==0){
+					 return false;
+				 }
 				  if(res.Success==false){
 					  //alert("skk");
 					  console.log(index);
-					  $(".picad"+index).parent().parent().remove();
+					   $(".picad"+index).parent().remove();
 					  return false;
-				  }
-				
-				var cont = $.parseJSON(res.HtmlCode);
+				  }else if(index!=0){
+					  var cont = $.parseJSON(res.HtmlCode);
 				  // eval("(" + res.HtmlCode + ")"); 
+					
+					 // console.log(index);
+					htmlpig = '	 <div class="swiper-slide">  <img src="'+cont[0]['Image']+'" class="picad'+index+'"/>  <h2><span class="picadtt'+index+'">'+cont[0].Text+'</span><b> <img src="images/adimg02.png"/></b></h2>  </div>'
+					//$(".picad"+index).attr('src',cont[0]['Image']);
+					//$(".picadtt"+index).html(cont[0].Text);
+					$("#lllsong").append(htmlpig);
+					$(".picad"+index).attr("onclick","otad('"+cont[0].Text+"','"+'焦点图'+index+"','"+cont[0].Link+"')") ;
+					console.log(nonum,index);
+					//$(".picad"+index).parent().attr('href',cont[0]['Link']);
+					if(nonum>0 && nonum==index){
+						//console.log("kkkkk");
+					 
+						setTimeout(function () {
+							var swiper = new Swiper('.swiper-container', {
+							    pagination: '.swiper-pagination',
+							   /* nextButton: '.swiper-button-next',
+							    prevButton: '.swiper-button-prev',*/
+							    paginationClickable: true,
+							    spaceBetween: 30,
+							    centeredSlides: true,
+							    autoplay: 2500,
+							    autoplayDisableOnInteraction: false,
+							    loop: true,
+							});
+
+							
+						 },1);
+					}
+				  }
+				 
 				
-				 // console.log(index);
-				
-				$(".picad"+index).attr('src',cont[0]['Image']);
-				$(".picadtt"+index).html(cont[0].Text);
-				$(".picad"+index).attr("onclick","otad('"+cont[0].Text+"','"+'焦点图'+index+"','"+cont[0].Link+"')") ;
-				//$(".picad"+index).parent().attr('href',cont[0]['Link']);
-				if(nonum>0 && nonum==index){
-					var swiper = new Swiper('.swiper-container', {
-					    pagination: '.swiper-pagination',
-					   /* nextButton: '.swiper-button-next',
-					    prevButton: '.swiper-button-prev',*/
-					    paginationClickable: true,
-					    spaceBetween: 30,
-					    centeredSlides: true,
-					    autoplay: 2500,
-					    autoplayDisableOnInteraction: false,
-					    loop: true,
-					});
-				}
 			},
 			error:function(err){
 				console.log(err);

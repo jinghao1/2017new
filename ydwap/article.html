@@ -66,9 +66,24 @@ var cid = getUrlParam('cid');
 				}else{
 					$("#stitle").html(cont.data.shorttitle);
 				}
+				var jmin = 1;
+				var jmax = 1;
+				if(cont.data.carseriallist[0].dealerMinPriceStr==0){
+					 jmin = cont.data.carseriallist[0].dealerMinPriceStr;
+					cont.data.carseriallist[0].dealerMinPriceStr="暂无";
+				}
+				if(cont.data.carseriallist[0].dealerMaxPriceStr==0){
+					 jmax = cont.data.carseriallist[0].dealerMaxPriceStr;
+					cont.data.carseriallist[0].dealerMaxPriceStr ="暂无";
+				}
+				if(jmin==0 || jmax==0){
+					//插入底部相关车型信息
+					$("#bottomerel").append('<div class="c_box">  <div class="sdimg"><img src="'+cont.data.piccover+'">  </div>  <div class="c_bs"> <h2><b>'+cartype+'</b> </h2>  <h3>厂商指导价:'+cont.data.carseriallist[0].minPriceStr+'万~'+cont.data.carseriallist[0].maxPriceStr+'万</h3> <h4>经销商报价:<a>'+cont.data.carseriallist[0].dealerMinPriceStr+'</a>~<a>'+cont.data.carseriallist[0].dealerMaxPriceStr+'</a></h4>  </div></div>');
+				}else{
+					//插入底部相关车型信息
+					$("#bottomerel").append('<div class="c_box">  <div class="sdimg"><img src="'+cont.data.piccover+'">  </div>  <div class="c_bs"> <h2><b>'+cartype+'</b> </h2>  <h3>厂商指导价:'+cont.data.carseriallist[0].minPriceStr+'万~'+cont.data.carseriallist[0].maxPriceStr+'万</h3> <h4>经销商报价:<a>'+cont.data.carseriallist[0].dealerMinPriceStr+'万</a>~<a>'+cont.data.carseriallist[0].dealerMaxPriceStr+'万</a></h4>  </div></div>');
+				}
 				
-				//插入底部相关车型信息
-				$("#bottomerel").append('<div class="c_box">  <div class="sdimg"><img src="'+cont.data.piccover+'">  </div>  <div class="c_bs"> <h2><b>'+cartype+'</b> </h2>  <h3>厂商指导价:'+cont.data.carseriallist[0].minPriceStr+'万~'+cont.data.carseriallist[0].maxPriceStr+'万</h3> <h4>经销商报价:<a>'+cont.data.carseriallist[0].dealerMinPriceStr+'万</a>~<a>'+cont.data.carseriallist[0].dealerMaxPriceStr+'万</a></h4>  </div></div>');
 				$("#bottomerel").find(".c_box").attr("onclick","otad('"+cont.data.carseriallist[0].serialName+"','文章页底部相关车型' ,'http://car.m.qichedaquan.com/carSerialSummary/"+cont.data.carseriallist[0].urlspell+"')") ;
 			 
 			}else{

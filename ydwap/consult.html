@@ -30,18 +30,21 @@
     <!-- header头图轮播 -->
     <header>
         <div class="swiper-container">
-        <div class="swiper-wrapper">
-            <div class="swiper-slide"><img src="" class="picad1"/><h2><span class='picadtt1'>宝沃新车上市</span><b>
-            <img src="images/adimg02.png"/></b></h2></div>
-            <div class="swiper-slide"><a><img src="" class="picad2"/><h2><span class='picadtt2'>宝沃新车上市</span><b>
-            <img src="images/adimg02.png"/></b></h2></a></div>
-            <div class="swiper-slide"><a><img src="" class="picad3"/><h2><span class='picadtt3'>宝沃新车上市</span><b>
-            <img src="images/adimg02.png"/></b></h2></a></div>
-            <div class="swiper-slide"><a><img src="" class="picad4"/><h2><span class='picadtt4'>宝沃新车上市</span><b>
-            <img src="images/adimg02.png"/></b></h2></a></div>
-            <div class="swiper-slide"><a><img src="" class="picad5"/><h2><span class='picadtt5'>宝沃新车上市</span><b>
-            <img src="images/adimg02.png"/></b></h2></a></div> 
-        </div>
+	        <div class="swiper-wrapper" id="lllsong">
+	            <!--<div class="swiper-slide">
+		            <img src="" class="picad1"/>
+			            <h2><span class='picadtt1'>宝沃新车上市</span><b>
+	            	<img src="images/adimg02.png"/></b></h2>
+	            </div>
+	            <div class="swiper-slide"><a><img src="" class="picad2"/><h2><span class='picadtt2'>宝沃新车上市</span><b>
+	            <img src="images/adimg02.png"/></b></h2></a></div>
+	            <div class="swiper-slide"><a><img src="" class="picad3"/><h2><span class='picadtt3'>宝沃新车上市</span><b>
+	            <img src="images/adimg02.png"/></b></h2></a></div>
+	            <div class="swiper-slide"><a><img src="" class="picad4"/><h2><span class='picadtt4'>宝沃新车上市</span><b>
+	            <img src="images/adimg02.png"/></b></h2></a></div>
+	            <div class="swiper-slide"><a><img src="" class="picad5"/><h2><span class='picadtt5'>宝沃新车上市</span><b>
+	            <img src="images/adimg02.png"/></b></h2></a></div>--> 
+	        </div>
         <!-- Add Pagination -->
         <div class="swiper-pagination"></div>
     </div>
@@ -78,7 +81,7 @@
         <div class="tksCont">
             <h2>选择理由，精准屏蔽(可多选)</h2>
             <ul id="dialoghk">
-	            <li>来源:行圆汽车 
+	            <li>来源 
 	            	<input id="hklaiy" type="hidden" value="0"> 
 	            </li>
 	            <li>标题党
@@ -99,6 +102,8 @@
 
 
 $(document).ready(function () {  
+		
+					 
 	$("body").data("ajaxing",1);
     $(window).scroll(function () {
         var allconth = $("#allcont").height(); 
