@@ -98,6 +98,11 @@ var cid = getUrlParam('cid');
 		dataType: 'json', 
 		success:function(res){
 			//botadimg
+			//console.log(res.Success);
+			if(res.Success==false){
+				$("#botadimg").parent().remove();
+				return false;
+			}
 			var cont = eval("(" + res.HtmlCode + ")"); //转换为json 
 			$("#botadimg").attr("src",cont[0].ImageUrl);
 			//console.log(cont);

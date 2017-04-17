@@ -112,6 +112,7 @@ $(document).ready(function(){
    	var nonum = 0;
    	$(jd).each(function(index,element){ nonum = index; });
    	$(jd).each(function(index,element){  
+	   
 	   	$.ajax({
 			type:'get',
 			url:adurl+element,
