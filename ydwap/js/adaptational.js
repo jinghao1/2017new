@@ -131,19 +131,19 @@ function infoblock(ind,val){
 
 //大图文广告块
 function tuwenblock(val){
-	var str = '<div class="m_box" ><h4> '+val.Text+' </h4><div class="vid-box">  <img src="'+val.Image+'" />  </div> <h5><i>广告</i>&nbsp;<span>行圆汽车</span><b class="dk"><img src="images/close.png"/></b></h5> </div>';
+	var str = '<div class="m_box" ><h4> '+val.Text+' </h4><div class="vid-box">  <img src="'+val.Image+'" />  </div> <h5><i><img src="images/adimg.jpg"/>&nbsp;<span>行圆汽车</span><b class="dk"><img src="images/close.png"/></b></h5> </div>';
 	
     return str;
 }
 //三个组图广告块
 function zublock(val){
 	 
-	var str = ' <div class="m_box"> <h4>'+val.Text+'</h4>  <p> <img src="'+val.Image+'"/><img src="'+val.Image1+'"/><img src="'+val.Image2+'"/> </p>  <h5><i>广告</i>&nbsp;<span>行圆汽车</span><b class="dk"><img src="images/close.png"/></b></h5>  </div>';
+	var str = ' <div class="m_box"> <h4>'+val.Text+'</h4>  <p> <img src="'+val.Image+'"/><img src="'+val.Image1+'"/><img src="'+val.Image2+'"/> </p>  <h5><i><i><img src="images/adimg.jpg"/></i>&nbsp;<span>行圆汽车</span><b class="dk"><img src="images/close.png"/></b></h5>  </div>';
     return str;   
 }
 //软文广告 
 function ruanwblock(val){
-	var str = '<div class="m_box"><div class="boxL"> <h2> '+val.Text+' </h2>  <h5><i>广告</i>&nbsp;<span>行圆汽车</span>&nbsp; <b class="dk"><img src="images/close.png"/></b></h5> </div> <div class="boxR">  <img src="'+val.Image+'"> </div></div>';
+	var str = '<div class="m_box"><div class="boxL"> <h2> '+val.Text+' </h2>  <h5><i><i><img src="images/adimg.jpg"/></i>&nbsp;<span>行圆汽车</span>&nbsp; <b class="dk"><img src="images/close.png"/></b></h5> </div> <div class="boxR">  <img src="'+val.Image+'"> </div></div>';
 	return str;
 }
 
