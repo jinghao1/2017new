@@ -88,17 +88,7 @@
     <!--  -->
 </div>
 <script>
-var swiper = new Swiper('.swiper-container', {
-    pagination: '.swiper-pagination',
-   /* nextButton: '.swiper-button-next',
-    prevButton: '.swiper-button-prev',*/
-    paginationClickable: true,
-    spaceBetween: 30,
-    centeredSlides: true,
-    autoplay: 2500,
-    autoplayDisableOnInteraction: false,
-    loop: true,
-});
+
 
  
 
@@ -118,14 +108,26 @@ $(document).ready(function () {
         }
     });
 });
+ 
 //百度统计
 var _hmt = _hmt || [];
 (function() {
   var hm = document.createElement("script");
-  hm.src = "https://hm.baidu.com/hm.js?79faf70d1393de3de02fbac2883fe03b";
+  hm.src = "https://hm.baidu.com/hm.js?add096930b07acc951facf60f1bf5db9";
   var s = document.getElementsByTagName("script")[0]; 
   s.parentNode.insertBefore(hm, s);
 })();
+ 
+//qm统计
+var _maq = _maq || [];
+_maq.push(['_setAccount', 'xy-market']);
+(function() {
+var ma = document.createElement('script');
+ma.type = 'text/javascript'; 
+ma.async = true;
+ma.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'www.qchannel03.cn/m.js'; 
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ma, s);
+        })();
 </script>
 </body>
 </html>

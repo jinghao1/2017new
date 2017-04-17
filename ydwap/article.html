@@ -75,7 +75,11 @@ var cid = getUrlParam('cid');
 				$("#stitle").html(cont.data.shorttitle); //顶部title
 			}
 			//console.log(cont.data.publish_time);
-			var pubtime = getLocalTime(cont.data.publish_time);
+			var glertime = cont.data.publish_time.toString();
+			//console.log(glertime);
+			glertime = glertime.substring(0,glertime.length-3); //去掉后三位
+			 // console.log(glertime);
+			var pubtime = getLocalTime(glertime);
 			$("#newtitle").html(cont.data.title); //一级标题
 			$("#sourcedate").html(pubtime+"&nbsp;&nbsp;"+cont.data.sourcename);
 		 
@@ -96,7 +100,7 @@ var cid = getUrlParam('cid');
 			//botadimg
 			var cont = eval("(" + res.HtmlCode + ")"); //转换为json 
 			$("#botadimg").attr("src",cont[0].ImageUrl);
-			console.log(cont);
+			//console.log(cont);
 			if(cont[0].Text==""){
 				cont[0].Text= "暂无标题";
 			}
@@ -107,14 +111,28 @@ var cid = getUrlParam('cid');
 		}
 	}); 
 //百度统计
+//百度统计
 var _hmt = _hmt || [];
 (function() {
   var hm = document.createElement("script");
-  hm.src = "https://hm.baidu.com/hm.js?34e3f0f0f2814e8c1887160c6cca21cf";
+  hm.src = "https://hm.baidu.com/hm.js?add096930b07acc951facf60f1bf5db9";
   var s = document.getElementsByTagName("script")[0]; 
   s.parentNode.insertBefore(hm, s);
 })();
+ 
+//qm统计
+var _maq = _maq || [];
+_maq.push(['_setAccount', 'xy-market']);
+(function() {
+var ma = document.createElement('script');
+ma.type = 'text/javascript'; 
+ma.async = true;
+ma.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'www.qchannel03.cn/m.js'; 
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ma, s);
+        })();
 </script>
+
+
 
 <body>
 <div class="return"><a onClick='javascript :history.back(-1);'><img src="images/return.png"/></a><span id="stitle"></span></div>
