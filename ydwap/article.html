@@ -66,23 +66,34 @@ var cid = getUrlParam('cid');
 				}else{
 					$("#stitle").html(cont.data.shorttitle);
 				}
-				var jmin = 1;
-				var jmax = 1;
-				if(cont.data.carseriallist[0].dealerMinPriceStr==0){
-					 jmin = cont.data.carseriallist[0].dealerMinPriceStr;
-					cont.data.carseriallist[0].dealerMinPriceStr="暂无";
-				}
-				if(cont.data.carseriallist[0].dealerMaxPriceStr==0){
-					 jmax = cont.data.carseriallist[0].dealerMaxPriceStr;
-					cont.data.carseriallist[0].dealerMaxPriceStr ="暂无";
-				}
-				if(jmin==0 || jmax==0){
-					//插入底部相关车型信息
-					$("#bottomerel").append('<div class="c_box">  <div class="sdimg"><img src="'+cont.data.piccover+'">  </div>  <div class="c_bs"> <h2><b>'+cartype+'</b> </h2>  <h3>厂商指导价:'+cont.data.carseriallist[0].minPriceStr+'万~'+cont.data.carseriallist[0].maxPriceStr+'万</h3> <h4>经销商报价:<a>'+cont.data.carseriallist[0].dealerMinPriceStr+'</a>~<a>'+cont.data.carseriallist[0].dealerMaxPriceStr+'</a></h4>  </div></div>');
+				var csmin = cont.data.carseriallist[0].minPriceStr; //厂商最低价
+				var csmax = cont.data.carseriallist[0].maxPriceStr; //厂商最高价
+				var jxmin = cont.data.carseriallist[0].dealerMinPriceStr; //经销商最低价
+				var jxmax = cont.data.carseriallist[0].dealerMaxPriceStr; //经销商最高价
+				///console.log(csmin,jxmin);
+				if(csmin==0){
+					csmin = "暂无";
 				}else{
-					//插入底部相关车型信息
-					$("#bottomerel").append('<div class="c_box">  <div class="sdimg"><img src="'+cont.data.piccover+'">  </div>  <div class="c_bs"> <h2><b>'+cartype+'</b> </h2>  <h3>厂商指导价:'+cont.data.carseriallist[0].minPriceStr+'万~'+cont.data.carseriallist[0].maxPriceStr+'万</h3> <h4>经销商报价:<a>'+cont.data.carseriallist[0].dealerMinPriceStr+'万</a>~<a>'+cont.data.carseriallist[0].dealerMaxPriceStr+'万</a></h4>  </div></div>');
+					csmin += "万";
 				}
+				if(csmax==0){
+					csmax = "暂无";
+				}else{
+					csmax += "万";
+				}
+				if(jxmin==0){
+					jxmin = "暂无";
+				}else{
+					jxmin += "万";
+				}
+				if(jxmax==0){
+					jxmax = "暂无";
+				}else{
+					jxmax += "万";
+				} 
+					//插入底部相关车型信息
+				$("#bottomerel").append('<div class="c_box">  <div class="sdimg"><img src="'+cont.data.piccover+'">  </div>  <div class="c_bs"> <h2><b>'+cartype+'</b> </h2>  <h3>厂商指导价:'+csmin+'~'+csmax+'</h3> <h4>经销商报价:<a>'+jxmin+'</a>~<a>'+jxmax+'</a></h4>  </div></div>');
+			 
 				
 				$("#bottomerel").find(".c_box").attr("onclick","otad('"+cont.data.carseriallist[0].serialName+"','文章页底部相关车型' ,'http://car.m.qichedaquan.com/carSerialSummary/"+cont.data.carseriallist[0].urlspell+"')") ;
 			 

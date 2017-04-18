@@ -238,7 +238,11 @@ $(document).ready(function(){
 		},
 		error:function(err){
 			console.log("jing");
-			console.log(err);
+			//console.log(err);
+			//$("input[name='pagenum']").val(page); 
+			//$("body").data("ajaxing",1);
+			//$(".ldings").remove();
+			//$("#allcont").append("<div class='ldingserr ldings'>网络较慢，请稍后...</div>");
 		}
 	});
 })

@@ -123,7 +123,11 @@ function otad(tit,pos,link){
 
 //信息块
 function infoblock(ind,val){ 
-	var str = '<div class="m_box '+val.newsId+'"><div class="boxL"> <h2> <a href="article.html?cid='+val.newsId+'">'+val.title+'</a></h2>  <h3><span>'+val.categoryName+'</span>&nbsp;<span>'+val.publish_time+'</span><b onclick="hkout('+val.newsId+')" class="dk" style="display:none;"><img src="images/close.png"/></b></h3> </div> <div class="boxR">  <a href="article.html?cid='+val.newsId+'"><img src="'+val.piccover+'"></a></div></div>';
+	//console.log(val.title);
+	//console.log(val.newsId);
+	var picurl = val.piccover.split("\"");
+	//console.log(picurl[0]);
+	var str = '<div class="m_box '+val.newsId+'"><div class="boxL"> <h2> <a href="article.html?cid='+val.newsId+'">'+val.title+'</a></h2>  <h3><span>'+val.categoryName+'</span>&nbsp;<span>'+val.publish_time+'</span><b onclick="hkout('+val.newsId+')" class="dk" style="display:none;"><img src="images/close.png"/></b></h3> </div> <div class="boxR">  <a href="article.html?cid='+val.newsId+'"><img src="'+picurl[0]+'"></a></div></div>';
 	return str;
 }
 
@@ -207,6 +211,7 @@ function laizk(page) {
 	var jscurl = "/medias/public/index.php/port/Hkinfo/Changelist";
 	var jscont = "/medias/public/index.php/port/Hkinfo/Changecont";
 	page = parseInt(page);
+	$(".ldingserr").remove();
 	$("input[name='pagenum']").val(page+1); 
 	$("body").data("ajaxing",0);
 	$("#allcont").append("<div class='ldings'><img src='images/loading.gif'/>&nbsp;正在加载....</div>");
@@ -217,8 +222,11 @@ function laizk(page) {
 		data:{pageNo:page,pageSize:'10'}, 
 		dataType: 'jsonp', 
 		jsonp:'callback',
+		timeout:3000,
         callback:"flightHandler",
-		success:function(res){  
+		success:function(res){ 
+			//console.log("song"); 
+			//console.log(res);
 			var cont = eval("("+res+")"); //转换为json
 			var tdata = cont.data.newsList;
 			var constr = "";
@@ -227,11 +235,16 @@ function laizk(page) {
 				$("#allcont").append(constr); 
 			}); 
 			$("body").data("ajaxing",1);
+			//return;
 			$(".ldings").remove();
 		},
 		error:function(err){
+			$("input[name='pagenum']").val(page); 
+			$("body").data("ajaxing",1);
+			$(".ldings").remove();
+			$("#allcont").append("<div class='ldingserr ldings'>网络较慢，请稍后...</div>");
 			console.log("jing");
-			console.log(err);
+			//console.log(err);
 		}
 	});
 	 
