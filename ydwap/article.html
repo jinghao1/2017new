@@ -60,6 +60,7 @@ var cid = getUrlParam('cid');
 			//console.log(cont.data);
 			//console.log(cont.data.carseriallist[0]);
 			if(cont.data.carseriallist[0]!=undefined){ //存在相关推荐车型
+				//console.log(cont.data.carseriallist[0]);
 				var cartype = cont.data.carseriallist[0].serialName; 
 				if(cartype!=undefined){
 					$("#stitle").html(cartype);
@@ -91,8 +92,26 @@ var cid = getUrlParam('cid');
 				}else{
 					jxmax += "万";
 				} 
-					//插入底部相关车型信息
-				$("#bottomerel").append('<div class="c_box">  <div class="sdimg"><img src="'+cont.data.piccover+'">  </div>  <div class="c_bs"> <h2><b>'+cartype+'</b> </h2>  <h3>厂商指导价:'+csmin+'~'+csmax+'</h3> <h4>经销商报价:<a>'+jxmin+'</a>~<a>'+jxmax+'</a></h4>  </div></div>');
+				if(csmin=="暂无" && csmax=="暂无" && jxmax=="暂无" && jxmin=="暂无" ){	
+					var changstr = "暂无";
+					var jxstr = "暂无";
+				}else if(csmin=="暂无" && csmax=="暂无" && (jxmax!="暂无" || jxmin!="暂无") ){ //厂商
+				 	var changstr = csmin;
+					var jxstr = jxmin+"~"+jxmax;
+				}else if(jxmin=="暂无" && jxmax=="暂无"){ //经销商
+						//插入底部相关车型信息
+					 var changstr = csmin+"~"+csmax;
+					var jxstr = jxmin;
+				}else{
+				 	 var changstr = csmin+"~"+csmax;
+					var jxstr = jxmin+"~"+jxmax;
+				}	
+				if(cont.data.piccover == ""){
+					cont.data.piccover = 'http://static.qcdqcdn.com/img/noImg.png';
+				}
+						//插入底部相关车型信息
+					$("#bottomerel").append('<div class="c_box">  <div class="sdimg"><img src="'+cont.data.piccover+'">  </div>  <div class="c_bs"> <h2><b>'+cartype+'</b> </h2>  <h3>厂商指导价:'+changstr+'</h3> <h4>经销商报价:<a>'+jxstr+'</a></h4>  </div></div>');
+				
 			 
 				
 				$("#bottomerel").find(".c_box").attr("onclick","otad('"+cont.data.carseriallist[0].serialName+"','文章页底部相关车型' ,'http://car.m.qichedaquan.com/carSerialSummary/"+cont.data.carseriallist[0].urlspell+"')") ;
