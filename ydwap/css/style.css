@@ -11,11 +11,12 @@ a{display:inline-block;}
 .carType{margin-top:0.5rem;width:100%;border-bottom:1px solid #ededed;float:left;}
 .carType h1{margin-left:0.625rem;/*border-left:2px solid #1091ed;*/color: #000;font-size:0.6rem;/*padding-left:0.25rem;*/}
 .carType h1 img{width:0.125rem; float:left;margin-top:0.15rem; margin-right:0.2rem;}
-.carType dl{width:33.333%;text-align:center; display: inline-block;float:left;}
-.carType dl:last-child{width:31%;}
-.carType dl dt{display: block;margin:0 auto;padding-top:1.0rem;padding-bottom:0.75rem; text-align:center;}
-.carType dl dt img{width:3.5rem;}
-.carType dl dd{font-size:0.5rem;padding-bottom:0.75rem;color:#3c3c3c;}
+.carType .dls{width:100%;float:left}
+.carType .dls dl{width:33.3%;text-align:center; display: inline-block;float:left;}
+/*.carType .dls dl:first-child{width:30%;}*/
+.carType .dls dl dt{display: block;margin:0 auto;padding-top:1.0rem;padding-bottom:0.75rem; text-align:center;}
+.carType .dls dl dt img{width:3.5rem;}
+.carType .dls dl dd{font-size:0.5rem;padding-bottom:0.75rem;color:#3c3c3c;}
 .main{width:92%;margin-left:4%;float:left; position: relative;}
 .m_box{border-bottom:1px solid #f4f4f4;padding:0.38rem 0;float:left;width:100%;position:relative;}
 .m_box h4{font-size:0.7rem;color:#000000;margin-bottom:0.25rem;}
