@@ -65,19 +65,19 @@ a:hover {color:#FFF; text-decoration:underline;}
 /*.dB{width:1000px;margin:0 auto;height:500px;padding-top:140px;}*/
 
 /*活动报名*/
-.login{position:absolute;right:0;top:147px;width:331px; }
-.login ul{float:left;}
-.login li{float:left;margin-left:94px; margin-bottom:21px;height:35px;}
-.login li input.name{font-size:12px;width:227px;height:35px;line-height:35px;color:#8c949a;padding-left:10px;}
-.login li select.sex{font-size:12px;margin-left:58px;background: url("../images/arrow02.png") no-repeat 94px center;width:102px;height:35px;line-height:35px;color:#8c949a;padding-left:10px;}
-.login li select.province{font-size:12px;background: url("../images/arrow02.png") no-repeat 63px center;width:82px;height:35px;line-height:35px;color:#8c949a;padding-left:10px;}
-.login li select.city{font-size:12px;margin-left:-21px;background: url("../images/arrow02.png") no-repeat 63px center;width:82px;height:35px;line-height:35px;color:#8c949a;padding-left:10px;}
-.login li input.phone{font-size:12px;color:#8c949a;width:227px;height:35px;line-height: 35px;padding-left:10px;}
-.login li select.dealer{font-size:12px;background: url("../images/arrow02.png") no-repeat 218px center;width:237px;height:35px;line-height:35px;color:#8c949a;padding-left:10px;}
-.login li select.carType{font-size:12px;background: url("../images/arrow02.png") no-repeat 218px center;width:237px;height:35px;line-height:35px;color:#8c949a;padding-left:10px;}
-.login p{color:#8c949a;}
-.login .btn{width:330px;cursor:pointer;line-height:50px; text-align:center;background: #017bde;font-size:22px;color:#fff;margin-top:30px;}
-.login .btn:hover{background:#0062c5;}
+.logins{position:absolute;right:0;top:147px;width:331px; }
+.logins ul{float:left;}
+.logins li{float:left;margin-left:94px; margin-bottom:21px;height:35px;}
+.logins li input.name{font-size:12px;width:227px;height:35px;line-height:35px;color:#8c949a;padding-left:10px;}
+.logins li select.sex{font-size:12px;margin-left:58px;background: url("../images/arrow02.png") no-repeat 94px center;width:102px;height:35px;line-height:35px;color:#8c949a;padding-left:10px;}
+.logins li select.province{font-size:12px;background: url("../images/arrow02.png") no-repeat 63px center;width:82px;height:35px;line-height:35px;color:#8c949a;padding-left:10px;}
+.logins li select.city{font-size:12px;margin-left:-21px;background: url("../images/arrow02.png") no-repeat 63px center;width:82px;height:35px;line-height:35px;color:#8c949a;padding-left:10px;}
+.logins li input.phone{font-size:12px;color:#8c949a;width:227px;height:35px;line-height: 35px;padding-left:10px;}
+.logins li select.dealer{font-size:12px;background: url("../images/arrow02.png") no-repeat 218px center;width:237px;height:35px;line-height:35px;color:#8c949a;padding-left:10px;}
+.logins li select.carType{font-size:12px;background: url("../images/arrow02.png") no-repeat 218px center;width:237px;height:35px;line-height:35px;color:#8c949a;padding-left:10px;}
+.logins p{color:#8c949a;}
+.logins .btn{width:330px;cursor:pointer;line-height:50px; text-align:center;background: #017bde;font-size:22px;color:#fff;margin-top:30px;}
+.logins .btn:hover{background:#0062c5;}
 .state{position:absolute;bottom:80px;left:27px;}
 .state h2{height:36px;float:left;/*margin-right:15px;*/cursor: pointer }
 .state h2.btns{background: url("../images/btn01.png") no-repeat;background-size:204px 36px;width:204px;height:36px;}

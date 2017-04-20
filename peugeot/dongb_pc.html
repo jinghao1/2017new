@@ -6,6 +6,8 @@
 <meta name="format-detection"  content="telephone=no"/>
 <link href="css/dobSty.css" rel="stylesheet" type="text/css"/>
 <link href="css/dialog.css" rel="stylesheet" type="text/css"/>
+<link href="css/base.css" rel="stylesheet" type="text/css"/>
+<link href="css/summarize.css" rel="stylesheet" type="text/css"/>
 <!-- <link href="css/video-js.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="js/video.min.js"></script>
 <script type="text/javascript" src="js/videojs-ie8.min.js"></script> -->
@@ -18,7 +20,12 @@
 <script type="text/javascript" src="js/login.js"></script>
 <script type="text/javascript" src="js/dialog.js"></script>
 </head>
-<body>                  
+<body> 
+<!-- 头部 -->
+<div id="headerid" class="header">
+    
+</div>  
+<!-- 头部-end -->               
 <div class="box">
     <div class="boxCont">
         <div class="boxOne"></div>
@@ -29,7 +36,7 @@
             <!-- <div class="tk01"></div> -->
             <!-- 了解四重礼详情 -end-->
             <!-- 活动报名 -->
-            <div class="login">
+            <div class="logins">
                 <ul>
                     <li><input type="text" placeholder="姓名" class="name" name="name" /></li>
                    <!--  <li><select class="sex" id="sex" name="sexId"><option value="1">先生</option><option value="2">女士</option></select></li> -->
@@ -288,6 +295,19 @@
     </div>   
     <!-- 中奖名单-end-->
 </div>
+<!-- 底部 -->
+<div class="footer" style="position: relative; bottom: 0px;">
+    <div class="footer" style="position: relative; bottom: 0px;">
+        <div class="footer_content"> 
+            <p> </p>
+            <div>
+                <span>京ICP备17011360号-1</span>
+                @2016-2017  <a href="javascript:void (0)">www.qichedaquan.com</a> All Rights Reserved. 北京行圆汽车信息技术有限公司所有
+            </div>
+        </div>
+    </div>
+</div>
+<!-- 底部-end -->
 <!-- 优酷视频 -->
 <!-- 3008 -->
 <script type="text/javascript">
@@ -371,6 +391,26 @@ var _hmt = _hmt || [];
   var s = document.getElementsByTagName("script")[0]; 
   s.parentNode.insertBefore(hm, s);
 })();
+
+//头部底部信息
+$(document).ready(function(){  
+    var url=window.location.href;
+    if(window.location.href.indexOf("?querytype")==-1){
+        url=window.location.href +"?querytype=1";
+    }
+    $.ajax({
+        type: "get",
+        url: "http://i.qichedaquan.com/info/header?backurl="+url,
+        dataType: 'jsonp',
+        jsonp:'callback',
+        callback:"getHeadCallBack",
+        timeout: 5000,
+        success: function (result) {
+            $("#headerid").html(result);
+            $('body').append('<script src="http://static.qcdqcdn.com/js/index.js"><\/script>')
+        } 
+    });    
+})
 </script>
 </body>
 </html>
