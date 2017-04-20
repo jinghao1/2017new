@@ -15,19 +15,21 @@ $arr = array('ip'=>$ip,'tm'=>$time,'no'=>$name1,'tw'=>$name2,'nm'=>$num);
 shuffle($arr); //打乱数组顺序
 $arrstr = implode("-",$arr); 
 $str = $aes->encrypt($arrstr);//加密
-echo '<input type="hidden" name="encrystr" value="'.$str.'" />';
-echo '<meta charset="UTF-8">';
-echo '<script type="text/javascript" src="../../public/javascript/skin/js/jquery-3.0.0.js"></script>
-<script type="text/javascript" src="../../public/javascript/skin/js/jweixin-1.0.0.js"></script>
-<script type="text/javascript" src="../../public/javascript/skin/js/basesong.js"></script>
-';
+
 if(!isMobile()){ //pc端
-	echo "pc";
-	include("./web/login.html");
+	//echo "pc";
+	
+	include("./pc/html/bwopc_xin.html");
+	echo '<input type="hidden" name="fromwh" value="2" />';
 }else{ //mobile 
-	echo 'mobile';
-	include("./web/mb.html");
+	//echo 'mobile';
+	
+	include("./html/bwo.html");
+	echo '<input type="hidden" name="fromwh" value="1" />';
 	//include("../userreg/reg.html");
 }
-
+echo '<input type="hidden" name="encrystr" value="'.$str.'" />';
+ 
+echo ' <script type="text/javascript" src="../../medias/public/javascript/skin/js/jweixin-1.0.0.js"></script>
+';
 ?>
