@@ -186,12 +186,50 @@ ma.async = true;
 ma.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'www.qchannel03.cn/m.js'; 
 var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ma, s);
         })();
+
+//页面分享
+$(document).ready(function(){ 
+	setTimeout(function(){
+		$("body").data("share_tt","标题分享share_title_test");
+		$("body").data("share_desc","标题分享share_title_test");
+		$("body").data("share_url","http://39.155.158.152/201703/ydwap/consult.html?test=2");
+		$("body").data("share_img","http://static.qcdqcdn.com/img/noImg.png");
+	}, 2000);
+	
+});
+	function ydshare(){
+		console.log("song");
+		
+		var share_title = $("body").data('share_tt');
+		var share_desc = $("body").data('share_desc');
+		var share_url = $("body").data('share_url');
+		var share_img = $("body").data('share_img');
+		console.log(share_title);
+		//return ;
+		window.yidian.thirdparty.share(share_title, share_desc, share_url, share_img); //分享标题，描述，链接地址，图片地址
+	}
 </script>
 
-
+<style type="text/css" media="screen" id="test">
+	span.shareright{
+		float:right;
+		margin-right:1em;
+		
+	}
+	.shareright img{
+		width:1.5em;
+		margin-top:0.5em;
+	}
+</style>
 
 <body>
-<div class="return"><a onClick='javascript :history.back(-1);'><img src="images/return.png"/></a><span id="stitle"></span></div>
+<div class="return">
+	<a onClick='javascript :history.back(-1);'>
+		<img src="images/return.png"/>
+	</a>
+	<span id="stitle"></span>
+	<span class="shareright" onclick='ydshare()'><img src="images/sharef.png" alt=""></span>
+</div>
 <div class="article">
     <h1 id="newtitle"> </h1>
     <h6 id="sourcedate"> </h6>
