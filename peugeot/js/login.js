@@ -1,8 +1,8 @@
 
 
 $(document).ready(function(){
- 	var kkurl = "http://h5.qlh520.top";
- 	var kkurl = "http://xy.qichedaquan.com";
+ 	//var kkurl = "http://h5.qlh520.top";
+ 	var kkurl = "https://xy.qichedaquan.com";
  	
 	//默认状态下，将‘省’的值传入
 	$.getJSON(kkurl+"/medias/public/index.php/port/Userreg/listdata", { han: "list"}, function(json){

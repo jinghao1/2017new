@@ -30,7 +30,7 @@ echo ' <script type="text/javascript" src="/medias/public/javascript/skin/js/jwe
 ';
 //echo '<input type="hidden" name="fromwh" value="2" />';
 if(isset($_GET['self'])){
-	echo '<input type="hidden" name="fself" value="1" />';
+	echo '<input type="hidden" name="fself" value="'.$_GET['self'].'" />';
 }else{
 	echo '<input type="hidden" name="fself" value="0" />';
 } 

@@ -1,8 +1,9 @@
 
 
 $(document).ready(function(){
- 	var kkurl = "http://h5.qlh520.top";
- 	var kkurl = "http://xy.qichedaquan.com";
+  
+ 	var kkurl = "//xy.qichedaquan.com";
+ 	//var kkurl = "http://39.155.158.152";
  	//var encrystr = $("input[name='encrystr']").val();
 	
 	//默认状态下，将‘省’的值传入
