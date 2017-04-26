@@ -109,6 +109,7 @@ var cid = getUrlParam('cid');
 				if(cont.data.piccover == ""){
 					cont.data.piccover = 'http://static.qcdqcdn.com/img/noImg.png';
 				}
+				
 						//插入底部相关车型信息
 					$("#bottomerel").append('<div class="c_box">  <div class="sdimg"><img src="'+cont.data.piccover+'">  </div>  <div class="c_bs"> <h2><b>'+cartype+'</b> </h2>  <h3>厂商指导价:'+changstr+'</h3> <h4>经销商报价:<a>'+jxstr+'</a></h4>  </div></div>');
 				
@@ -118,16 +119,34 @@ var cid = getUrlParam('cid');
 			 
 			}else{
 				$("#stitle").html(cont.data.shorttitle); //顶部title
+				
 			}
+			//console.log(cont.data.piccover);
+			if(cont.data.piccover == ""){ //相关车型图片作为分享图片
+				cont.data.piccover = 'http://static.qcdqcdn.com/img/noImg.png';
+			}
+			//console.log(cont.data.piccover);
 			//console.log(cont.data.publish_time);
 			var glertime = cont.data.publish_time.toString();
 			//console.log(glertime);
 			glertime = glertime.substring(0,glertime.length-3); //去掉后三位
 			 // console.log(glertime);
 			var pubtime = getLocalTime(glertime);
+		
 			$("#newtitle").html(cont.data.title); //一级标题
+			
+				//分享标题
+			$("body").data("share_tt",cont.data.shorttitle);
+			//定义分享标题描述
+			$("body").data("share_desc",cont.data.title);
 			$("#sourcedate").html(pubtime+"&nbsp;&nbsp;"+cont.data.sourcename);
-		 
+		 	//分享链接
+		 	//获取当前链接
+		 	var cururl=window.location.href;
+		    cururl = cururl+"&shareyd=1"; //标记为一点资讯分享
+		 	$("body").data("share_url",cururl);
+		 	//分享图片链接
+		 	$("body").data("share_img",cont.data.piccover);
 			$("#cont").html(cont.data.newscontent);
 			var conthtml = $("#cont").find(".img_notextident").find("img");
 			$(conthtml).each(function(indcon,conele){ //移除img style
@@ -187,24 +206,18 @@ ma.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'ww
 var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ma, s);
         })();
 
-//页面分享
-$(document).ready(function(){ 
-	setTimeout(function(){
-		$("body").data("share_tt","标题分享share_title_test");
-		$("body").data("share_desc","标题分享share_title_test");
-		$("body").data("share_url","http://39.155.158.152/201703/ydwap/consult.html?test=2");
-		$("body").data("share_img","http://static.qcdqcdn.com/img/noImg.png");
-	}, 2000);
-	
-});
+ //页面分享方法
 	function ydshare(){
-		console.log("song");
+		//console.log("song");
 		
 		var share_title = $("body").data('share_tt');
 		var share_desc = $("body").data('share_desc');
 		var share_url = $("body").data('share_url');
 		var share_img = $("body").data('share_img');
 		console.log(share_title);
+		console.log(share_desc);
+		console.log(share_url);
+		console.log(share_img);
 		//return ;
 		window.yidian.thirdparty.share(share_title, share_desc, share_url, share_img); //分享标题，描述，链接地址，图片地址
 	}
@@ -218,7 +231,7 @@ $(document).ready(function(){
 	}
 	.shareright img{
 		width:1.5em;
-		margin-top:0.5em;
+		margin-top:0.6em;
 	}
 </style>
 

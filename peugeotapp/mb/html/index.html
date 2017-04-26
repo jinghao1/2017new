@@ -273,5 +273,46 @@ var _hmt = _hmt || [];
   s.parentNode.insertBefore(hm, s);
 })();
  
+//function getAppShareInfo(){
+//	var title ='GO! X008 SUV盛会 “惠”有大动作'; // 分享标题
+//	//var kkurl = "http://xy.qichedaquan.com";
+//	var kkurl = "http://39.155.158.152";
+//    var link = kkurl+'/201703/peugeotapp';
+//    var desc = '东风标致2008、3008、4008全系SUV盛惠升级'; // 分享描述
+//    var imgUrl = kkurl+'/201703/peugeotapp/images/log1.jpg'; 
+//	var shareData={
+//	"title":title,
+//	"desc":desc,
+//	"link":link, 
+//	"showShare":1,
+//	"imgurl":imgUrl,
+//	"width":"200",
+//	"height":"200"
+//	};
+//	window.xyCar.getAppShareInfo(shareData);
+//	return shareData; 
+//}
 
+function getAppShareInfo(platform){
+        var title ="GO! X008 SUV盛会 “惠”有大动作"; // 分享标题
+        var kkurl = "http://39.155.158.152";
+        var link = kkurl+"/201703/peugeotapp";
+        var desc = "东风标致2008、3008、4008全系SUV盛惠升级"; // 分享描述
+        var imgUrl = kkurl+"/201703/peugeotapp/images/log1.jpg";
+
+        var data = {
+                title: title,
+                desc: desc,
+                link: link,
+                showShare: 1,
+                imgurl: imgUrl,
+                width:200,
+            height:200
+            };
+            if(platform == 1){
+              window.xyCar.getAppShareInfo(JSON.stringify(data));
+            }else{
+          return data;
+        }
+    }
 </script>
