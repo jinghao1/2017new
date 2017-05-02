@@ -200,7 +200,7 @@ $(document).ready(function(){
 	}); 
 
 	//获取第一次信息流 20 条，并插入广告信息 
-	var hereurl = "http://xy.qichedaquan.com";
+	var hereurl = "https://xy.qichedaquan.com";
 	var jscurl = "/medias/public/index.php/port/Hkinfo/Changelist";
 	var jscont = "/medias/public/index.php/port/Hkinfo/Changecont";
 	$.ajax({
@@ -214,6 +214,7 @@ $(document).ready(function(){
 			//console.log("song");
 			//var tyres = typeof(res); 
 			var cont = eval("("+res+")"); //转换为json
+			console.log(cont);
 			var tdata = cont.data.newsList;
 			var constr = "";
 			$.each(tdata , function(ind,val){
