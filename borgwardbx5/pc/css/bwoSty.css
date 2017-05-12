@@ -53,17 +53,17 @@ a:hover {color:#FFF; text-decoration:underline;}
 
 /*.container{background:url(../images/bwBg.jpg) no-repeat center top;}*/
 /*.content{width:1000px;padding-top:521px;margin:0 auto; overflow: hidden;}*/
-.jr{float:right;background:url(../images/bg01.jpg) no-repeat center top;width:100%;height:574px;}
+.jr{float:right;background:url(../images/bg01.jpg) no-repeat center top;width:100%;height:687px;}
 .jr p{width:1000px;overflow: hidden;margin:0 auto;}
-.jr p a{color:#fff;float:right;margin-top:520px;}
+.jr p a{color:#fff;float:right;margin-top:320px;margin-right:190px}
 
-.tu2{float:left;background:url(../images/bg02.jpg) no-repeat center top;width:100%;height:457px;}
-.tu3{float:left;background:url(../images/bg03.jpg) no-repeat center top;width:100%;height:543px;}
-.tu4{float:left;background:url(../images/bg04.jpg) no-repeat center top;width:100%;height:549px;}
-.tu5{float:left;background:url(../images/bg05.jpg) no-repeat center top;width:100%;height:525px;}
-.tu6{float:left;background:url(../images/bg06.jpg) no-repeat center top;width:100%;height:652px;}
+.tu2{float:left;background:url(../images/bg02.jpg) no-repeat center top;width:100%;height:409px;}
+.tu3{float:left;background:url(../images/bg03.jpg) no-repeat center top;width:100%;height:542px;}
+.tu4{float:left;background:url(../images/bg04.jpg) no-repeat center top;width:100%;height:547px;}
+.tu5{float:left;background:url(../images/bg05.jpg) no-repeat center top;width:100%;height:591px;}
+.tu6{float:left;background:url(../images/bg06.jpg) no-repeat center top;width:100%;height:393px;}
 /*视频-登录*/
-.bg01{width:1000px;margin:0 auto;overflow: hidden;margin-top:93px;}
+.bg01{width:1000px;margin:0 auto;overflow: hidden;margin-top:22px;}
 .bg01 .video{width:500px;height:280px;float:left;}
 .bg01 .login{float:right;width:460px;}
 .bg01 .login li{float:left; width:460px;line-height:40px;margin-bottom:10px;}
@@ -127,5 +127,9 @@ a:hover {color:#FFF; text-decoration:underline;}
 .bg04 .news{position:absolute;width:292px;height:43px;top:-75px;right:0;}
 
 
-.bg05{width:1000px;position:relative;margin:0 auto;overflow: hidden;margin-top:-30px;}
+.bg05{width:1000px;position:relative;margin:0 auto;overflow: hidden;margin-top:10px;height:260px;}
 .bg05 p{color:#fff; font-size:12px;float:right;margin-right:20px;}
+
+.bg05 ul li{margin-top:20px;margin-left:23px;float:left;width:218px;height:220px;}
+
+.bg05 ul li a{float:left;width:218px;height:220px; cursor:pointer;}

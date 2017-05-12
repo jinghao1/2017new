@@ -6,13 +6,20 @@
 <title>宝沃BX5</title>
 <meta name="format-detection" content="telephone=no"/>
 <link href="./pc/css/bwoSty.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="//player.youku.com/jsapi"></script>
+<link href="./pc/css/base.css" rel="stylesheet" type="text/css"/>
+<link href="./pc/css/summarize.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="http://player.youku.com/jsapi"></script>
 <script type="text/javascript" src="./pc/js/jquery-1.10.2.min.js"></script>
 <script type="text/javascript" src="./pc/js/jquery.SuperSlide.2.1.1.js"></script>
 <script type="text/javascript" src="./pc/js/login.js"></script>
 <script type="text/javascript" src="./pc/js/html5media.min.js"></script>
 </head>
-<body>                  
+<body> 
+	<!-- 头部 -->
+	<div id="headerid" class="header">
+		
+	</div>  
+	<!-- 头部-end --> 				
    <div class="jr">
         <p><a target="_blank" href="http://bx5.borgward.com.cn/">进入BX5官网>> </a></p>
    </div>
@@ -138,8 +145,8 @@
     <!-- 车型亮点-end -->
     <!-- 车型配置 -->
     <div class="tu4">
-        <div class="bg03">
-            <iframe src="./pc/html/tableCon.html" frameborder="no" style="width:1000px;height:450px; overflow: hidden;margin-top:0px;background:none"></iframe>
+        <div class="bg03" style="background:none">
+            <iframe src="tableCon.html" frameborder="no" scrolling="no" style="width:1000px;height:450px; overflow: hidden;margin-top:0px;background:none"></iframe>
         </div>
     </div>
     <!-- 车型配置-end -->
@@ -167,9 +174,28 @@
     <!-- 精美车图-end -->
     <div class="tu6">
          <div class="bg05">
-            <p>上市活动中奖名单>> </p>
+            <!--<p>上市活动中奖名单>> </p>-->
+			<ul>
+				<li><a href="http://www.borgward.com.cn/baowo1"></a></li>
+				<li><a href="http://www.borgward.com.cn/brand_personage"></a></li>
+				<li><a href="http://www.borgward.com.cn/brand_ideas"></a></li>
+				<li><a href="http://www.borgward.com.cn/brand_success"></a></li>
+			</ul>
         </div>
     </div>
+	<!-- 底部 -->
+	<div class="footer" style="position: relative; bottom: 0px;">
+		<div class="footer" style="position: relative; bottom: 0px;">
+			<div class="footer_content"> 
+				<p> </p>
+				<div>
+					<span>京ICP备17011360号-1</span>
+					@2016-2017  <a href="javascript:void (0)">www.qichedaquan.com</a> All Rights Reserved. 北京行圆汽车信息技术有限公司所有
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- 底部-end -->
 
 <script type="text/javascript">
     player = new YKU.Player('youkuplayer',{
@@ -203,9 +229,9 @@
             pnLoop:ary[7] });
     //edit by song 
     var ymurl = "http://h5.qlh520.top";
-    var ymurl = "//xy.qichedaquan.com";
+    var ymurl = "http://xy.qichedaquan.com";
 
-    $(".btn").click(function(){
+        $(".btn").click(function(){
         //名字不为空
         var name = $("input[name='name']").val();
         if(name == "" || name == "姓名" ){
@@ -299,7 +325,7 @@
             }
         })
      
-    }) 
+    })
 
 //百度统计
 var _hmt = _hmt || [];
@@ -309,6 +335,29 @@ var _hmt = _hmt || [];
   var s = document.getElementsByTagName("script")[0]; 
   s.parentNode.insertBefore(hm, s);
 })();
-</script>   
+</script> 
+<script type="text/javascript">
+
+
+//头部底部信息
+$(document).ready(function(){  
+    var url=window.location.href;
+    if(window.location.href.indexOf("?querytype")==-1){
+        url=window.location.href +"?querytype=1";
+    }
+    $.ajax({
+        type: "get",
+        url: "http://i.qichedaquan.com/info/header?backurl="+url,
+        dataType: 'jsonp',
+        jsonp:'callback',
+        callback:"getHeadCallBack",
+        timeout: 5000,
+        success: function (result) {
+            $("#headerid").html(result);
+            $('body').append('<script src="http://static.qcdqcdn.com/js/index.js"><\/script>')
+        } 
+    });    
+})
+</script>  
 </body>
 </html>
