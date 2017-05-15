@@ -3,6 +3,8 @@ img{width:100%;display: block}
 input{border:none;}
 .bwo{position:relative;background: url(../images/bg.jpg) no-repeat;height:89.35rem; background-size:100%;}
 .jr{position: absolute;top:7.3rem; right:2.5rem;width:3.1rem;height:0.775rem}
+.ewm{position:absolute;top:12.675rem; left:1.0rem;width:5.6rem;height:3.075rem;}
+.ewm span{float:left;width:2.35rem;margin-right:0.25rem;}
 .jr a{ display:inline-block;width:3.1rem;height:0.775rem}
 .jcVideo{position:absolute;top:16.25rem;left:0.975rem;}
 .jcVideo h2,.login h2,.carType h2,.carImg h2,.history h2{border-left:2px solid #8a0000; padding-left:0.5rem;font-size:0.7rem;color:#fff;}
