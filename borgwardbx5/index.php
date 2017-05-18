@@ -17,12 +17,12 @@ $arrstr = implode("-",$arr);
 $str = $aes->encrypt($arrstr);//加密
 
 if(!isMobile()){ //pc端
-	//echo "pc";
+	// echo "pc";die;
 	
 	include("./pc/html/bwopc_xin.html");
 	echo '<input type="hidden" name="fromwh" value="2" />';
 }else{ //mobile 
-	//echo 'mobile';
+	// echo 'mobile';die;
 	
 	include("./html/bwo.html");
 	echo '<input type="hidden" name="fromwh" value="1" />';

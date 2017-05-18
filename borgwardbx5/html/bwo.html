@@ -9,7 +9,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="format-detection" content="email=no">
     <link rel="stylesheet" type="text/css" href="./css/reset.css" />
-    <link rel="stylesheet" type="text/css" href="./css/bwo.css" />
+    <link rel="stylesheet" type="text/css" href="./css/bwo.css?v1" />
     <link rel="stylesheet" type="text/css" href="./css/swiper.min.css"/>
     <script src="./js/jquery-1.10.2.min.js" type="text/javascript"></script>
     <script src="./js/adaptational.js" type="text/javascript"></script>
@@ -19,27 +19,9 @@
 <body>
     <div class="bwo">
         <div class="jr"><a href="http://i.ttge.com/svn/bx5/wap/index.html"></a></div>
-		<div class="ewm">
-			<span><img src="./images/wx.png"/></span>
-			<span><img src="./images/wb.png"/></span>
-		</div>
-        <!-- 精彩视频 -->
-        <div class="jcVideo">
-            <div class="vid-box">
-                <!--<img src="./images/video.jpg"/>-->
-                <video controls="controls" poster="./images/video.png">
-                  <!-- <source src="movie.ogg" type="video/ogg"> -->
-                  <source src="./video/video.mp4" type="video/mp4">
-                </video>
-                <!-- <video width="352" height="264"  autobuffer>
-                <source src="../media/cat.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'></source>
-                </video> -->
-            </div>
-        </div>
-        <!-- 精彩视频-end -->
         <!-- 预约试驾 -->
         <div class="login">
-            <h2>预约试驾</h2>
+
             <ul>
                 <li><span><i>*</i>姓&emsp;名：</span><font><input name="name" type="text"/></font></li>
                 <li><span><i>*</i>性&emsp;别：</span><font class="radio"><b><input name="sexId" value="1" checked type="radio"/>&nbsp;男</b><b>&nbsp;<input  name="sexId" value="2" type="radio"/>&nbsp;女</b></font></li>
@@ -63,16 +45,55 @@
                     </p>
                 </li>
                 <li><span><i>*</i>经销商：</span><font>
-						<select id="dealer" name='dealer'>
-                            <option>请选择</option>
-                        </select>
-	                </font></li>
+                    <select id="dealer" name='dealer'>
+                        <option>请选择</option>
+                    </select>
+                </font></li>
             </ul>
             <h3>&nbsp;<input name="alread" type="checkbox" value="1" checked />&nbsp;<a>*</a>我已阅读并接受汽车大全隐私条款：
-您的个人资料有可能会提交至宝沃厂商的授权经销商 或汽车大全客服，与您进一步沟通试驾、购车等事宜。</h3>
+                您的个人资料有可能会提交至宝沃厂商的授权经销商 或汽车大全客服，与您进一步沟通试驾、购车等事宜。</h3>
             <div class="tjBtn"></div>
         </div>
         <!-- 预约试驾-end -->
+        <!-- 精彩视频 -->
+        <div class="jcVideo">
+            <h2>精彩视频</h2>
+            <div class="vid-box">
+                <!--<img src="./images/video.jpg"/>-->
+                <video controls="controls" poster="./images/video.png">
+                  <!-- <source src="movie.ogg" type="video/ogg"> -->
+                  <source src="./video/video.mp4" type="video/mp4">
+                </video>
+                <!-- <video width="352" height="264"  autobuffer>
+                <source src="../media/cat.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'></source>
+                </video> -->
+            </div>
+        </div>
+        <!-- 精彩视频-end -->
+        <!-- 精美车图 -->
+        <div class="carImg">
+            <h2>精美车图</h2>
+            <!-- Swiper -->
+            <div class="swiper-containers">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="./images/pic01.jpg"></div>
+                    <div class="swiper-slide"><img src="./images/pic02.jpg"></div>
+                    <div class="swiper-slide"><img src="./images/pic03.jpg"></div>
+                    <div class="swiper-slide"><img src="./images/pic04.jpg"></div>
+                    <div class="swiper-slide"><img src="./images/pic06.jpg"></div>
+                    <div class="swiper-slide"><img src="./images/pic07.jpg"></div>
+                    <div class="swiper-slide"><img src="./images/pic08.jpg"></div>
+                    <div class="swiper-slide"><img src="./images/pic09.jpg"></div>
+                    <div class="swiper-slide"><img src="./images/pic10.jpg"></div>
+                </div>
+                <!-- Add Pagination -->
+                <div class="swiper-pagination" style="display: none"></div>
+                <!-- Add Navigation -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+        </div>
+        <!-- 精美车图-end -->
         <!-- 车型亮点 -->
         <div class="carType">
             <h2>车型亮点</h2>
@@ -84,7 +105,7 @@
                     <div class="swiper-slide" style="width:14.1rem"><img src="./images/img01.png"/></div>
                     <div class="swiper-slide" style="width:14.1rem"><img src="./images/img02.png"/></div>
                     <div class="swiper-slide" style="width:14.1rem"><img src="./images/img03.png"/></div>
-                    <div class="swiper-slide" style="width:14.1rem"><img src="./images/img04.png"/></div> 
+                    <div class="swiper-slide" style="width:14.1rem"><img src="./images/img04.png"/></div>
                     <div class="swiper-slide" style="width:14.1rem"><img src="./images/img07.png"/></div>
                     <div class="swiper-slide" style="width:14.1rem"><img src="./images/img08.png"/></div>
                     <div class="swiper-slide" style="width:14.1rem"><img src="./images/img09.png"/></div>
@@ -99,31 +120,555 @@
             <div class="swiper-pagination"></div>
         </div>
         <!-- 车型亮点-end -->
-        <!-- 精美车图 -->
-        <div class="carImg">
-            <h2>精美车图</h2>
-            <!-- Swiper -->
-            <div class="swiper-containers">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide"><img src="./images/pic01.jpg"></div>
-                <div class="swiper-slide"><img src="./images/pic02.jpg"></div>
-                <div class="swiper-slide"><img src="./images/pic03.jpg"></div>
-                <div class="swiper-slide"><img src="./images/pic04.jpg"></div>
-                <div class="swiper-slide"><img src="./images/pic05.jpg"></div>
-                <div class="swiper-slide"><img src="./images/pic06.jpg"></div>
-                <div class="swiper-slide"><img src="./images/pic07.jpg"></div>
-                <div class="swiper-slide"><img src="./images/pic08.jpg"></div>
-                <div class="swiper-slide"><img src="./images/pic09.jpg"></div>
-                <div class="swiper-slide"><img src="./images/pic10.jpg"></div>
+        <!-- 车型配置 -->
+        <div class="carPzhi">
+            <h2>车型配置</h2>
+            <div class="choose-cartype">
+                <select id="xz-car">
+                    <option data-id="0">2WD AT 都市型</option>
+                    <option data-id="1">2WD AT 风尚型</option>
+                    <option data-id="2">2WD AT 锋锐型</option>
+                    <option data-id="3">2WD AT 智享型</option>
+                    <option data-id="4">AWD AT 风尚型</option>
+                    <option data-id="5">AWD AT 锋锐型</option>
+                    <option data-id="6">AWD AT 智享型</option>
+                    <option data-id="7">AWD AT 尊享型</option>
+                </select>
             </div>
-            <!-- Add Pagination -->
-            <div class="swiper-pagination" style="display: none"></div>
-            <!-- Add Navigation -->
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
+            <div class="car-peizhi">
+                <table class="dsx2wd" style="display: table;">
+                    <tbody><tr><td>价格</td><td>15.98万元</td></tr>
+                    <tr><td>长×宽×高（mm）</td><td>4490×1877×1675</td></tr>
+                    <tr><td>轴距（mm）</td><td>2685</td></tr>
+                    <tr><td>空载最小离地间隙（mm）</td><td>186</td></tr>
+                    <tr><td>整备质量（Kg）</td><td>1550</td></tr>
+                    <tr><td>型式</td><td>25T GDI涡轮增压直喷发动机(1797cc)</td></tr>
+                    <tr><td>最大功率（kw/rpm)</td><td>140/5500</td></tr>
+                    <tr><td>最大扭矩（N·m/rpm）</td><td>280/1750-4500</td></tr>
+                    <tr><td>综合工况油耗（L/100km）</td><td>6.9</td></tr>
+                    <tr><td>排放标准</td><td>国5</td></tr>
+                    <tr><td>变速箱</td><td>6速手自一体变速箱+运动模式</td></tr>
+                    <tr><td>悬架系统</td><td>前：麦弗逊式 / 后：多连杆式</td></tr>
+                    <tr><td>制动系统</td><td>前：通风盘式 / 后：盘式</td></tr>
+                    <tr><td>转向系统</td><td>EPS车速感应电子助力转向系统</td></tr>
+                    <tr><td>轮胎规格</td><td>225/65R17</td></tr>
+                    <tr><td>远近光一体HID感应前大灯（带弯道辅助照明）</td><td>—</td></tr>
+                    <tr><td>LED日间行车灯</td><td>●</td></tr>
+                    <tr><td>外后视镜电动折叠</td><td>—</td></tr>
+                    <tr><td>外后视镜电加热（带迎宾照地灯）</td><td>—</td></tr>
+                    <tr><td>可开启式全景天窗（带电动遮阳帘与防夹功能）</td><td>—</td></tr>
+                    <tr><td>自动雨量感应式前雨刮</td><td>—</td></tr>
+                    <tr><td>四门一键升降防夹车窗</td><td>—</td></tr>
+                    <tr><td>防紫外线/隔热车窗玻璃</td><td>—</td></tr>
+                    <tr><td>真皮多功能方向盘（带蓝牙免提）</td><td>—</td></tr>
+                    <tr><td>自动防眩目内后视镜</td><td>—</td></tr>
+                    <tr><td>双温区自动恒温空调</td><td>●</td></tr>
+                    <tr><td>后排空调出风口</td><td>●</td></tr>
+                    <tr><td>LED内舱氛围灯</td><td>—</td></tr>
+                    <tr><td>座椅材质</td><td>经典织物</td></tr>
+                    <tr><td>驾驶席座椅电动8向调节(含2向电动腰托)</td><td>—</td></tr>
+                    <tr><td>前排座椅加热</td><td>—</td></tr>
+                    <tr><td>后排中央扶手（带杯托+储物盒）</td><td>—</td></tr>
+                    <tr><td>电动开启式后备箱（带记忆功能）</td><td>—</td></tr>
+                    <tr><td>智能无钥匙进入/一键启动系统</td><td>●</td></tr>
+                    <tr><td>定速巡航</td><td>—</td></tr>
+                    <tr><td>前排双安全气囊</td><td>●</td></tr>
+                    <tr><td>前排侧气囊</td><td>—</td></tr>
+                    <tr><td>前后贯穿式头部气帘</td><td>—</td></tr>
+                    <tr><td>EPB电子驻车制动+Auto Hold自动驻车系统</td><td>●</td></tr>
+                    <tr><td>ESC车身稳定控制系统</td><td>●</td></tr>
+                    <tr><td>EDS电子差速锁</td><td>●</td></tr>
+                    <tr><td>HBA刹车辅助系统</td><td>●</td></tr>
+                    <tr><td>HAC上坡辅助系统</td><td>●</td></tr>
+                    <tr><td>HDC陡坡缓降系统</td><td>—</td></tr>
+                    <tr><td>TPMS主动式胎压监测系统</td><td>—</td></tr>
+                    <tr><td>后泊车雷达</td><td>●</td></tr>
+                    <tr><td>前泊车雷达</td><td>—</td></tr>
+                    <tr><td>4.2英寸彩色仪表显示屏</td><td>—</td></tr>
+                    <tr><td>8英寸彩色高清中控触摸屏</td><td>—</td></tr>
+                    <tr><td>十向多功能控制旋钮 </td><td>—</td></tr>
+                    <tr><td>手机映射</td><td>—</td></tr>
+                    <tr><td>视频播放功能</td><td>—</td></tr>
+                    <tr><td>高保真立体声音响系统</td><td>●</td></tr>
+                    <tr><td>扬声器</td><td>6</td></tr>
+                    <tr><td>倒车影像</td><td>—</td></tr>
+                    <tr><td>360°鹰眼俯视监测系统</td><td>—</td></tr>
+                    <tr><td>行车记录仪+智能微光感应夜视系统</td><td>—</td></tr>
+                    <tr><td>云服务（实时交通+在线娱乐资讯+违章查询)* </td><td>—</td></tr>
+                    <tr><td>GPS一键导航*</td><td>—</td></tr>
+                    <tr><td>车载WIFI热点*</td><td>—</td></tr>
+                    <tr><td>语音识别*</td><td>—</td></tr>
+                    <tr><td>4G通讯模块系统</td><td>●</td></tr>
+                    <tr><td>S0S一键救援</td><td>●</td></tr>
+                    <tr><td>车辆状态查询+车况查询诊断+远程车辆控制</td><td>●</td></tr>
+                    </tbody></table>
+                <table class="dsx2wd" style="display: none;">
+                    <tbody><tr><td>价格</td><td>16.98万元</td></tr>
+                    <tr><td>长×宽×高（mm）</td><td>4490×1877×1675</td></tr>
+                    <tr><td>轴距（mm）</td><td>2685</td></tr>
+                    <tr><td>空载最小离地间隙（mm）</td><td>186</td></tr>
+                    <tr><td>整备质量（Kg）</td><td>1560</td></tr>
+                    <tr><td>型式</td><td>25T GDI涡轮增压直喷发动机(1797cc)</td></tr>
+                    <tr><td>最大功率（kw/rpm)</td><td>140/5500</td></tr>
+                    <tr><td>最大扭矩（N·m/rpm）</td><td>280/1750-4500</td></tr>
+                    <tr><td>综合工况油耗（L/100km）</td><td>6.9</td></tr>
+                    <tr><td>排放标准</td><td>国5</td></tr>
+                    <tr><td>变速箱</td><td>6速手自一体变速箱+运动模式</td></tr>
+                    <tr><td>悬架系统</td><td>前：麦弗逊式 / 后：多连杆式</td></tr>
+                    <tr><td>制动系统</td><td>前：通风盘式 / 后：盘式</td></tr>
+                    <tr><td>转向系统</td><td>EPS车速感应电子助力转向系统</td></tr>
+                    <tr><td>轮胎规格</td><td>225/60R18</td></tr>
+                    <tr><td>远近光一体HID感应前大灯（带弯道辅助照明）</td><td>—</td></tr>
+                    <tr><td>LED日间行车灯</td><td>●</td></tr>
+                    <tr><td>外后视镜电动折叠</td><td>●</td></tr>
+                    <tr><td>外后视镜电加热（带迎宾照地灯）</td><td>—</td></tr>
+                    <tr><td>可开启式全景天窗（带电动遮阳帘与防夹功能）</td><td>●</td></tr>
+                    <tr><td>自动雨量感应式前雨刮</td><td>—</td></tr>
+                    <tr><td>四门一键升降防夹车窗</td><td>—</td></tr>
+                    <tr><td>防紫外线/隔热车窗玻璃</td><td>—</td></tr>
+                    <tr><td>真皮多功能方向盘（带蓝牙免提）</td><td>●</td></tr>
+                    <tr><td>自动防眩目内后视镜</td><td>—</td></tr>
+                    <tr><td>双温区自动恒温空调</td><td>●</td></tr>
+                    <tr><td>后排空调出风口</td><td>●</td></tr>
+                    <tr><td>LED内舱氛围灯</td><td>—</td></tr>
+                    <tr><td>座椅材质</td><td>法式双针皮革</td></tr>
+                    <tr><td>驾驶席座椅电动8向调节(含2向电动腰托)</td><td>—</td></tr>
+                    <tr><td>前排座椅加热</td><td>—</td></tr>
+                    <tr><td>后排中央扶手（带杯托+储物盒）</td><td>●</td></tr>
+                    <tr><td>电动开启式后备箱（带记忆功能）</td><td>—</td></tr>
+                    <tr><td>智能无钥匙进入/一键启动系统</td><td>●</td></tr>
+                    <tr><td>定速巡航</td><td>●</td></tr>
+                    <tr><td>前排双安全气囊</td><td>●</td></tr>
+                    <tr><td>前排侧气囊</td><td>●</td></tr>
+                    <tr><td>前后贯穿式头部气帘</td><td>—</td></tr>
+                    <tr><td>EPB电子驻车制动+Auto Hold自动驻车系统</td><td>●</td></tr>
+                    <tr><td>ESC车身稳定控制系统</td><td>●</td></tr>
+                    <tr><td>EDS电子差速锁</td><td>●</td></tr>
+                    <tr><td>HBA刹车辅助系统</td><td>●</td></tr>
+                    <tr><td>HAC上坡辅助系统</td><td>●</td></tr>
+                    <tr><td>HDC陡坡缓降系统</td><td>—</td></tr>
+                    <tr><td>TPMS主动式胎压监测系统</td><td>—</td></tr>
+                    <tr><td>后泊车雷达</td><td>●</td></tr>
+                    <tr><td>前泊车雷达</td><td>—</td></tr>
+                    <tr><td>4.2英寸彩色仪表显示屏</td><td>●</td></tr>
+                    <tr><td>8英寸彩色高清中控触摸屏</td><td>●</td></tr>
+                    <tr><td>十向多功能控制旋钮 </td><td>●</td></tr>
+                    <tr><td>手机映射</td><td>●</td></tr>
+                    <tr><td>视频播放功能</td><td>●</td></tr>
+                    <tr><td>高保真立体声音响系统</td><td>●</td></tr>
+                    <tr><td>扬声器</td><td>6</td></tr>
+                    <tr><td>倒车影像</td><td>●</td></tr>
+                    <tr><td>360°鹰眼俯视监测系统</td><td>—</td></tr>
+                    <tr><td>行车记录仪+智能微光感应夜视系统</td><td>—</td></tr>
+                    <tr><td>云服务（实时交通+在线娱乐资讯+违章查询)* </td><td>○</td></tr>
+                    <tr><td>GPS一键导航*                                          </td><td>○</td></tr>
+                    <tr><td>车载WIFI热点*                                          </td><td>○</td></tr>
+                    <tr><td>语音识别*                                                 </td><td>○</td></tr>
+                    <tr><td>4G通讯模块系统</td><td>●</td></tr>
+                    <tr><td>S0S一键救援</td><td>●</td></tr>
+                    <tr><td>车辆状态查询+车况查询诊断+远程车辆控制</td><td>●</td></tr>
+                    </tbody></table>
+                <table class="dsx2wd" style="display: none;">
+                    <tbody><tr><td>价格</td><td>17.98万元</td></tr>
+                    <tr><td>长×宽×高（mm）</td><td>4490×1877×1675</td></tr>
+                    <tr><td>轴距（mm）</td><td>2685</td></tr>
+                    <tr><td>空载最小离地间隙（mm）</td><td>186</td></tr>
+                    <tr><td>整备质量（Kg）</td><td>1580</td></tr>
+                    <tr><td>型式</td><td>25T GDI涡轮增压直喷发动机(1797cc)</td></tr>
+                    <tr><td>最大功率（kw/rpm)</td><td>140/5500</td></tr>
+                    <tr><td>最大扭矩（N·m/rpm）</td><td>280/1750-4500</td></tr>
+                    <tr><td>综合工况油耗（L/100km）</td><td>6.9</td></tr>
+                    <tr><td>排放标准</td><td>国5</td></tr>
+                    <tr><td>变速箱</td><td>6速手自一体变速箱+运动模式</td></tr>
+                    <tr><td>悬架系统</td><td>前：麦弗逊式 / 后：多连杆式</td></tr>
+                    <tr><td>制动系统</td><td>前：通风盘式 / 后：盘式</td></tr>
+                    <tr><td>转向系统</td><td>EPS车速感应电子助力转向系统</td></tr>
+                    <tr><td>轮胎规格</td><td>225/60R18</td></tr>
+                    <tr><td>远近光一体HID感应前大灯（带弯道辅助照明）</td><td>●</td></tr>
+                    <tr><td>LED日间行车灯</td><td>●</td></tr>
+                    <tr><td>外后视镜电动折叠</td><td>●</td></tr>
+                    <tr><td>外后视镜电加热（带迎宾照地灯）</td><td>—</td></tr>
+                    <tr><td>可开启式全景天窗（带电动遮阳帘与防夹功能）</td><td>●</td></tr>
+                    <tr><td>自动雨量感应式前雨刮</td><td>●</td></tr>
+                    <tr><td>四门一键升降防夹车窗</td><td>—</td></tr>
+                    <tr><td>防紫外线/隔热车窗玻璃</td><td>—</td></tr>
+                    <tr><td>真皮多功能方向盘（带蓝牙免提）</td><td>●</td></tr>
+                    <tr><td>自动防眩目内后视镜</td><td>●</td></tr>
+                    <tr><td>双温区自动恒温空调</td><td>●</td></tr>
+                    <tr><td>后排空调出风口</td><td>●</td></tr>
+                    <tr><td>LED内舱氛围灯</td><td>—</td></tr>
+                    <tr><td>座椅材质</td><td>法式双针皮革</td></tr>
+                    <tr><td>驾驶席座椅电动8向调节(含2向电动腰托)</td><td>—</td></tr>
+                    <tr><td>前排座椅加热</td><td>—</td></tr>
+                    <tr><td>后排中央扶手（带杯托+储物盒）</td><td>●</td></tr>
+                    <tr><td>电动开启式后备箱（带记忆功能）</td><td>—</td></tr>
+                    <tr><td>智能无钥匙进入/一键启动系统</td><td>●</td></tr>
+                    <tr><td>定速巡航</td><td>●</td></tr>
+                    <tr><td>前排双安全气囊</td><td>●</td></tr>
+                    <tr><td>前排侧气囊</td><td>●</td></tr>
+                    <tr><td>前后贯穿式头部气帘</td><td>●</td></tr>
+                    <tr><td>EPB电子驻车制动+Auto Hold自动驻车系统</td><td>●</td></tr>
+                    <tr><td>ESC车身稳定控制系统</td><td>●</td></tr>
+                    <tr><td>EDS电子差速锁</td><td>●</td></tr>
+                    <tr><td>HBA刹车辅助系统</td><td>●</td></tr>
+                    <tr><td>HAC上坡辅助系统</td><td>●</td></tr>
+                    <tr><td>HDC陡坡缓降系统</td><td>—</td></tr>
+                    <tr><td>TPMS主动式胎压监测系统</td><td>—</td></tr>
+                    <tr><td>后泊车雷达</td><td>●</td></tr>
+                    <tr><td>前泊车雷达</td><td>●</td></tr>
+                    <tr><td>4.2英寸彩色仪表显示屏</td><td>●</td></tr>
+                    <tr><td>8英寸彩色高清中控触摸屏</td><td>●</td></tr>
+                    <tr><td>十向多功能控制旋钮 </td><td>●</td></tr>
+                    <tr><td>手机映射</td><td>●</td></tr>
+                    <tr><td>视频播放功能</td><td>●</td></tr>
+                    <tr><td>高保真立体声音响系统</td><td>●</td></tr>
+                    <tr><td>扬声器</td><td>6</td></tr>
+                    <tr><td>倒车影像</td><td>—</td></tr>
+                    <tr><td>360°鹰眼俯视监测系统</td><td>●</td></tr>
+                    <tr><td>行车记录仪+智能微光感应夜视系统</td><td>—</td></tr>
+                    <tr><td>云服务（实时交通+在线娱乐资讯+违章查询)* </td><td>○</td></tr>
+                    <tr><td>GPS一键导航*                                          </td><td>○</td></tr>
+                    <tr><td>车载WIFI热点*                                          </td><td>○</td></tr>
+                    <tr><td>语音识别*                                                 </td><td>○</td></tr>
+                    <tr><td>4G通讯模块系统</td><td>●</td></tr>
+                    <tr><td>S0S一键救援</td><td>●</td></tr>
+                    <tr><td>车辆状态查询+车况查询诊断+远程车辆控制</td><td>●</td></tr>
+                    </tbody></table>
+                <table class="dsx2wd" style="display: none;">
+                    <tbody><tr><td>价格</td><td>18.98万元</td></tr>
+                    <tr><td>长×宽×高（mm）</td><td>4490×1877×1675</td></tr>
+                    <tr><td>轴距（mm）</td><td>2685</td></tr>
+                    <tr><td>空载最小离地间隙（mm）</td><td>186</td></tr>
+                    <tr><td>整备质量（Kg）</td><td>1590</td></tr>
+                    <tr><td>型式</td><td>25T GDI涡轮增压直喷发动机(1797cc)</td></tr>
+                    <tr><td>最大功率（kw/rpm)</td><td>140/5500</td></tr>
+                    <tr><td>最大扭矩（N·m/rpm）</td><td>280/1750-4500</td></tr>
+                    <tr><td>综合工况油耗（L/100km）</td><td>6.9</td></tr>
+                    <tr><td>排放标准</td><td>国5</td></tr>
+                    <tr><td>变速箱</td><td>6速手自一体变速箱+运动模式</td></tr>
+                    <tr><td>悬架系统</td><td>前：麦弗逊式 / 后：多连杆式</td></tr>
+                    <tr><td>制动系统</td><td>前：通风盘式 / 后：盘式</td></tr>
+                    <tr><td>转向系统</td><td>EPS车速感应电子助力转向系统</td></tr>
+                    <tr><td>轮胎规格</td><td>225/60R18</td></tr>
+                    <tr><td>远近光一体HID感应前大灯（带弯道辅助照明）</td><td>●</td></tr>
+                    <tr><td>LED日间行车灯</td><td>●</td></tr>
+                    <tr><td>外后视镜电动折叠</td><td>●</td></tr>
+                    <tr><td>外后视镜电加热（带迎宾照地灯）</td><td>●</td></tr>
+                    <tr><td>可开启式全景天窗（带电动遮阳帘与防夹功能）</td><td>●</td></tr>
+                    <tr><td>自动雨量感应式前雨刮</td><td>●</td></tr>
+                    <tr><td>四门一键升降防夹车窗</td><td>●</td></tr>
+                    <tr><td>防紫外线/隔热车窗玻璃</td><td>—</td></tr>
+                    <tr><td>真皮多功能方向盘（带蓝牙免提）</td><td>●</td></tr>
+                    <tr><td>自动防眩目内后视镜</td><td>●</td></tr>
+                    <tr><td>双温区自动恒温空调</td><td>●</td></tr>
+                    <tr><td>后排空调出风口</td><td>●</td></tr>
+                    <tr><td>LED内舱氛围灯</td><td>●</td></tr>
+                    <tr><td>座椅材质</td><td>Vienna真皮</td></tr>
+                    <tr><td>驾驶席座椅电动8向调节(含2向电动腰托)</td><td>●</td></tr>
+                    <tr><td>前排座椅加热</td><td>●</td></tr>
+                    <tr><td>后排中央扶手（带杯托+储物盒）</td><td>●</td></tr>
+                    <tr><td>电动开启式后备箱（带记忆功能）</td><td>●</td></tr>
+                    <tr><td>智能无钥匙进入/一键启动系统</td><td>●</td></tr>
+                    <tr><td>定速巡航</td><td>●</td></tr>
+                    <tr><td>前排双安全气囊</td><td>●</td></tr>
+                    <tr><td>前排侧气囊</td><td>●</td></tr>
+                    <tr><td>前后贯穿式头部气帘</td><td>●</td></tr>
+                    <tr><td>EPB电子驻车制动+Auto Hold自动驻车系统</td><td>●</td></tr>
+                    <tr><td>ESC车身稳定控制系统</td><td>●</td></tr>
+                    <tr><td>EDS电子差速锁</td><td>●</td></tr>
+                    <tr><td>HBA刹车辅助系统</td><td>●</td></tr>
+                    <tr><td>HAC上坡辅助系统</td><td>●</td></tr>
+                    <tr><td>HDC陡坡缓降系统</td><td>—</td></tr>
+                    <tr><td>TPMS主动式胎压监测系统</td><td>●</td></tr>
+                    <tr><td>后泊车雷达</td><td>●</td></tr>
+                    <tr><td>前泊车雷达</td><td>●</td></tr>
+                    <tr><td>4.2英寸彩色仪表显示屏</td><td>●</td></tr>
+                    <tr><td>8英寸彩色高清中控触摸屏</td><td>●</td></tr>
+                    <tr><td>十向多功能控制旋钮 </td><td>●</td></tr>
+                    <tr><td>手机映射</td><td>●</td></tr>
+                    <tr><td>视频播放功能</td><td>●</td></tr>
+                    <tr><td>高保真立体声音响系统</td><td>●</td></tr>
+                    <tr><td>扬声器</td><td>8</td></tr>
+                    <tr><td>倒车影像</td><td>—</td></tr>
+                    <tr><td>360°鹰眼俯视监测系统</td><td>●</td></tr>
+                    <tr><td>行车记录仪+智能微光感应夜视系统</td><td>○</td></tr>
+                    <tr><td>云服务（实时交通+在线娱乐资讯+违章查询)* </td><td>●</td></tr>
+                    <tr><td>GPS一键导航*                                          </td><td>●</td></tr>
+                    <tr><td>车载WIFI热点*                                          </td><td>●</td></tr>
+                    <tr><td>语音识别*                                                 </td><td>●</td></tr>
+                    <tr><td>4G通讯模块系统</td><td>●</td></tr>
+                    <tr><td>S0S一键救援</td><td>●</td></tr>
+                    <tr><td>车辆状态查询+车况查询诊断+远程车辆控制</td><td>●</td></tr>
+                    </tbody></table>
+                <table class="dsx2wd" style="display: none;">
+                    <tbody><tr><td>价格</td><td>18.58万元</td></tr>
+                    <tr><td>长×宽×高（mm）</td><td>4490×1877×1675</td></tr>
+                    <tr><td>轴距（mm）</td><td>2685</td></tr>
+                    <tr><td>空载最小离地间隙（mm）</td><td>186</td></tr>
+                    <tr><td>整备质量（Kg）</td><td>1640</td></tr>
+                    <tr><td>型式</td><td>25T GDI涡轮增压直喷发动机(1797cc)</td></tr>
+                    <tr><td>最大功率（kw/rpm)</td><td>140/5500</td></tr>
+                    <tr><td>最大扭矩（N·m/rpm）</td><td>280/1750-4500</td></tr>
+                    <tr><td>综合工况油耗（L/100km）</td><td>7.3</td></tr>
+                    <tr><td>排放标准</td><td>国5</td></tr>
+                    <tr><td>变速箱</td><td>6速手自一体变速箱+运动模式</td></tr>
+                    <tr><td>悬架系统</td><td>前：麦弗逊式 / 后：多连杆式</td></tr>
+                    <tr><td>制动系统</td><td>前：通风盘式 / 后：盘式</td></tr>
+                    <tr><td>转向系统</td><td>EPS车速感应电子助力转向系统</td></tr>
+                    <tr><td>轮胎规格</td><td>225/60R18</td></tr>
+                    <tr><td>远近光一体HID感应前大灯（带弯道辅助照明）</td><td>—</td></tr>
+                    <tr><td>LED日间行车灯</td><td>●</td></tr>
+                    <tr><td>外后视镜电动折叠</td><td>●</td></tr>
+                    <tr><td>外后视镜电加热（带迎宾照地灯）</td><td>—</td></tr>
+                    <tr><td>可开启式全景天窗（带电动遮阳帘与防夹功能）</td><td>●</td></tr>
+                    <tr><td>自动雨量感应式前雨刮</td><td>—</td></tr>
+                    <tr><td>四门一键升降防夹车窗</td><td>—</td></tr>
+                    <tr><td>防紫外线/隔热车窗玻璃</td><td>—</td></tr>
+                    <tr><td>真皮多功能方向盘（带蓝牙免提）</td><td>●</td></tr>
+                    <tr><td>自动防眩目内后视镜</td><td>—</td></tr>
+                    <tr><td>双温区自动恒温空调</td><td>●</td></tr>
+                    <tr><td>后排空调出风口</td><td>●</td></tr>
+                    <tr><td>LED内舱氛围灯</td><td>—</td></tr>
+                    <tr><td>座椅材质</td><td>法式双针皮革</td></tr>
+                    <tr><td>驾驶席座椅电动8向调节(含2向电动腰托)</td><td>—</td></tr>
+                    <tr><td>前排座椅加热</td><td>—</td></tr>
+                    <tr><td>后排中央扶手（带杯托+储物盒）</td><td>●</td></tr>
+                    <tr><td>电动开启式后备箱（带记忆功能）</td><td>—</td></tr>
+                    <tr><td>智能无钥匙进入/一键启动系统</td><td>●</td></tr>
+                    <tr><td>定速巡航</td><td>●</td></tr>
+                    <tr><td>前排双安全气囊</td><td>●</td></tr>
+                    <tr><td>前排侧气囊</td><td>●</td></tr>
+                    <tr><td>前后贯穿式头部气帘</td><td>—</td></tr>
+                    <tr><td>EPB电子驻车制动+Auto Hold自动驻车系统</td><td>●</td></tr>
+                    <tr><td>ESC车身稳定控制系统</td><td>●</td></tr>
+                    <tr><td>EDS电子差速锁</td><td>●</td></tr>
+                    <tr><td>HBA刹车辅助系统</td><td>●</td></tr>
+                    <tr><td>HAC上坡辅助系统</td><td>●</td></tr>
+                    <tr><td>HDC陡坡缓降系统</td><td>●</td></tr>
+                    <tr><td>TPMS主动式胎压监测系统</td><td>—</td></tr>
+                    <tr><td>后泊车雷达</td><td>●</td></tr>
+                    <tr><td>前泊车雷达</td><td>—</td></tr>
+                    <tr><td>4.2英寸彩色仪表显示屏</td><td>●</td></tr>
+                    <tr><td>8英寸彩色高清中控触摸屏</td><td>●</td></tr>
+                    <tr><td>十向多功能控制旋钮 </td><td>●</td></tr>
+                    <tr><td>手机映射</td><td>●</td></tr>
+                    <tr><td>视频播放功能</td><td>●</td></tr>
+                    <tr><td>高保真立体声音响系统</td><td>●</td></tr>
+                    <tr><td>扬声器</td><td>6</td></tr>
+                    <tr><td>倒车影像</td><td>●</td></tr>
+                    <tr><td>360°鹰眼俯视监测系统</td><td>—</td></tr>
+                    <tr><td>行车记录仪+智能微光感应夜视系统</td><td>—</td></tr>
+                    <tr><td>云服务（实时交通+在线娱乐资讯+违章查询)* </td><td>○</td></tr>
+                    <tr><td>GPS一键导航*                                          </td><td>○</td></tr>
+                    <tr><td>车载WIFI热点*                                          </td><td>○</td></tr>
+                    <tr><td>语音识别*                                                 </td><td>○</td></tr>
+                    <tr><td>4G通讯模块系统</td><td>●</td></tr>
+                    <tr><td>S0S一键救援</td><td>●</td></tr>
+                    <tr><td>车辆状态查询+车况查询诊断+远程车辆控制</td><td>●</td></tr>
+
+                    </tbody></table>
+                <table class="dsx2wd" style="display: none;">
+                    <tbody><tr><td>价格</td><td>19.58万元</td></tr>
+                    <tr><td>长×宽×高（mm）</td><td>4490×1877×1675</td></tr>
+                    <tr><td>轴距（mm）</td><td>2685</td></tr>
+                    <tr><td>空载最小离地间隙（mm）</td><td>186</td></tr>
+                    <tr><td>整备质量（Kg）</td><td>1660</td></tr>
+                    <tr><td>型式</td><td>25T GDI涡轮增压直喷发动机(1797cc)</td></tr>
+                    <tr><td>最大功率（kw/rpm)</td><td>140/5500</td></tr>
+                    <tr><td>最大扭矩（N·m/rpm）</td><td>280/1750-4500</td></tr>
+                    <tr><td>综合工况油耗（L/100km）</td><td>7.3</td></tr>
+                    <tr><td>排放标准</td><td>国5</td></tr>
+                    <tr><td>变速箱</td><td>6速手自一体变速箱+运动模式</td></tr>
+                    <tr><td>悬架系统</td><td>前：麦弗逊式 / 后：多连杆式</td></tr>
+                    <tr><td>制动系统</td><td>前：通风盘式 / 后：盘式</td></tr>
+                    <tr><td>转向系统</td><td>EPS车速感应电子助力转向系统</td></tr>
+                    <tr><td>轮胎规格</td><td>225/60R18</td></tr>
+                    <tr><td>远近光一体HID感应前大灯（带弯道辅助照明）</td><td>●</td></tr>
+                    <tr><td>LED日间行车灯</td><td>●</td></tr>
+                    <tr><td>外后视镜电动折叠</td><td>●</td></tr>
+                    <tr><td>外后视镜电加热（带迎宾照地灯）</td><td>—</td></tr>
+                    <tr><td>可开启式全景天窗（带电动遮阳帘与防夹功能）</td><td>●</td></tr>
+                    <tr><td>自动雨量感应式前雨刮</td><td>●</td></tr>
+                    <tr><td>四门一键升降防夹车窗</td><td>—</td></tr>
+                    <tr><td>防紫外线/隔热车窗玻璃</td><td>—</td></tr>
+                    <tr><td>真皮多功能方向盘（带蓝牙免提）</td><td>●</td></tr>
+                    <tr><td>自动防眩目内后视镜</td><td>●</td></tr>
+                    <tr><td>双温区自动恒温空调</td><td>●</td></tr>
+                    <tr><td>后排空调出风口</td><td>●</td></tr>
+                    <tr><td>LED内舱氛围灯</td><td>—</td></tr>
+                    <tr><td>座椅材质</td><td>法式双针皮革</td></tr>
+                    <tr><td>驾驶席座椅电动8向调节(含2向电动腰托)</td><td>—</td></tr>
+                    <tr><td>前排座椅加热</td><td>—</td></tr>
+                    <tr><td>后排中央扶手（带杯托+储物盒）</td><td>●</td></tr>
+                    <tr><td>电动开启式后备箱（带记忆功能）</td><td>—</td></tr>
+                    <tr><td>智能无钥匙进入/一键启动系统</td><td>●</td></tr>
+                    <tr><td>定速巡航</td><td>●</td></tr>
+                    <tr><td>前排双安全气囊</td><td>●</td></tr>
+                    <tr><td>前排侧气囊</td><td>●</td></tr>
+                    <tr><td>前后贯穿式头部气帘</td><td>●</td></tr>
+                    <tr><td>EPB电子驻车制动+Auto Hold自动驻车系统</td><td>●</td></tr>
+                    <tr><td>ESC车身稳定控制系统</td><td>●</td></tr>
+                    <tr><td>EDS电子差速锁</td><td>●</td></tr>
+                    <tr><td>HBA刹车辅助系统</td><td>●</td></tr>
+                    <tr><td>HAC上坡辅助系统</td><td>●</td></tr>
+                    <tr><td>HDC陡坡缓降系统</td><td>●</td></tr>
+                    <tr><td>TPMS主动式胎压监测系统</td><td>—</td></tr>
+                    <tr><td>后泊车雷达</td><td>●</td></tr>
+                    <tr><td>前泊车雷达</td><td>●</td></tr>
+                    <tr><td>4.2英寸彩色仪表显示屏</td><td>●</td></tr>
+                    <tr><td>8英寸彩色高清中控触摸屏</td><td>●</td></tr>
+                    <tr><td>十向多功能控制旋钮 </td><td>●</td></tr>
+                    <tr><td>手机映射</td><td>●</td></tr>
+                    <tr><td>视频播放功能</td><td>●</td></tr>
+                    <tr><td>高保真立体声音响系统</td><td>●</td></tr>
+                    <tr><td>扬声器</td><td>6</td></tr>
+                    <tr><td>倒车影像</td><td>—</td></tr>
+                    <tr><td>360°鹰眼俯视监测系统</td><td>●</td></tr>
+                    <tr><td>行车记录仪+智能微光感应夜视系统</td><td>—</td></tr>
+                    <tr><td>云服务（实时交通+在线娱乐资讯+违章查询)* </td><td>○</td></tr>
+                    <tr><td>GPS一键导航*                                          </td><td>○</td></tr>
+                    <tr><td>车载WIFI热点*                                          </td><td>○</td></tr>
+                    <tr><td>语音识别*                                                 </td><td>○</td></tr>
+                    <tr><td>4G通讯模块系统</td><td>●</td></tr>
+                    <tr><td>S0S一键救援</td><td>●</td></tr>
+                    <tr><td>车辆状态查询+车况查询诊断+远程车辆控制</td><td>●</td></tr>
+                    </tbody></table>
+                <table class="dsx2wd" style="display: none;">
+                    <tbody><tr><td>价格</td><td>20.58万元</td></tr>
+                    <tr><td>长×宽×高（mm）</td><td>4490×1877×1675</td></tr>
+                    <tr><td>轴距（mm）</td><td>1685</td></tr>
+                    <tr><td>空载最小离地间隙（mm）</td><td>186</td></tr>
+                    <tr><td>整备质量（Kg）</td><td>1660</td></tr>
+                    <tr><td>型式</td><td>25T GDI涡轮增压直喷发动机(1797cc)</td></tr>
+                    <tr><td>最大功率（kw/rpm)</td><td>140/5500</td></tr>
+                    <tr><td>最大扭矩（N·m/rpm）</td><td>280/1750-4500</td></tr>
+                    <tr><td>综合工况油耗（L/100km）</td><td>7.3</td></tr>
+                    <tr><td>排放标准</td><td>国5</td></tr>
+                    <tr><td>变速箱</td><td>6速手自一体变速箱+运动模式</td></tr>
+                    <tr><td>悬架系统</td><td>前：麦弗逊式 / 后：多连杆式</td></tr>
+                    <tr><td>制动系统</td><td>前：通风盘式 / 后：盘式</td></tr>
+                    <tr><td>转向系统</td><td>EPS车速感应电子助力转向系统</td></tr>
+                    <tr><td>轮胎规格</td><td>225/60R18</td></tr>
+                    <tr><td>远近光一体HID感应前大灯（带弯道辅助照明）</td><td>●</td></tr>
+                    <tr><td>LED日间行车灯</td><td>●</td></tr>
+                    <tr><td>外后视镜电动折叠</td><td>●</td></tr>
+                    <tr><td>外后视镜电加热（带迎宾照地灯）</td><td>●</td></tr>
+                    <tr><td>可开启式全景天窗（带电动遮阳帘与防夹功能）</td><td>●</td></tr>
+                    <tr><td>自动雨量感应式前雨刮</td><td>●</td></tr>
+                    <tr><td>四门一键升降防夹车窗</td><td>●</td></tr>
+                    <tr><td>防紫外线/隔热车窗玻璃</td><td>—</td></tr>
+                    <tr><td>真皮多功能方向盘（带蓝牙免提）</td><td>●</td></tr>
+                    <tr><td>自动防眩目内后视镜</td><td>●</td></tr>
+                    <tr><td>双温区自动恒温空调</td><td>●</td></tr>
+                    <tr><td>后排空调出风口</td><td>●</td></tr>
+                    <tr><td>LED内舱氛围灯</td><td>●</td></tr>
+                    <tr><td>座椅材质</td><td>Vienna真皮</td></tr>
+                    <tr><td>驾驶席座椅电动8向调节(含2向电动腰托)</td><td>●</td></tr>
+                    <tr><td>前排座椅加热</td><td>●</td></tr>
+                    <tr><td>后排中央扶手（带杯托+储物盒）</td><td>●</td></tr>
+                    <tr><td>电动开启式后备箱（带记忆功能）</td><td>●</td></tr>
+                    <tr><td>智能无钥匙进入/一键启动系统</td><td>●</td></tr>
+                    <tr><td>定速巡航</td><td>●</td></tr>
+                    <tr><td>前排双安全气囊</td><td>●</td></tr>
+                    <tr><td>前排侧气囊</td><td>●</td></tr>
+                    <tr><td>前后贯穿式头部气帘</td><td>●</td></tr>
+                    <tr><td>EPB电子驻车制动+Auto Hold自动驻车系统</td><td>●</td></tr>
+                    <tr><td>ESC车身稳定控制系统</td><td>●</td></tr>
+                    <tr><td>EDS电子差速锁</td><td>●</td></tr>
+                    <tr><td>HBA刹车辅助系统</td><td>●</td></tr>
+                    <tr><td>HAC上坡辅助系统</td><td>●</td></tr>
+                    <tr><td>HDC陡坡缓降系统</td><td>●</td></tr>
+                    <tr><td>TPMS主动式胎压监测系统</td><td>●</td></tr>
+                    <tr><td>后泊车雷达</td><td>●</td></tr>
+                    <tr><td>前泊车雷达</td><td>●</td></tr>
+                    <tr><td>4.2英寸彩色仪表显示屏</td><td>●</td></tr>
+                    <tr><td>8英寸彩色高清中控触摸屏</td><td>●</td></tr>
+                    <tr><td>十向多功能控制旋钮 </td><td>●</td></tr>
+                    <tr><td>手机映射</td><td>●</td></tr>
+                    <tr><td>视频播放功能</td><td>●</td></tr>
+                    <tr><td>高保真立体声音响系统</td><td>●</td></tr>
+                    <tr><td>扬声器</td><td>8</td></tr>
+                    <tr><td>倒车影像</td><td>—</td></tr>
+                    <tr><td>360°鹰眼俯视监测系统</td><td>●</td></tr>
+                    <tr><td>行车记录仪+智能微光感应夜视系统</td><td>○</td></tr>
+                    <tr><td>云服务（实时交通+在线娱乐资讯+违章查询)* </td><td>●</td></tr>
+                    <tr><td>GPS一键导航*                                          </td><td>●</td></tr>
+                    <tr><td>车载WIFI热点*                                          </td><td>●</td></tr>
+                    <tr><td>语音识别*                                                 </td><td>●</td></tr>
+                    <tr><td>4G通讯模块系统</td><td>●</td></tr>
+                    <tr><td>S0S一键救援</td><td>●</td></tr>
+                    <tr><td>车辆状态查询+车况查询诊断+远程车辆控制</td><td>●</td></tr>
+                    </tbody></table>
+                <table class="dsx2wd" style="display: none;">
+                    <tbody><tr><td>价格</td><td>21.68万元</td></tr>
+                    <tr><td>长×宽×高（mm）</td><td>4490×1877×1675</td></tr>
+                    <tr><td>轴距（mm）</td><td>2685</td></tr>
+                    <tr><td>空载最小离地间隙（mm）</td><td>186</td></tr>
+                    <tr><td>整备质量（Kg）</td><td>1670</td></tr>
+                    <tr><td>型式</td><td>25T GDI涡轮增压直喷发动机(1797cc)</td></tr>
+                    <tr><td>最大功率（kw/rpm)</td><td>140/5500</td></tr>
+                    <tr><td>最大扭矩（N·m/rpm）</td><td>280/1750-4500</td></tr>
+                    <tr><td>综合工况油耗（L/100km）</td><td>7.3</td></tr>
+                    <tr><td>排放标准</td><td>国5</td></tr>
+                    <tr><td>变速箱</td><td>6速手自一体变速箱+运动模式</td></tr>
+                    <tr><td>悬架系统</td><td>前：麦弗逊式 / 后：多连杆式</td></tr>
+                    <tr><td>制动系统</td><td>前：通风盘式 / 后：盘式</td></tr>
+                    <tr><td>转向系统</td><td>EPS车速感应电子助力转向系统</td></tr>
+                    <tr><td>轮胎规格</td><td>225/60R18</td></tr>
+                    <tr><td>远近光一体HID感应前大灯（带弯道辅助照明）</td><td>●</td></tr>
+                    <tr><td>LED日间行车灯</td><td>●</td></tr>
+                    <tr><td>外后视镜电动折叠</td><td>●</td></tr>
+                    <tr><td>外后视镜电加热（带迎宾照地灯）</td><td>●</td></tr>
+                    <tr><td>可开启式全景天窗（带电动遮阳帘与防夹功能）</td><td>●</td></tr>
+                    <tr><td>自动雨量感应式前雨刮</td><td>●</td></tr>
+                    <tr><td>四门一键升降防夹车窗</td><td>●</td></tr>
+                    <tr><td>防紫外线/隔热车窗玻璃</td><td>●</td></tr>
+                    <tr><td>真皮多功能方向盘（带蓝牙免提）</td><td>●</td></tr>
+                    <tr><td>自动防眩目内后视镜</td><td>●</td></tr>
+                    <tr><td>双温区自动恒温空调</td><td>●</td></tr>
+                    <tr><td>后排空调出风口</td><td>●</td></tr>
+                    <tr><td>LED内舱氛围灯</td><td>●</td></tr>
+                    <tr><td>座椅材质</td><td>Vienna真皮</td></tr>
+                    <tr><td>驾驶席座椅电动8向调节(含2向电动腰托)</td><td>●</td></tr>
+                    <tr><td>前排座椅加热</td><td>●</td></tr>
+                    <tr><td>后排中央扶手（带杯托+储物盒）</td><td>●</td></tr>
+                    <tr><td>电动开启式后备箱（带记忆功能）</td><td>●</td></tr>
+                    <tr><td>智能无钥匙进入/一键启动系统</td><td>●</td></tr>
+                    <tr><td>定速巡航</td><td>●</td></tr>
+                    <tr><td>前排双安全气囊</td><td>●</td></tr>
+                    <tr><td>前排侧气囊</td><td>●</td></tr>
+                    <tr><td>前后贯穿式头部气帘</td><td>●</td></tr>
+                    <tr><td>EPB电子驻车制动+Auto Hold自动驻车系统</td><td>●</td></tr>
+                    <tr><td>ESC车身稳定控制系统</td><td>●</td></tr>
+                    <tr><td>EDS电子差速锁</td><td>●</td></tr>
+                    <tr><td>HBA刹车辅助系统</td><td>●</td></tr>
+                    <tr><td>HAC上坡辅助系统</td><td>●</td></tr>
+                    <tr><td>HDC陡坡缓降系统</td><td>●</td></tr>
+                    <tr><td>TPMS主动式胎压监测系统</td><td>●</td></tr>
+                    <tr><td>后泊车雷达</td><td>●</td></tr>
+                    <tr><td>前泊车雷达</td><td>●</td></tr>
+                    <tr><td>4.2英寸彩色仪表显示屏</td><td>●</td></tr>
+                    <tr><td>8英寸彩色高清中控触摸屏</td><td>●</td></tr>
+                    <tr><td>十向多功能控制旋钮 </td><td>●</td></tr>
+                    <tr><td>手机映射</td><td>●</td></tr>
+                    <tr><td>视频播放功能</td><td>●</td></tr>
+                    <tr><td>高保真立体声音响系统</td><td>●</td></tr>
+                    <tr><td>扬声器</td><td>9</td></tr>
+                    <tr><td>倒车影像</td><td>—</td></tr>
+                    <tr><td>360°鹰眼俯视监测系统</td><td>●</td></tr>
+                    <tr><td>行车记录仪+智能微光感应夜视系统</td><td>●</td></tr>
+                    <tr><td>云服务（实时交通+在线娱乐资讯+违章查询)* </td><td>●</td></tr>
+                    <tr><td>GPS一键导航*                                          </td><td>●</td></tr>
+                    <tr><td>车载WIFI热点*                                          </td><td>●</td></tr>
+                    <tr><td>语音识别*                                                 </td><td>●</td></tr>
+                    <tr><td>4G通讯模块系统</td><td>●</td></tr>
+                    <tr><td>S0S一键救援</td><td>●</td></tr>
+                    <tr><td>车辆状态查询+车况查询诊断+远程车辆控制</td><td>●</td></tr>
+
+                    </tbody></table>
+            </div>
         </div>
-        </div>
-        <!-- 精美车图-end -->
+        <!-- 车型配置-end -->
         <!-- 品牌历史 -->
         <div class="history">
             <h2>品牌历史</h2>
@@ -133,6 +678,11 @@
                 <a href="http://www.borgward.com.cn/brand_ideas"></a>
                 <a href="http://www.borgward.com.cn/brand_success"></a>
             </div>
+            <div class="ewm">
+                <span><img src="./images/wx.png"/></span>
+                <span><img src="./images/wb.png"/></span>
+            </div>
+            <div class="phone"><img src="./images/phone.png"/></div>
         </div>
         <!-- 品牌历史-end -->
     </div>
@@ -156,9 +706,15 @@
         prevButton: '.swiper-button-prev'
     });
 
+    $('#xz-car').change(function () {
+        var index=$(this).find('option:selected').data('id');
+        $('.dsx2wd').eq(index).show().siblings().hide();
+
+    })
+
 
     //edit by song 
-	var ymurl = "http://h5.qlh520.top";
+	//var ymurl = "http://h5.qlh520.top";
 	var ymurl = "//xy.qichedaquan.com";
 	 
     
@@ -265,10 +821,10 @@
             return alert(msg.message);
         }
 		
-		var title ='宝沃BX5撼世登场'; // 分享标题
+		var title ='德国宝沃BX5 风尚PLUS型 锋芒上市'; // 分享标题
         var link =ymurl+'/201703/borgwardbx5';
-        var desc = '宝沃BX5全新上市'; // 分享描述
-        var imgUrl = ymurl+'/201703/borgwardbx5/images/sharewx.jpg'; 
+        var desc = '全系14.98万起'; // 分享描述
+        var imgUrl = 'http://xy.qichedaquan.com/201703/borgwardbx5/images/share.png'; 
 	    var wx_appId = msg.appId; 
 		var wx_timestamp = msg.timestamp;
 		var wx_nonceStr = msg.nonceStr;

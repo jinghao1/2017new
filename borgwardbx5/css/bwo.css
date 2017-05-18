@@ -1,18 +1,25 @@
 body{}
 img{width:100%;display: block}
 input{border:none;}
-.bwo{position:relative;background: url(../images/bg.jpg) no-repeat;height:89.35rem; background-size:100%;}
-.jr{position: absolute;top:7.3rem; right:2.5rem;width:3.1rem;height:0.775rem}
-.ewm{position:absolute;top:12.675rem; left:1.0rem;width:5.6rem;height:3.075rem;}
-.ewm span{float:left;width:2.35rem;margin-right:0.25rem;}
+.bwo{position:relative;background: url(../images/bg.jpg) no-repeat;position: relative;
+    background: url(../images/bg.jpg) no-repeat;
+    height: 113.95rem;
+    background-size: 100%; background-size:100%;}
+.jr{position: absolute;top:3.85rem; right:1.0rem;width:3.1rem;height:0.775rem}
+
 .jr a{ display:inline-block;width:3.1rem;height:0.775rem}
-.jcVideo{position:absolute;top:16.25rem;left:0.975rem;}
-.jcVideo h2,.login h2,.carType h2,.carImg h2,.history h2{border-left:2px solid #8a0000; padding-left:0.5rem;font-size:0.7rem;color:#fff;}
-.vid-box{width:14.1rem;height:8.3rem;position:relative;}
+.jcVideo{    position: absolute;
+    top: 33rem;
+    left: 0.975rem;}
+.jcVideo h2,.login h2,.carType h2,.carImg h2,.history h2,.carPzhi h2{border-left:2px solid #8a0000; padding-left:0.5rem;font-size:0.7rem;color:#fff;}
+.vid-box{ width: 14.1rem;
+    height: 8.3rem;
+    position: relative;
+    margin-top: 0.55rem;}
 .vid-box img{width:14.1rem;height:8.3rem;}
 .vid-box video{width:14.1rem;height:8.3rem;position:absolute; top:0;}
 
-.login{position:absolute;top:26.2rem;left:0.975rem;width:14.1rem;}
+.login{position: absolute;top: 16.25rem;left: 0.975rem;}
 .login ul{}
 .login ul li{line-height:1.4rem;width:14.1rem; margin-top:0.6rem;float:left;}
 .login ul li span{float:left;width:3rem; color:#fff; font-size:0.65rem;}
@@ -32,13 +39,89 @@ input{border:none;}
 .login h3{font-size:12px;margin-top:0.375rem;float:left;color:#838383;}
 .login h3 a{color:#d50012;}
 .tjBtn{float:left;margin-top:1.15rem;margin-left:3.8rem; width:6.475rem;background: url("../images/btn.png") no-repeat;height:1.375rem; background-size:100%;}
-.carType{position:absolute;top:44.35rem;margin-left:6%;width:88%;}
+.carType{    position: absolute;
+    top: 56.775rem;
+    width: 88%;
+    margin-left: 6%;}
 
-.carImg{position:absolute;top:57.775rem;width:88%;margin-left:6%;}
+.carImg{    position: absolute;
+    top: 44.35rem;
+    margin-left: 6%;
+    width: 88%;}
+.carPzhi{
+    position: absolute;
+    top: 71.35rem;
+    margin-left: 6%;
+    width: 88%;
+}
 
-.history{position:absolute;top:70.375rem;width:88%;margin-left:6%;}
-.h_box{background: url("../images/ls.png") no-repeat;float:left; background-size:100% 100%;width:100%;height:15.75rem;margin-top:0.75rem;}
-.h_box a{width:49%;height:42%;margin-bottom:1%;float:left;margin-right:2%;}
+.choose-cartype {
+    width: 100%;
+    height: 1.4rem;
+    background: url(../images/xzcx.png) no-repeat;
+    background-size: contain;
+    position: relative;
+    margin: 0.5rem auto;
+}
+#xz-car {
+    width: 8.2rem;
+    height: 1.4rem;
+    background: none;
+    border: none;
+    outline: none;
+    top: 0;
+    right: 0;
+    position: absolute;
+    font-size: 15px;
+    color: #fff;
+}
+
+.car-peizhi {
+    width: 100%;
+    height: 12rem;
+    overflow: auto;
+    margin-top: 15px;
+}
+table {
+    border-spacing: 0;
+    border-collapse: collapse;
+    font-size: 11px;
+}
+.dsx2wd {
+    width: 100%;
+    display: none;
+}
+.dsx2wd tr {
+    height: 30px;
+    border: 1px solid #c6c6c6;
+}
+.dsx2wd tr:nth-child(2n) {
+    background: #d7d7d7;
+}
+.dsx2wd tr:nth-child(2n+1) {
+    background: #e6e6e6;
+}
+.dsx2wd td {
+    border: 1px solid #c6c6c6;
+    width: 50%;
+}
+.dsx2wd td:nth-child(2n+1) {
+    padding-left: 5px;
+}
+caption, td, th {
+    font-weight: 400;
+    text-align: left;
+}
+.dsx2wd td:nth-child(2n) {
+    text-align: center;
+}
+
+.history{ position: absolute;
+    top: 88.7rem;
+    width: 88%;
+    margin-left: 6%;}
+.h_box{background: url("../images/ls.png") no-repeat;float:left; background-size:100% 100%;width:100%;height:14.075rem;margin-top:0.75rem;}
+.h_box a{width:49%;height:49%;margin-bottom:1%;float:left;margin-right:2%;}
 .h_box a:last-child{margin-right:0;}
 /*swiper*/
 .swiper-containers{width:100%;margin-left:auto;margin-right:0;margin-top:0.6rem;overflow:hidden;z-index:1;position:relative;}
@@ -51,5 +134,21 @@ input{border:none;}
 .swiper-containers .swiper-button-prev{background-image: url(../images/left.png);width:1.375rem;height:3.65rem;background-size:1.375rem 3.65rem;left:-1px;margin-top:-1.9rem;}
 .swiper-containers .swiper-button-next{background-image: url(../images/right.png);width:1.375rem;height:3.65rem;background-size:1.375rem 3.65rem;right:-1px;margin-top:-1.9rem;}
 
-
+.ewm{    /*position: absolute;
+    top: 12.675rem;
+    left: 1.0rem;
+    width: 6.6rem;*/
+    float:left;
+    margin-top:1.25rem;
+    }
+.ewm span{float: left;
+    width: 4.0rem;
+    margin-left:2rem;
+    margin-right: 0.55rem;}
+.phone{
+    width:9.225rem;
+    float:left;
+    margin-top:0.875rem;
+    margin-left:2.85rem;
+}
 
